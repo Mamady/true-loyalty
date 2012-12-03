@@ -1,0 +1,8 @@
+TLMainBundle_homepage:
+    pattern:  /
+    defaults: { _controller: TLMainBundle:Page:index }
+
+TLMainBundle_page:
+    pattern:  /company/{page}
+    defaults: { _controller: TLMainBundle:Page:show }
+

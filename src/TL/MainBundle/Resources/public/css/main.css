@@ -56,6 +56,11 @@ img {border:0;}
     height:70px;
     background-image:url(../images/logo.png);
     background-repeat:no-repeat;
+    color: #666;
+    font-size: 35px;
+    line-height: 65px;
+    padding-left: 60px;
+    text-transform: uppercase;
 }
 .HeaderRight {
     width:200px;

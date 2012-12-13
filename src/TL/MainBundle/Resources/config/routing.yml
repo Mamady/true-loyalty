@@ -1,8 +1,52 @@
 TLMainBundle_homepage:
     pattern:  /
-    defaults: { _controller: TLMainBundle:Page:index }
+    defaults: { _controller: TLMainBundle:Page:show, page: index }
 
-TLMainBundle_page:
-    pattern:  /company/{page}
-    defaults: { _controller: TLMainBundle:Page:show }
+
+TLMainBundle_page_how_it_works:
+    pattern:  /how-it-works
+    defaults: { _controller: TLMainBundle:Page:show, page: how_it_works }
+
+TLMainBundle_page_features:
+    pattern:  /features
+    defaults: { _controller: TLMainBundle:Page:show, page: features }
+
+TLMainBundle_page_testimonials:
+    pattern:  /testimonials
+    defaults: { _controller: TLMainBundle:Page:show, page: testimonials }
+
+TLMainBundle_page_faq:
+    pattern:  /faq
+    defaults: { _controller: TLMainBundle:Page:show, page: faq }
+
+
+
+TLMainBundle_page_pricing:
+    pattern:  /pricing
+    defaults: { _controller: TLMainBundle:Page:show, page: pricing }
+
+
+
+TLMainBundle_page_story:
+    pattern:  /story
+    defaults: { _controller: TLMainBundle:Page:show, page: story }
+
+TLMainBundle_page_team:
+    pattern:  /team
+    defaults: { _controller: TLMainBundle:Page:show, page: team }
+
+TLMainBundle_page_press:
+    pattern:  /press
+    defaults: { _controller: TLMainBundle:Page:show, page: press }
+
+TLMainBundle_page_jobs:
+    pattern:  /jobs
+    defaults: { _controller: TLMainBundle:Page:show, page: jobs }
+
+
+TLMainBundle_page_contact:
+    pattern:  /contact
+    defaults: { _controller: TLMainBundle:Page:show, page: contact }
+
+
 

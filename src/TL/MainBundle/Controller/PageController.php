@@ -8,8 +8,25 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class PageController extends Controller
 {
-    public function indexAction()
+    public function showAction($page)
     {
-        return $this->render('TLMainBundle:Page:index.html.twig');
+        $pages = array(
+            'index',
+            'how_it_works',
+            'features',
+            'testimonials',
+            'faq',
+            'pricing',
+            'story',
+            'team',
+            'jobs',
+            'press',
+            'contact',
+        );
+
+        if(in_array($page, $pages)) {
+            return $this->render('TLMainBundle:Page:'.$page.'.html.twig');
+        }
+
     }
 }

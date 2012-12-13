@@ -1,87 +1,343 @@
 {% extends "TLMainBundle::layout.html.twig" %}
 
-{% block content %}
-      <!-- Start Box Left -->
-      <div class="Box1Left"> 
-    
-    <!-- Start text -->
-    <div class="Box1Text"> Loyalty cards - in your Smartphone. </div>
-    <!-- End text --> 
-    
-    <!-- Start Paragraph text -->
-    <p class="Box1P">We make paperless loyalty programs for businesses, to help them grow repeat customers and turn new customers into returning customers. True Loyalty is easy to install, simple to use, and gives you a way to communicate with your most loyal customers . </p>
+{% block pageTop "" %}
 
-    <!-- End paragraph text --> 
-    
-    <!-- Start lightbox images -->
-    <p class="LightBoxContainer"> <a rel="author" href="./images/Screen1Big.png" title=""><img alt="" src="./images/Screen1.png" height="62" width="100"  /></a> <a rel="author" href="./images/Screen2Big.png" title=""><img alt="" src="./images/Screen2.png" height="62" width="100"  /></a> <a rel="author" href="./images/Screen2Big.png" title=""><img class="last" alt="" src="./images/Screen3.png" height="62" width="100"  /></a> </p>
-  </div>
-      <!-- End lightbox images --> 
-      
-      <!-- End Box Left --> 
-      
-      <!-- Start Box 2  -->
-      <div class="Box2"> 
-    <!-- Start box that holds the progress bars -->
-    <div class="Box2Left"> 
-          <!-- Start CSS progress bars -->
-          <div class="progressbar" data-perc="25">
-        <div class="bar color3"><span></span></div>
-        <div class="label"><span></span></div>
-      </div>
-          <div class="progressbar" data-perc="30">
-        <div class="bar color4"><span></span></div>
-        <div class="label"><span></span></div>
-      </div>
-          <div class="progressbar" data-perc="47">
-        <div class="bar color2"><span></span></div>
-        <div class="label"><span></span></div>
-      </div>
-          <div class="progressbar" data-perc="50">
-        <div class="bar color1"><span></span></div>
-        <div class="label"><span></span></div>
-      </div>
-          <!-- End progress bars --> 
+{% block content %}
+
+        <!-- SLIDER -->
+        <div id="outerslider">
+            <div id="slidercontainer">
+                <section id="slider">
+                    <div id="slideritems" class="flexslider preloader">
+                        <ul class="slides">
+
+                            {#
+                            <li style="background-image:url(/bundles/tlmain/images/slider/bg-slider1.jpg);">
+                                <img src="/bundles/tlmain/images/slider/slider1.png" alt="" />
+                                <div class="flex-caption">
+                                    <div class="text-caption row right">
+                                        <div class="caption-content">
+                                            <h2>Getting Worldwide</h2>
+                                            <div>Consectetur adipiscing elit aeneane lorem lipsum, condimentum ultrices consequat eu, vehicula mauris lipsum adipiscing lipsum aenean orci lorem. Asequat lorem ipsum dolor lorem sit amet, consectetur adipiscing dolor elit. Aenean nisl orci, condimentum.</div>
+                                            <a class="sliderbutton" href="http://www.interfeis.com/"><span>For Details</span></a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            #}
+                            <li style="background-image:url(/bundles/tlmain/images/slider/bg-slider2.jpg);">
+                                <img src="/bundles/tlmain/images/slider/slider2.png" alt="" />
+                                <div class="flex-caption">
+                                    <div class="text-caption row left">
+                                        <div class="caption-content">
+                                            <h2><a href="http://www.interfeis.com">Access It Everywhere</a></h2>
+                                            <div><a href="http://www.interfeis.com">Consectetur adipiscing elit aeneane lorem lipsum, condimentum ultrices consequat eu, vehicula mauris lipsum adipiscing lipsum aenean orci lorem. Asequat lorem ipsum dolor lorem sit amet, consectetur adipiscing dolor elit. Aenean nisl orci, condimentum.</a></div>
+                                            <a class="sliderbutton" href="http://www.interfeis.com"><span>For Details</span></a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            {#
+                            <li style="background-image:url(/bundles/tlmain/images/slider/bg-slider3.jpg);">
+                                <img src="/bundles/tlmain/images/slider/slider3.png" alt="" />
+                                <div class="flex-caption">
+                                    <div class="text-caption row top">
+                                        <div class="caption-content">
+                                            <h2>Using The Latest Technology</h2>
+                                            <div>Consectetur adipiscing elit aeneane lorem lipsum, condimentum ultrices consequat eu, vehicula mauris lipsum adipiscing lipsum aenean orci lorem. Asequat lorem ipsum dolor lorem sit amet, consectetur adipiscing dolor elit. Aenean nisl orci, condimentum.</div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            #}                
+                         </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </section>
+                <div class="clearfix"></div>
+            </div>
         </div>
-    <!-- End box that holds the progress bars --> 
-    
-    <!-- Start div that holds the text to the right of the progress bars -->
-    <div class="Box2Container"> 
-          
-        <div class="Box2Text"> Increase sales by creating trust </div>
-          
-            <p class="Box2P"> 
-                We help you create truely satisfied customers. Not only does their loyalty convert into long term sales, they become advocates of your business. True Loyalty means that your customer retention becomes a powerful method of customer acquisition.
-            </p>
-          
-          <p class="LightBoxContainer"> <a rel="alternate" href="./images/Screen1Big.png" title=""><img alt="" src="./images/Screen1.png" height="62" width="100"  /></a> <a rel="alternate" href="./images/Screen2Big.png" title=""><img alt="" src="./images/Screen2.png" height="62" width="100"  /></a> <a rel="alternate" href="./images/Screen2Big.png" title=""><img class="last" alt="" src="./images/Screen3.png" height="62" width="100"  /></a> </p>
-          <!-- End lightbox --> 
-          
-        </div>
-    <!-- End div containing all text next to progress bars --> 
-  </div>
-      <!-- End Box Left --> 
-      
-      <!-- Start Box 3 -->
-      <div class="Box3">
-      
-  <!-- Div containing client header -->  <div class="Box3Head">Satisfied Clients</div> <!-- End client header -->
-  
-    <div class="Sponser1"><a href="#" class="Clients"></a></div>
-    <div class="Sponser1"><a href="#" class="Clients2"></a></div>
-    <div class="Sponser1"><a href="#" class="Clients3"></a></div>
-    <div class="Sponser1"><a href="#" class="Clients4"></a></div>
-    <div class="Sponser1"><a href="#" class="Clients4"></a></div>
-    
-  </div>
-      <!-- End Box 3 --> 
-      
-      <!-- Start Box 4 -->
-      <div class="Box4">
-    <div class="Box4Head">Are you ready for more customers?</div>
-    <div class="Box4P">Get started today with a FREE Trial</div>
-    <div class="Box4Button"> <span class="shine"></span> <a href="#" class="button3"> <span class="shine"></span> <span class="text">Get started right now</span> </a></div>
-  </div>
-      <!-- End Box 4 --> 
+        <!-- END SLIDER -->
+        
  
+        
+        <!-- MAIN CONTENT -->
+        <div id="outermain">
+            <div class="container">
+                <section id="maincontent" class="row">
+                    <div class="twelvecol">
+            
+                    <h2 class="bigtext">Rockefeller is a Flexible &amp; Powerful Multipurposes WordPress  Themes</h2>
+                    <p class="secondarytext">It brings you a beautiful look and a powerful framework for your website</p>
+                    <div class="separator"><div></div> </div>
+                    
+                    <div  class="minisliders flexslider">
+                      <ul class="slides">
+                        <li class="slide " >
+                          <div class="fourcol ">
+                              <img src="/bundles/tlmain/images/content/iconhome-6.png" alt="Quality &amp; Commitment" class="alignleft" /><br />
+                              <h3>High Quality.</h3>
+                              <div class="clearfix"></div>
+                              <p>We understand that consistency and perception of your product is mostly important. That's why we guarantee and ensure that our quality standard meets your need. Our quality control system guarantee you the perfection of every theme we create.</p>
+                          </div>
+                          <div class="fourcol ">
+                              <img src="/bundles/tlmain/images/content/iconhome-2.png" alt="Evolving theme" class="alignleft" /><br />
+                              <h3>Evolving Theme.</h3>
+                              <div class="clearfix"></div>
+                              <p>First of all, we create high quality themes. But we dont stuck there, because we know that technology is changing rapidly and we need to keep up with the technology so we evolve the theme. We debug the bugs(well&#8230;it&#8217;s a must) &amp; make the theme compatible with latest technology.</p>
+                          </div>
+                          <div class="fourcol last">
+                              <img src="/bundles/tlmain/images/content/iconhome-3.png" class="alignleft" alt="Thorough Documentation" /><br />
+                              <h3>Clear Documentation.</h3>
+                              <div class="clearfix"></div>
+                              <p>We believe great product comes with great documentation. We really don&#8217;t want the user feel loss, we want the user understand clearly about how to use our product. And the key is by creating a clear and understandable documentation. so even the new user doesn&#8217;t feel loss.</p>
+                          </div>
+                        </li>
+                        <li class="slide " >
+                          <div class="fourcol ">
+                              <img src="/bundles/tlmain/images/content/iconhome-4.png" alt="Great Framework" class="alignleft" /><br />
+                              <h3>Great Framework.</h3>
+                              <div class="clearfix"></div>
+                              <p>First of all, we create high quality themes. But we dont stuck there, because we know that technology is changing rapidly and we need to keep up with the technology so we evolve the theme. We debug the bugs(well&#8230;it&#8217;s a must) &amp; make the theme compatible with latest technology.</p>
+                          </div>
+                          <div class="fourcol ">
+                              <img src="/bundles/tlmain/images/content/iconhome-5.png" alt="Responsive Layout" class="alignleft" /><br />
+                              <h3>Responsive Layout.</h3>
+                              <div class="clearfix"></div>
+                              <p>We understand that consistency and perception of your product is mostly important. That's why we guarantee and ensure that our quality standard meets your need. Our quality control system guarantee you the perfection of every theme we create.</p>
+                          </div>
+                          <div class="fourcol last">
+                              <img src="/bundles/tlmain/images/content/iconhome-1.png" class="alignleft" alt="Medium for The Masses" /><br />
+                              <h3>Medium for The Masses.</h3>
+                              <div class="clearfix"></div>
+                              <p>We believe great product comes with great documentation. We really don&#8217;t want the user feel loss, we want the user understand clearly about how to use our product. And the key is by creating a clear and understandable documentation. so even the new user doesn&#8217;t feel loss.</p>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>
+                    
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+
+                    <div class="pcarousel">
+                        <div class="titlecontainer">
+                            <h2 class="contenttitle"><span>Our Recent Portfolio</span></h2>
+                        </div>
+                        <div class="pc-content">
+                        Consectetur adipiscing elit aeneane lorem lipsum, condimentum ultrices consequat eu, vehicula mauris lipsum adipiscing lipsum aenean orci lorem. Asequat lorem ipsum dolor lorem sit amet, consectetur adipiscing dolor elit. Aenean nisl orci, condimentum.Submit examples to <a href="mailto:ramayana@interfeis.com">ramayana [at] interfeis.com</a> or tweet to <a href="http://www.twitter.com/theinterfeis">@theinterfeis</a>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="flexslider-carousel">
+                            <ul class="slides">
+                              <li class="threecol">
+                                <div class="cr-item-container">
+                                    <div class="if-pf-img">
+                                        <div class="rollover"></div>
+                                        <a class="image zoom" href="/bundles/tlmain/images/content/pf/thinkprint.jpg"  data-rel="prettyPhoto[thinkprint]" title="Thinkprint"></a>
+                                        <a class="image gotolink" href="#" title="Thinkprint"></a>
+                                        <img src="/bundles/tlmain/images/content/pf/thinkprint-251x191.jpg" alt="Thinkprint" />
+                                    </div>
+                                    <h3><a href="#">Thinkprint</a></h3>
+                                    <div class="if-pf-text">Maecenas eu lorem leo, placera&#8230;</div>
+                                </div>
+                              </li>
+                              <li class="threecol">
+                                <div class="cr-item-container">
+                                <div class="if-pf-img">
+                                    <div class="rollover"></div>
+                                    <a class="image zoom" href="/bundles/tlmain/images/content/pf/sayitinprint.jpg"  data-rel="prettyPhoto[say-it-in-print]" title="Say It in Print"></a>
+                                    <a class="image gotolink" href="#" title="Say It in Print"></a>
+                                    <img src="/bundles/tlmain/images/content/pf/sayitinprint-251x191.jpg" alt="Say It in Print" />
+                                </div>
+                                <h3><a href="h#">Say It in Print</a></h3>
+                                <div class="if-pf-text">Maecenas eu lorem leo, placera&#8230;</div>
+                                </div>
+                              </li>
+                              <li class="threecol">
+                                <div class="cr-item-container">
+                                <div class="if-pf-img">
+                                    <div class="rollover"></div>
+                                    <a class="image zoom" href="/bundles/tlmain/images/content/pf/minicards.jpg"  data-rel="prettyPhoto[minicards]" title="Minicards"></a>
+                                    <a class="image gotolink" href="#" title="Minicards"></a>
+                                    <img src="/bundles/tlmain/images/content/pf/minicards-251x191.jpg" alt="Minicards" />
+                                </div>
+                                <h3><a href="#/">Minicards</a></h3>
+                                <div class="if-pf-text">Maecenas eu lorem leo, placera&#8230;</div>
+                                </div>
+                              </li>
+                              <li class="threecol">
+                                  <div class="cr-item-container">
+                                  <div class="if-pf-img">
+                                      <div class="rollover"></div>
+                                      <a class="image zoom" href="/bundles/tlmain/images/content/pf/leaflet07.jpg"  data-rel="prettyPhoto[1000-layered-photoshop]" title="1000 Layered Photoshop"></a>
+                                      <a class="image gotolink" href="#" title="1000 Layered Photoshop"></a>
+                                      <img src="/bundles/tlmain/images/content/pf/leaflet07-251x191.jpg" alt="1000 Layered Photoshop" />
+                                  </div>
+                                  <h3><a href="#">1000 Layered Photoshop</a></h3>
+                                  <div class="if-pf-text">Maecenas eu lorem leo, placera&#8230;</div>
+                                  </div>
+                              </li>
+                              <li class="threecol">
+                                  <div class="cr-item-container">
+                                  <div class="if-pf-img">
+                                      <div class="rollover"></div>
+                                      <a class="image zoom" href="/bundles/tlmain/images/content/pf/leaflet06.jpg"  data-rel="prettyPhoto[graphic-river-leaflet]" title="Graphic River Leaflet"></a>
+                                      <a class="image gotolink" href="#" title="Graphic River Leaflet"></a>
+                                      <img src="/bundles/tlmain/images/content/pf/leaflet06-251x191.jpg" alt="Graphic River Leaflet" />
+                                  </div>
+                                  <h3><a href="#">Graphic River Leaflet</a></h3>
+                                  <div class="if-pf-text">Maecenas eu lorem leo, placera&#8230;</div>
+                                  </div>
+                              </li>
+                              <li class="threecol">
+                                  <div class="cr-item-container">
+                                  <div class="if-pf-img">
+                                      <div class="rollover"></div>
+                                      <a class="image zoom" href="/bundles/tlmain/images/content/pf/card10.jpg"  data-rel="prettyPhoto[rockable-card]" title="Collis Ta&#8217;eed Card"></a>
+                                      <a class="image gotolink" href="#" title="Collis Ta&#8217;eed Card"></a>
+                                      <img src="/bundles/tlmain/images/content/pf/card10-251x191.jpg" alt="Collis Ta&#8217;eed Card" />
+                                  </div>
+                                  <h3><a href="#">Collis Ta&#8217;eed Card</a></h3>
+                                  <div class="if-pf-text">Maecenas eu lorem leo, placera&#8230;</div>
+                                  </div>
+                              </li>
+                              <li class="threecol">
+                                  <div class="cr-item-container">
+                                  <div class="if-pf-img">
+                                      <div class="rollover"></div>
+                                      <a class="image zoom" href="/bundles/tlmain/images/content/pf/card04.jpg"  data-rel="prettyPhoto[rockable-card]" title="Rockable Card"></a>
+                                      <a class="image gotolink" href="#" title="Rockable Card"></a>
+                                      <img src="/bundles/tlmain/images/content/pf/card04-251x191.jpg" alt="Rockable Card" />
+                                  </div>
+                                  <h3><a href="#">Rockable Card</a></h3>
+                                  <div class="if-pf-text">Maecenas eu lorem leo, placera&#8230;</div>
+                                  </div>
+                              </li>
+                              <li class="threecol">
+                                  <div class="cr-item-container">
+                                  <div class="if-pf-img">
+                                      <div class="rollover"></div>
+                                      <a class="image zoom" href="/bundles/tlmain/images/content/pf/book01.jpg"  data-rel="prettyPhoto[how-to-be-a-rockstart]" title="How to be a Rockstart"></a>
+                                      <a class="image gotolink" href="#" title="How to be a Rockstart"></a>
+                                      <img src="/bundles/tlmain/images/content/pf/book01-251x191.jpg" alt="How to be a Rockstart" />
+                                  </div>
+                                  <h3><a href="#">How to be a Rockstart</a></h3>
+                                  <div class="if-pf-text">Maecenas eu lorem leo, placera&#8230;</div>
+                                  </div>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+
+                    <div class="sixcol ">
+                        <div class="if-heading">
+                          <h3><span>Our Strength</span></h3>
+                        </div>
+                        <div id="toggle">
+                            <h2 class="trigger"><span>Highly Flexible</span></h2>
+                            <div class="toggle_container">
+                                <div class="block">
+                                <img src="/bundles/tlmain/images/content/iconhome-9.png" alt="Highly Flexible" class="alignleft" /><br>
+                                <h3>Highly Flexible</h3>
+                                <div class="clearfix"></div>
+                                <p>First of all, we create high quality themes. But we dont stuck there, because we know that technology is changing rapidly and we need to keep up with the technology so we evolve the theme. We debug the bugs(well&#8230;it&#8217;s a must) &amp; make the theme compatible with latest technology.</p>
+                                </div>
+                            </div>
+                            <h2 class="trigger"><span>Fast Response</span></h2>
+                            <div class="toggle_container">
+                                <div class="block">
+                                <img src="/bundles/tlmain/images/content/iconhome-7.png" alt="Fast Response" class="alignleft" /><br>
+                                <h3>Fast Response</h3>
+                                <div class="clearfix"></div>
+                                <p>We understand that consistency and perception of your product is mostly important. That's why we guarantee and ensure that our quality standard meets your need. Our quality control system guarantee you the perfection of every theme we create.</p>
+                                </div>
+                            </div>
+                            <h2 class="trigger"><span>Easy to Customize</span></h2>
+                            <div class="toggle_container">
+                                <div class="block">
+                                <img src="/bundles/tlmain/images/content/iconhome-8.png" class="alignleft" alt="Easy to Customize" /><br>
+                                <h3>Easy to Customize</h3>
+                                <div class="clearfix"></div>
+                                <p>We believe great product comes with great documentation. We really don&#8217;t want the user feel loss, we want the user understand clearly about how to use our product. And the key is by creating a clear and understandable documentation. so even the new user doesn&#8217;t feel loss.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sixcol last">
+                        <div class="if-trotating flexslider ">
+                        <div class="if-trotating-title">
+                            <h3><span>Our Testimonial</span></h3>
+                        </div>
+                        <ul class="slides">
+                            <li>
+                                <blockquote>
+                                    Maecenas eu lorem leo, placerat luctus eros. Maecenas pretium, elit et tempus tincidunt, nisi turpis elementum ligula, vel ultricies lorem elit ut nibh.
+                                <span class="arrowbubble"></span></blockquote>
+                                <div class="clearfix"></div>
+                                <span class="testiimg">
+                                    <img src="/bundles/tlmain/images/content/testi-4.jpg" width="70" height="70" alt="Tom Dickson" title="Tom Dickson" class="scale-with-grid" />
+                                    <span class="insetshadow"></span>
+                                </span>
+                                <span class="testiinfo"><strong>Tom Dickson</strong><br/>General Manager of Microshift</span>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li>
+                                <blockquote>
+                                    Cras venenatis mollis ligula ac consequat. Nulla facilisi. Ut commodo fermentum sapien nec tempor. Curabitur augue arcu, pharetra in elementum ace.
+                                <span class="arrowbubble"></span></blockquote>
+                                <div class="clearfix"></div>
+                                <span class="testiimg">
+                                    <img src="/bundles/tlmain/images/content/testi-1.jpg" width="70" height="70" alt="Billy Sebastian" title="Billy Sebastian" class="scale-with-grid" />
+                                    <span class="insetshadow"></span>
+                                </span>
+                                <span class="testiinfo"><strong>Billy Sebastian</strong><br/>Web Developer of Titans Co.</span>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li>
+                                <blockquote>
+                                    Nullam tincidunt elit vitae dolor fringilla facilisis. Nam venenatis tempor nibh. Integer sed augue mi, vel convallis tortor.
+                                <span class="arrowbubble"></span></blockquote>
+                                <div class="clearfix"></div>
+                                <span class="testiimg">
+                                    <img src="/bundles/tlmain/images/content/testi-3.jpg" width="70" height="70" alt="Vanya Cooper" title="Vanya Cooper" class="scale-with-grid" />
+                                    <span class="insetshadow"></span>
+                                </span>
+                                <span class="testiinfo"><strong>Vanya Cooper</strong><br/>Freelancer Web Designer</span>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li>
+                                <blockquote>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.
+                                <span class="arrowbubble"></span></blockquote>
+                                <div class="clearfix"></div>
+                                <span class="testiimg">
+                                    <img src="/bundles/tlmain/images/content/testi-2.jpg" width="70" height="70" alt="Theresa Trang" title="Theresa Trang" class="scale-with-grid" />
+                                    <span class="insetshadow"></span>
+                                </span>
+                                <span class="testiinfo"><strong>Theresa Trang</strong><br/>Founder of Pineapple Co.</span>
+                                <div class="clearfix"></div>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        </div>
+                    </div>
+                
+                
+                    </div>
+                    <div class="clearfix"></div><!-- clear float --> 
+                </section><!-- maincontent -->
+            </div>
+        </div>
+        <!-- END MAIN CONTENT -->
+
 {% endblock %}

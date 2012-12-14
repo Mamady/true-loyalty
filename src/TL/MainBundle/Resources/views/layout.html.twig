@@ -121,10 +121,12 @@
                 <div id="afterheader" class="row">
                     <section id="aftertheheader">
                         <div class="breadcrumb twelvecol">
-                            You are here: <a href="index.html">Home</a> &raquo; <a href="about.html">About Us</a> &raquo; <strong>Services</strong>
+                            {% block breadcrumb %}
+                                You are here: <a href="index.html">Home</a> &raquo; <a href="about.html">About Us</a> &raquo; <strong>Services</strong>
+                            {% endblock %}
                         </div>
                         <div class="clearfix"></div>                        
-                        <h1 class="pagetitle">Services</h1>                    
+                        <h1 class="pagetitle">{% block pageTopText "Services" %}</h1>                    
                     </section>
                     <div class="clearfix"></div>
                 </div>

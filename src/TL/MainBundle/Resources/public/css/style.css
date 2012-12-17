@@ -60,6 +60,12 @@ p {
 	margin-bottom:20px;
 }
 
+p a, p a:visited {
+    color: #3079ED;
+}
+p a:hover {
+    text-decoration: underline;
+}
 body p:last-child{margin-bottom:0;}
 
 ul {
@@ -180,6 +186,9 @@ sub {
 	top: .5ex;
 }
 
+.center {
+    text-align: center;
+}
 /* Text meant only for screen readers */
 .screen-reader-text {
 	position: absolute;

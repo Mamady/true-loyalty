@@ -16,6 +16,7 @@ hr{
 }
 
 input[type="text"],
+input[type="email"],
 textarea, input[type="password"], select{
 	background-color:#e4e4e4;
 	color:#555;

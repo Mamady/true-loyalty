@@ -8,7 +8,7 @@ Rockefeller - CSS File
 /* Main global 'theme' and typographic styles */
 body {
 	font-family:'Open Sans',Arial, Helvetica, sans-serif;
-	font-size:12px;
+	font-size:14px;
 	-webkit-font-smoothing:antialiased;
 	margin:0 auto;
 	padding:0;
@@ -653,6 +653,7 @@ img{
 /* form & button */
 form{margin:0; padding:0;}
 input[type="text"],
+input[type="email"],
 textarea, input[type="password"], select{
 	font-size:11px;
 	padding:8px 5px;
@@ -1607,25 +1608,13 @@ ul.listcarousel li{list-style-type:none;padding:0px;}
 /* CONTACT */
 form{margin:0; padding:0;}
 fieldset{border:0px;}
-#contactform{margin:0 auto; position:relative; }
-#contactform label{display:block; width:100%; float:left; padding-bottom:5px; font-weight:700}
+.contactform{margin:0 auto; position:relative; }
+.contactform label{display:block; width:100%; padding-bottom:5px; font-weight:700}
+.contactform input[type=text], .contactform input[type=email]{width:80%; padding-bottom:5px; font-weight:700}
 span.required{ color:#f00;}
 span.error{color:red;text-align:left; font-size:11px; padding-bottom:15px; display:block;}
-#contactform input.text-input{
-    font-size: 11px;
-    margin-bottom: 12px;
-    margin-top: 6px;
-	width:55%;
-}
-#contactform textarea{ width:80%;} 
-#message{ margin-left:0px;}
-#message p{margin:6px 0px; }
-.note{ color:#d45454;}
-#contactform .button{
-	cursor:pointer;
-	margin-top:20px;
- }
- 
+.contactform textarea{ width:80%;} 
+
 .contact_email{list-style-type:none;background:url(../images/icons/address/email.png) no-repeat 0px 6px !important;border:0px !important; padding:0px 0px 6px 20px}
 .contact_address{list-style-type:none;background:url(../images/icons/address/home.png) no-repeat 0px 4px !important;border:0px !important; padding:0px 0px 6px 20px}
 .contact_phone{list-style-type:none;background:url(../images/icons/address/phone.png) no-repeat 0px 6px !important;border:0px !important; padding:0px 0px 6px 20px}
@@ -2368,3 +2357,75 @@ ul.customlist.listcheck li, li.check{background:url(../images/list-check.png) no
 }
 
 
+.alert {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.alert,
+.alert h4 {
+  color: #c09853;
+}
+
+.alert h4 {
+  margin: 0;
+}
+
+.alert .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  line-height: 20px;
+}
+
+.alert-success {
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.alert-success h4 {
+  color: #468847;
+}
+
+.alert-danger,
+.alert-error {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+
+.alert-danger h4,
+.alert-error h4 {
+  color: #b94a48;
+}
+
+.alert-info {
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.alert-info h4 {
+  color: #3a87ad;
+}
+
+.alert-block {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.alert-block > p,
+.alert-block > ul {
+  margin-bottom: 0;
+}
+
+.alert-block p + p {
+  margin-top: 5px;
+}

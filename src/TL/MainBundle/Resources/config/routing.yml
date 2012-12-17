@@ -46,7 +46,7 @@ TLMainBundle_page_jobs:
 
 TLMainBundle_page_contact:
     pattern:  /contact
-    defaults: { _controller: TLMainBundle:Page:show, page: contact }
+    defaults: { _controller: TLMainBundle:Page:contact, page: contact }
 
 
 

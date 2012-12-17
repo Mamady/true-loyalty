@@ -7,32 +7,23 @@
                 <section id="maincontent" class="row">
                     <div class="twelvecol">
             
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mauris elit, pellentesque eu laoreet a, molestie vel metus. Etiam posuere, arcu ut rhoncus aliquet, turpis lorem viverra quam, et ullamcorper massa eros eget sapien. Aliquam mauris elit, pellentesque eu laoreet a, molestie vel metus.</p>
+                     <p>We would love to answer any questions that you have or help you get started with your membership today! Feel free to contact us using the information below.</p>
                     <div class="separator"></div>
                     <div class="sixcol ">
                         <div class="if-heading">
                             <h3><span>Let&#8217;s keep in touch</span></h3>
-                            <div id="contactform">
-                                  <form id="contact" action="#">
-                                      <fieldset>
-                                          <span class="error" id="name_error">Please enter name !</span>
-                                          <span class="error" id="email_error">Please enter email address !</span>
-                                          <span class="error" id="email_error2">Please enter valid email address !</span>
-                                          <span class="error" id="msg_error">Please enter message !</span>
-                                          <label for="name" id="name_label">Your Name (required)</label>
-                                          <input type="text" name="name" id="name" size="50" value="" class="text-input" />
-                                          <label for="email" id="email_label">Your Email (required)</label>
-                                          <input type="text" name="email" id="email" size="50" value="" class="text-input" />
-                                          <label for="subject" id="subject_label">Subject</label>
-                                          <input type="text" name="subject" id="subject" size="50"  value="" class="text-input" />
-                                          <label for="msg" id="msg_label">Your Message (required)</label>
-                                          <textarea rows="8" name="msg" id="msg" class="text-input"></textarea>
-                                          <br />
-                                          <input type="submit" name="submit" class="btn" id="submit_btn" value="Send"/>
-                                      </fieldset>
-                                  </form>
-                            </div><!-- end contactform -->
-                        </div>
+                            <form action="{{ path('TLMainBundle_page_contact') }}" method="post" {{ form_enctype(form) }} class="contactform">
+                                {{ form_errors(form) }}
+
+                                <p>{{ form_row(form.name) }}</p>
+                                <p>{{ form_row(form.email) }}</p>
+                                <p>{{ form_row(form.message) }}</p>
+                                
+                                {{ form_rest(form) }}
+                                <input type="submit" name="submit" class="btn btn-primary btn-large" id="submit_btn" value="Send"/>
+                            </form>
+                            
+                       </div>
                     </div>
                     <div class="sixcol last">
                         <div class="if-heading">

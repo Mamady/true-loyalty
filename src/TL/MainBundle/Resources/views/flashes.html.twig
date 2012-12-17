@@ -1,0 +1,11 @@
+{% for name, messages in app.session.flashbag.all() %}
+
+    {% for message in messages %}
+        <div class="row twelvecol">
+            <div class="alert alert-block alert-{{ name }}">{{ message|raw }}</div>
+        </div>
+    {% endfor %}
+
+{% endfor %}
+
+

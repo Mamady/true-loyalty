@@ -43,6 +43,15 @@
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    {% block css %}
+        {% stylesheets filter='cssrewrite' output='css/*.css' combine=true
+            'bundles/tlmain/css/custom.css'
+        %}
+            <link rel="stylesheet" type="text/css" href="{{ asset_url }}" media="screen" />
+        {% endstylesheets %}
+    {% endblock %}
+
+
     <link rel="shortcut icon" href="bundles/tlmain/images/favicon.ico" />
 </head>
 
@@ -85,18 +94,17 @@
                     <section id="navigation">
                         <nav>
                         <ul id="topnav" class="sf-menu">
-                            <li class="current"><a href="{{ path('TLMainBundle_homepage') }}">Home</a> </li>
-                            <li><a href="{{ path('TLMainBundle_page_how_it_works') }}">How It Works</a>
+                            <li ><a href="{{ path('TLMainBundle_page_how_it_works') }}">How It Works</a></li>
+                            <li ><a href="{{ path('TLMainBundle_page_features') }}">Features</a></li>
+                            {#
                                 <ul class="sub-menu">
-                                    <li ><a href="{{ path('TLMainBundle_page_how_it_works') }}">How It Works</a></li>
-                                    <li ><a href="{{ path('TLMainBundle_page_features') }}">Features</a></li>
-                           {#         <li ><a href="{{ path('TLMainBundle_page_testimonials') }}">Testimonials</a></li>
+                                   <li ><a href="{{ path('TLMainBundle_page_testimonials') }}">Testimonials</a></li>
                                     <li ><a href="{{ path('TLMainBundle_page_faq') }}">FAQ</a></li>
-                            #}
                                 </ul>
+                            #}
                            </li>
-                            <li><a href="{{ path('TLMainBundle_page_pricing') }}">Pricing</a>
-                           </li>
+                            <li><a href="{{ path('TLMainBundle_page_pricing') }}">Pricing</a></li>
+                            <li style="margin-top: -8px;"><a href="{{ path('TLMainBundle_page_features') }}" class="btn btn-warning btn-large" style="padding: 8px; box-shadow: none;">Get Started</a></li>
                             <li><a href="{{ path('TLMainBundle_page_story') }}">About Us</a></li>
                             <li><a href="{{ path('TLMainBundle_page_contact') }}">Contact</a></li>
                         </ul>                        

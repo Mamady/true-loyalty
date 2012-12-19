@@ -1,77 +1,156 @@
 {% extends "TLMainBundle::layout.html.twig" %}
 
+{% block title "Loyalty Program Pricing - True Loyalty" %}
+
+{% block css %}
+    {{ parent() }}
+    {% stylesheets filter='cssrewrite' output='css/*.css' combine=true
+        'bundles/tlmain/css/pricing.css'
+    %}
+        <link rel="stylesheet" type="text/css" href="{{ asset_url }}" media="screen" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block breadcrumb "" %}
+
+{% block pageTop %}
+    <div class="clearfix"></div>
+{% endblock %}
+
 {% block content %}
 
-<div id="outermain">
-            <div class="container">
-                <section id="maincontent" class="row">
-                    <div class="twelvecol">
-            
-                        <h4>Tables</h4>
-                        <table>
-                        <tbody>
-                        <tr>
-                        <th>Header 1</th>
-                        <th>Header 2</th>
-                        <th>Header 3</th>
-                        </tr>
-                        <tr>
-                        <td>Division 1</td>
-                        <td>Division 2</td>
-                        <td>Division 3</td>
-                        </tr>
-                        <tr class="even">
-                        <td>Division 1</td>
-                        <td>Division 2</td>
-                        <td>Division 3</td>
-                        </tr>
-                        <tr>
-                        <td>Division 1</td>
-                        <td>Division 2</td>
-                        <td>Division 3</td>
-                        </tr>
-                        <tr class="even">
-                        <td>Division 1</td>
-                        <td>Division 2</td>
-                        <td>Division 3</td>
-                        </tr>
-                        <tr>
-                        <td>Division 1</td>
-                        <td>Division 2</td>
-                        <td>Division 3</td>
-                        </tr>
-                        <tr>
-                        <td>Division 1</td>
-                        <td>Division 2</td>
-                        <td>Division 3</td>
-                        </tr>
-                        <tr>
-                        <td>Division 1</td>
-                        <td>Division 2</td>
-                        <td>Division 3</td>
-                        </tr>
-                        <tr>
-                        <td>Division 1</td>
-                        <td>Division 2</td>
-                        <td>Division 3</td>
-                        </tr>
-                        <tr>
-                        <td>Division 1</td>
-                        <td>Division 2</td>
-                        <td>Division 3</td>
-                        </tr>
-                        <tr>
-                        <td>Division 1</td>
-                        <td>Division 2</td>
-                        <td>Division 3</td>
-                        </tr>
-                        </tbody>
-                        </table>
-                    </div>
-                    <div class="clearfix"></div>
-             
-                </section><!-- maincontent -->
+<div id="outermain" style="padding-top: 130px;">
+    <div class="container">
+        <section id="maincontent" class="row">
+            <div class="twelvecol">
+    
+
+                <div id="main-table">
+                    <div class="main-table-row main-special-row">
+                        <ul>
+                            <li class="tip1"><img class="tooltip" src="public/images/plans/tooltip.png">Max Members</li>
+                            <li class="tip2"><img class="tooltip" src="public/images/plans/tooltip.png">Emails per month</li>
+                            <li class="tip11"><img class="tooltip" src="public/images/plans/tooltip.png">Marketing Pack</li>
+                            <li class="tip3"><img class="tooltip" src="public/images/plans/tooltip.png">Data Export</li>
+                            <li class="tip3"><img class="tooltip" src="public/images/plans/tooltip.png">SMS promotions</li>
+                            <li class="tip9"><img class="tooltip" src="public/images/plans/tooltip.png">Customer Feedback System</li>
+                        </ul>
+
+                        <ul>    
+                            <li><strong>Support & Services</strong></li>
+                            <li class="tip13"><img class="tooltip" src="public/images/plans/tooltip.png">Phone consultation</li>
+                            <li class="tip15"><img class="tooltip" src="public/images/plans/tooltip.png">Dedicated account manager</li>
+                        </ul>
+                    </div><!-- main-table-row -->
+
+                    <div class="main-table-row table-one">
+                        <div class="table-title">
+                            <h1>Starter</h1>
+                            <span>For small businesses that care about customer loyalty</span>
+                        </div><!-- table-title -->
+
+                        <div class="table-price">
+                            <h2><i>&nbsp;</i>FREE<span>&nbsp;</span></h2>
+                             <h3>&nbsp;<br />
+                            &nbsp;</h3>
+                            <a href="/signup/starter" class="btn btn-success">Start free trial</a>
+                        </div><!-- table-price -->
+
+                        <ul>
+                            <li>300</li>
+                            <li>300</li>
+                            <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
+                            <li>-</li>
+                            <li>-</li>
+                            <li>-</li>
+                        </ul>
+
+                        <ul>
+                            <li></li>
+                            <li>-</li>
+                            <li>-</li>
+                        </ul>
+                        <a href="/signup/starter" class="btn btn-success">Start free trial</a>
+                    </div><!-- main-table-row -->
+
+                    <div class="main-table-row table-premium">
+                        <div class="table-title">
+                            <h1>Premium</h1>
+                            <span>For medium businesses that value true loyalty</span>
+                        </div><!-- table-title -->
+                    <div class="premium-hold">
+
+                        <div class="table-price">
+                            <h2><i>&pound;</i>14.99<span>mo.</span></h2>
+                            <h3>billed annually<br />
+                            or &pound;19.99 month-to-month</h3>
+                            <a href="/signup/premium" class="btn btn-success">Start free trial</a>
+                        </div><!-- table-price -->
+
+                        <ul>
+                            <li>Unlimited</li>
+                            <li>1000</li>
+                            <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
+                            <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
+                            <li>-</li>
+                            <li>-</li>
+                        </ul>
+
+                        <ul>
+                            <li></li>
+                            <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
+                            <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
+                        </ul>
+                        <a href="/signup/premium" class="btn btn-success">Start free trial</a>
+                    </div><!-- premium0hold -->
+                    </div><!-- main-table-row -->
+
+                    <div class="main-table-row table-three">
+                        <div class="table-title">
+                            <h1>Deluxe</h1>
+                            <span>For large and successful loyalty programs that need to scale</span>
+                        </div><!-- table-title -->
+
+                        <div class="table-price">
+                            <h2><i>&pound;</i>64.99<span>mo.</span></h2>
+                            <h3>billed annually<br />
+                            or &pound;79.99 month-to-month</h3>
+                            <a href="/signup/pro" class="btn btn-success">Start free trial</a>
+                        </div><!-- table-price -->
+
+                        <ul>
+                            <li>Unlimited</li>
+                            <li>Unlimited</li>
+                            <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
+                            <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
+                            <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
+                            <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
+                        </ul>
+
+                        <ul>
+                            <li></li>
+                            <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
+                            <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
+                        </ul>
+                        <a href="/signup/pro" class="btn btn-success">Start free trial</a>
+                    </div><!-- main-table-row -->
+                <div class="clr"></div>           
+            </div><!-- main-table -->
+
+
+
+
+
+
+
+
+
+
             </div>
-        </div>
+            <div class="clearfix"></div>
+        
+        </section>
+    </div>
+</div>
 
 {% endblock %}

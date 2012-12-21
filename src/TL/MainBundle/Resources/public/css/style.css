@@ -1712,7 +1712,7 @@ ul.customlist.listcheck li, li.check{background:url(../images/list-check.png) no
     background: -ms-linear-gradient(top, #cccccc 0%,#bbbbbb 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#bbbbbb',GradientType=0 );
     background: linear-gradient(top, #cccccc 0%,#bbbbbb 100%);
-    color: #FFF;
+    color: #FFF !important;
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;

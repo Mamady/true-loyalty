@@ -44,7 +44,7 @@
 }
 
 #main-table .main-special-row {
-    margin:298px 0 0 0;
+    margin:250px 0 0 0;
 }
 
 #main-table .main-special-row .tooltip {
@@ -85,7 +85,7 @@
 }
 
 #main-table .main-table-row .table-price {
-    height:170px;
+    height:122px;
     text-align:center;
     padding:25px 0 0 0;
     background-color: #ffffff;

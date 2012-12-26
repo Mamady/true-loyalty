@@ -37,9 +37,9 @@ class PageController extends Controller
     {
 
         $form = $this->createFormBuilder()
-            ->add('name', 'text')
-            ->add('email', 'email')
-            ->add('message', 'textarea')
+            ->add('name', 'text', array('label' => 'Your Name'))
+            ->add('email', 'email', array('label' => 'Your Email'))
+            ->add('message', 'textarea', array('label' => 'Message'))
             ->getForm();
 
         if ($request->isMethod('POST')) {

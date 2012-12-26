@@ -17,7 +17,7 @@
                     <div class="sixcol ">
                         <div class="if-heading">
                             <h3><span>Let&#8217;s keep in touch</span></h3>
-                            <form action="{{ path('TLMainBundle_page_contact') }}" method="post" {{ form_enctype(form) }} class="contactform">
+                            <form action="{{ path('TLMainBundle_page_contact') }}" method="post" {{ form_enctype(form) }} class="styledform">
                                 {{ form_errors(form) }}
 
                                 <p>{{ form_row(form.name) }}</p>
@@ -25,7 +25,7 @@
                                 <p>{{ form_row(form.message) }}</p>
                                 
                                 {{ form_rest(form) }}
-                                <input type="submit" name="submit" class="btn btn-primary btn-large" id="submit_btn" value="Send"/>
+                                <input type="submit" name="submit" class="btn btn-primary" id="submit_btn" value="Send"/>
                             </form>
                             
                        </div>

@@ -631,6 +631,7 @@ div.breadcrumb a:hover{
 /* CONTENT
 -------------------------------------------------------------- */
 #outermain{padding:30px 0px;}
+#outermain.nopagetop{padding-top: 130px;}
 #maincontent{}
 #content{}
 .main{padding:0 0px 0 0;}
@@ -1560,10 +1561,13 @@ h2.active {background:transparent;}
 .if-heading h1 span{padding:0px 10px 0px 0px;}
 .if-heading h2{margin:-18px 0px 20px 0px;font-size:24px;}
 .if-heading h2 span{padding:0px 10px 0px 0px;}
+.center .if-heading h2 span{padding:0px 10px 0px;}
 .if-heading h3{margin:-14px 0px 20px 0px;font-size:20px;}
 .if-heading h3 span{padding:0px 10px 0px 0px;}
+.center .if-heading h3 span{padding:0px 10px 0px;}
 .if-heading h4{margin:-12px 0px 20px 0px;}
 .if-heading h4 span{padding:0px 10px 0px 0px;}
+.if-heading fieldset h4 span{padding: 0 5px 0 5px; }
 .if-heading h5{margin:-11px 0px 20px 0px;}
 .if-heading h5 span{padding:0px 10px 0px 0px;}
 .if-heading h6{margin:-10px 0px 20px 0px;}
@@ -1614,15 +1618,16 @@ h2.active {background:transparent;}
 ul.listcarousel{padding:0px; margin:0px;}
 ul.listcarousel li{list-style-type:none;padding:0px;}
 
-/* CONTACT */
+/* FORMS */
 form{margin:0; padding:0;}
-fieldset{border:0px;}
-.contactform{margin:0 auto; position:relative; }
-.contactform label{display:block; width:100%; padding-bottom:5px; font-weight:700}
-.contactform input[type=text], .contactform input[type=email]{width:80%; padding-bottom:5px; font-weight:700}
+fieldset{border:1px solid #E4E4E4; padding: 0 5px; }
+.styledform fieldset input[type=text], .styledform fieldset input[type=password] {padding: 5px 0; }
+.styledform{margin:0 auto; position:relative; }
+.styledform label{display:block; width:100%; padding-bottom:5px; font-weight:700}
+.styledform input[type=password], .styledform input[type=text], .styledform input[type=email]{width:100%; padding-bottom:5px; font-weight:700}
 span.required{ color:#f00;}
 span.error{color:red;text-align:left; font-size:11px; padding-bottom:15px; display:block;}
-.contactform textarea{ width:80%;} 
+.styledform textarea{ width:100%;} 
 
 .contact_email{list-style-type:none;background:url(../images/icons/address/email.png) no-repeat 0px 6px !important;border:0px !important; padding:0px 0px 6px 20px}
 .contact_address{list-style-type:none;background:url(../images/icons/address/home.png) no-repeat 0px 4px !important;border:0px !important; padding:0px 0px 6px 20px}
@@ -2114,3 +2119,6 @@ a.btn-error:hover  {
 .alert-block p + p {
   margin-top: 5px;
 }
+
+
+

@@ -62,3 +62,14 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: TL\UserBundle\Entity\User
+    registration:
+        form:
+            type: tl_userbundle_registerclientform
+
+stof_doctrine_extensions:
+    default_locale: en_GB
+    orm:
+        default:
+            sluggable:      true
+            timestampable:  true
+

@@ -49,4 +49,12 @@ TLMainBundle_page_contact:
     defaults: { _controller: TLMainBundle:Page:contact, page: contact }
 
 
+# Dashboard
+
+TLMainBundle_dashboard:
+    pattern:  /dashboard
+    defaults: { _controller: TLMainBundle:Dashboard:index }
+
+
+
 

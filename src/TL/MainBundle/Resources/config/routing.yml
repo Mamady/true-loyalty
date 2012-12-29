@@ -28,7 +28,7 @@ TLMainBundle_page_pricing:
 
 
 TLMainBundle_page_story:
-    pattern:  /story
+    pattern:  /about
     defaults: { _controller: TLMainBundle:Page:show, page: story }
 
 TLMainBundle_page_team:

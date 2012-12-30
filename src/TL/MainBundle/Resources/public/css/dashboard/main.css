@@ -1223,7 +1223,10 @@ ol.linenums li { padding-left: 12px; color: #bebec5; line-height: 20px; text-sha
 .dates-range li input[type=text] { width: 100%; }
 
 
-
+.small-star {
+    width: 20px; height: 20px;
+    vertical-align: middle;
+}
 
 /* # Media queries
 ================================================== */

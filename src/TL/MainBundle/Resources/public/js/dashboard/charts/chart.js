@@ -1,20 +1,35 @@
 	$(function () {
-    var sin = [], cos = [];
-    for (var i = 0; i < 16; i += 0.5) {
-        sin.push([i, Math.sin(i)]);
-        cos.push([i, Math.cos(i)]);
-    }
+    var feedback = [ [0.6, 3], [2.6,4], [3.6, 3], [5.6,19], [6.6,33], [7.6,37], [8.6,88], [9.6, 77]];
 
-    var plot = $.plot($("#chart"),
-           [ { data: sin, label: "sin(x)"}, { data: cos, label: "cos(x)" } ], {
-               series: {
-                   lines: { show: true },
-                   points: { show: true }
-               },
-               grid: { hoverable: true, clickable: true },
-               yaxis: { min: -1.1, max: 1.1 },
-			   xaxis: { min: 0, max: 15 }
-             });
+    var plot = $.plot($("#chart"), [ 
+        {  
+            data: feedback,
+            bars: { 
+                show: true,
+                barWidth: 0.8 
+            }
+        } ],
+        {
+            grid: { hoverable: true, clickable: true },
+            yaxis: { min: 0, max: 100 },
+            xaxis: { 
+                min: 0,
+                max: 10.6,
+                ticks: [
+                    [1,1],    
+                    [2,2],    
+                    [3,3],    
+                    [4,4],    
+                    [5,5],    
+                    [6,6],    
+                    [7,7],    
+                    [8,8],    
+                    [9,9],    
+                    [10,10]
+                ]
+            }
+        }
+    );
 
     function showTooltip(x, y, contents) {
         $('<div id="tooltip" class="chart-tooltip">' + contents + '</div>').css( {

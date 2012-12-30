@@ -703,6 +703,10 @@ $(document).ready(function() {
 	$('#support').sparkline(
 		'html', {type: 'bar', barColor: '#4fb9f0', height: '35px', barWidth: "5px", barSpacing: "2px", zeroAxis: "false"}
 	);	
+	$('#redemptions').sparkline(
+		'html', {type: 'bar', barColor: '#db6464', height: '35px', barWidth: "5px", barSpacing: "2px", zeroAxis: "false"}
+	);	
+
 
 
 

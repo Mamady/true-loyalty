@@ -63,7 +63,7 @@ class RegisterClientForm extends BaseType
                 ))
                  ->add('address2','text', array(
                     'label' => 'Address Line 2',
-                    'required' => true
+                    'required' => false
                 ))
                  ->add('city','text', array(
                     'label' => 'City / Town',

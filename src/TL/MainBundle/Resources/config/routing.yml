@@ -56,5 +56,11 @@ TLMainBundle_dashboard:
     defaults: { _controller: TLMainBundle:Dashboard:index }
 
 
+# Loyalty Card
+TLMainBundle_card_edit:
+    pattern:  /dashboard/card/edit
+    defaults: { _controller: TLMainBundle:LoyaltyCard:edit }
+
+
 
 

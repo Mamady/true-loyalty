@@ -278,40 +278,28 @@ $(document).ready(function() {
 
 	
 	$( "#slider" ).slider();
-	$( "#slider-range" ).slider({
-            range: true,
-            min: 0,
-            max: 500,
-            values: [ 75, 300 ],
-            slide: function( event, ui ) {
-                $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-            }
-        });
-        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-            " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-			
-	$( "#slider-range-min" ).slider({
-            range: "min",
-            value: 37,
-            min: 1,
-            max: 700,
-            slide: function( event, ui ) {
-                $( "#amount2" ).val( "$" + ui.value );
-            }
-        });
-        $( "#amount2" ).val( "$" + $( "#slider-range-min" ).slider( "value" ) );
-	
-	$( "#slider-range-max" ).slider({
-            range: "max",
-            min: 1,
-            max: 10,
-            value: 2,
-            slide: function( event, ui ) {
-                $( "#amount3" ).val( ui.value );
-            }
-        });
-        $( "#amount3" ).val( $( "#slider-range-max" ).slider( "value" ) );
+	$( "#slider-range-stamps" ).slider({
+        range: "max",
+        min: 1,
+        max: 10,
+        value: 2,
+        slide: function( event, ui ) {
+            $( "#cardStamps" ).val( ui.value );
+        }
+    });
+    $( "#cardStamps" ).val( $( "#slider-range-stamps" ).slider( "value" ) );
 		
+	$( "#slider-range-minimum-spend" ).slider({
+        range: "max",
+        min: 0,
+        max: 50,
+        value: 2,
+        slide: function( event, ui ) {
+            $( "#cardMinimumSpend" ).val( '£' + ui.value );
+        }
+    });
+    $( "#cardMinimumSpend" ).val( '£' + $( "#slider-range-minimum-spend" ).slider( "value" ) );
+	
 	$( "#eq > span" ).each(function() {
 		var value = parseInt( $( this ).text(), 10 );
 		$( this ).empty().slider({

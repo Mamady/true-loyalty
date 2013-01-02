@@ -1,5 +1,397 @@
 {% extends "TLMainBundle:Dashboard:layout.html.twig" %}
 
+{% block navDashboard "active" %}
+
 {% block content %}
+
+    <div class="page-header"><!-- Page header -->
+        <h5><i class="font-home"></i>Dashboard</h5>
+        <ul class="icons">
+            <li><a href="#" title="My tasks"><i class="font-tasks"></i><span>Tasks</span></a></li>
+            <li>/</li>
+            <li><a href="#" title="My tasks"><i class="font-refresh"></i><span>Reload data</span></a></li>
+            <li>/</li>
+            <li><a href="#" title="My tasks" class="dropdown-toggle" data-toggle="dropdown"><i class="font-cog"></i><span>Settings <b class="caret"></b></span></a>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="#"><i class="font-heart"></i>Favorite it</a></li>
+                    <li><a href="#"><i class="font-refresh"></i>Reload page</a></li>
+                    <li><a href="#"><i class="font-link"></i>Attach something</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div><!-- /page header -->
+    
+    <div class="body row-fluid">
+        <div class="span6"> 
+            <h3 class="pull-left">Loyalty Card Overview</h3>
+            <h3 class="pull-right"><a href="" class="btn btn-primary btn-large">Manage Loyalty Card</a></h3>
+            <div class="clearfix"></div> 
+
+            <div class="row-fluid">
+                <div class="span6"> 
+                        <ul class="topstats">
+                            <li>
+                                <div class="left">Total Members<h1>656 / 1,000</h1></div>
+                                <div class="topchart" id="balance">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+                            </li>
+                            <li>
+                                <div class="left">New Members<h1>345</h1></div>
+                                <div class="topchart" id="clicks">59,56,28,39,46,29,48,10,45,70,23,32,35,14</div>
+                            </li>
+                            <li>
+                                <div class="left">Total Visits<h1>1,490</h1></div>
+                                <div class="topchart" id="support">20,15,41,18,32,21,28,26,34,37,10,20,24,28</div>
+                            </li>
+                            <li>
+                                <div class="left">Total Redemptions<h1>9</h1></div>
+                                <div class="topchart" id="redemptions">20,15,41,18,32,21,28,26,34,37,10,20,24,28</div>
+                            </li>
+
+                        </ul>
+                </div>
+                <div class="span6"> 
+
+                    <table class="table table-bordered">
+                        <tbody>
+                        <tr>
+                            <td>Stamps to Earn Reward</td>
+                            <td class="align-center"><h1>5</h1></td>
+                        </tr>
+                        <tr>
+                            <td>Minimum Spend (Per Stamp)</td>
+                            <td class="align-center"><h3>&pound;4.00</h3></td>
+                        </tr>
+                        <tr>
+                            <td>Reward Details</td>
+                            <td class="align-center"><h3>Free Cup of Coffee</h3></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="span6"> 
+            <h3 class="pull-left">Campaign Overview</h3>
+            <h3 class="pull-right"><a href="" class="btn btn-primary btn-large">Create Campaign</a></h3>
+            <div class="clearfix"></div> 
+
+            <div class="row-fluid">
+                <div class="span6"> 
+                    <div class="well">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <h5>Current Campaigns</h5>
+                                <div class="nav pull-right">
+                                    <a href="#" class="dropdown-toggle just-icon" data-toggle="dropdown"><i class="font-cog"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#"><i class="font-heart"></i>Favorite it</a></li>
+                                        <li><a href="#"><i class="font-refresh"></i>Reload page</a></li>
+                                        <li><a href="#"><i class="font-link"></i>Attach something</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body">
+                            <h4>Free Doughnut with every coffee bought</h4>
+                            <p>12 November 2012, 3:18pm</p>
+                            <p>Send to 58 custoemrs <a href="">(Print codes)</a></p>
+                            <p>For every qualifying coffee that is purchased, you will receive a free doughnut</p>
+
+                            <p><a href="">View Campaign Details</a></p>
+                            <p>Promotion expires in <strong>14 days</strong></p>
+                            <p class="pull-right"><a href="" class="btn">View All Campaigns</a></p>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="span6 last"> 
+                    <div class="well">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <h5>Other Campaigns</h5>
+                                <div class="nav pull-right">
+                                    <a href="#" class="dropdown-toggle just-icon" data-toggle="dropdown"><i class="font-cog"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#"><i class="font-heart"></i>Favorite it</a></li>
+                                        <li><a href="#"><i class="font-refresh"></i>Reload page</a></li>
+                                        <li><a href="#"><i class="font-link"></i>Attach something</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div>
+                                <div class="pull-right align-center"><img src="{{ asset('bundles/tlmain/images/dashboard/icons/color/busy.png') }}"><br>Expired</div>
+                                <p class="pull-left">
+                                    50% off sausage rolls.<br>
+                                    06.11.12 - Sent to 14 customers<br>
+                                    Expired on 18th December 2012<br>
+                                    <a href="">View Campaign Details</a>
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
+                            <hr>
+
+                            <div>
+                                <div class="pull-right align-center"><img src="{{ asset('bundles/tlmain/images/dashboard/icons/color/busy.png') }}"><br>Expired</div>
+                                <p class="pull-left">
+                                    Free pasta dish for every other...<br>
+                                    06.11.12 - Sent to 14 customers<br>
+                                    Expired on 10th December 2012<br>
+                                    <a href="">View Campaign Details</a>
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
+
+                            <p class="pull-right"><a href="" class="btn">View All Campaigns</a></p>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="separator-doubled"></div> 
+
+    <div class="row-fluid">
+        <!-- Column --> 
+        <div class="span6">
+            <h3 class="pull-left">Customer Overview</h3>
+            <h3 class="pull-right"><a href="" class="btn btn-primary btn-large">Analyse Customers</a></h3>
+            <div class="clearfix"></div> 
+
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="well">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <h5>New Customers</h5>
+                                <div class="nav pull-right">
+                                    <a href="#" class="dropdown-toggle just-icon" data-toggle="dropdown"><i class="font-cog"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#"><i class="font-heart"></i>Favorite it</a></li>
+                                        <li><a href="#"><i class="font-refresh"></i>Reload page</a></li>
+                                        <li><a href="#"><i class="font-link"></i>Attach something</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body">
+                                <div class="message">
+                                <a href="#" class="message-img"><img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}"></a>
+                                <div class="message-body">
+                                    <p> 
+                                        <strong>Jake</strong><br>
+                                        Total Visits: 12 | Last Last: 06-11-12
+                                    </p>
+                                </div>
+                            </div>
+                                <div class="message">
+                                <a href="#" class="message-img"><img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}"></a>
+                                <div class="message-body">
+                                    <p> 
+                                        <strong>Jake</strong><br>
+                                        Total Visits: 12 | Last Last: 06-11-12
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="message">
+                                <a href="#" class="message-img"><img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}"></a>
+                                <div class="message-body">
+                                    <p> 
+                                        <strong>Jake</strong><br>
+                                        Total Visits: 12 | Last Last: 06-11-12
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="message">
+                                <a href="#" class="message-img"><img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}"></a>
+                                <div class="message-body">
+                                    <p> 
+                                        <strong>Jake</strong><br>
+                                        Total Visits: 12 | Last Last: 06-11-12
+                                    </p>
+                                </div>
+                            </div>
+                            <p>&nbsp;</p>
+                            <p class="pull-right"><a href="" class="btn">View All New Customers</a></p>
+                            <div class="clearfix"></div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="span6 last"> 
+                    <div class="well">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <h5>Active Customers</h5>
+                                <div class="nav pull-right">
+                                    <a href="#" class="dropdown-toggle just-icon" data-toggle="dropdown"><i class="font-cog"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#"><i class="font-heart"></i>Favorite it</a></li>
+                                        <li><a href="#"><i class="font-refresh"></i>Reload page</a></li>
+                                        <li><a href="#"><i class="font-link"></i>Attach something</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body">
+                                <div class="message">
+                                <a href="#" class="message-img"><img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}"></a>
+                                <div class="message-body">
+                                    <p> 
+                                        <strong>Jake</strong><br>
+                                        Total Visits: 12 | Last Last: 06-11-12
+                                    </p>
+                                </div>
+                            </div>
+                                <div class="message">
+                                <a href="#" class="message-img"><img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}"></a>
+                                <div class="message-body">
+                                    <p> 
+                                        <strong>Jake</strong><br>
+                                        Total Visits: 12 | Last Last: 06-11-12
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="message">
+                                <a href="#" class="message-img"><img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}"></a>
+                                <div class="message-body">
+                                    <p> 
+                                        <strong>Jake</strong><br>
+                                        Total Visits: 12 | Last Last: 06-11-12
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="message">
+                                <a href="#" class="message-img"><img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}"></a>
+                                <div class="message-body">
+                                    <p> 
+                                        <strong>Jake</strong><br>
+                                        Total Visits: 12 | Last Last: 06-11-12
+                                    </p>
+                                </div>
+                            </div>
+                            <p>&nbsp;</p>
+                            <p class="pull-right"><a href="" class="btn">View All Active Customers</a></p>
+                            <div class="clearfix"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="span6">
+            <h3 class="pull-left">Feedback Overview</h3>
+            <h3 class="pull-right"><a href="" class="btn btn-primary btn-large">View All Feedback</a></h3>
+            <div class="clearfix"></div> 
+
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="well">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <h5>November 2012</h5>
+                                <div class="nav pull-right">
+                                    <a href="#" class="dropdown-toggle just-icon" data-toggle="dropdown"><i class="font-cog"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#"><i class="font-heart"></i>Favorite it</a></li>
+                                        <li><a href="#"><i class="font-refresh"></i>Reload page</a></li>
+                                        <li><a href="#"><i class="font-link"></i>Attach something</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="chart with-legend" id="chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="span6 last"> 
+                    <div class="well">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <h5>Latest Feedback</h5>
+                                <div class="nav pull-right">
+                                    <a href="#" class="dropdown-toggle just-icon" data-toggle="dropdown"><i class="font-cog"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#"><i class="font-heart"></i>Favorite it</a></li>
+                                        <li><a href="#"><i class="font-refresh"></i>Reload page</a></li>
+                                        <li><a href="#"><i class="font-link"></i>Attach something</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body">
+                                <div class="message">
+                                <a href="#" class="message-img"><img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}"></a>
+                                <div class="message-body">
+                                    <p> 
+                                        <strong>Jake</strong><br>
+                                        <img alt="" src="{{ asset('bundles/tlmain/images/dashboard/icons/color/star.png') }}" class="small-star"> 
+                                        <img alt="" src="{{ asset('bundles/tlmain/images/dashboard/icons/color/star.png') }}" class="small-star"> 
+                                        <img alt="" src="{{ asset('bundles/tlmain/images/dashboard/icons/color/star.png') }}" class="small-star"> 
+                                        <span class="pull-right">06-11-12</span>
+
+                                    </p>
+                                </div>
+                            </div>
+
+                                <div class="message">
+                                <a href="#" class="message-img"><img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}"></a>
+                                <div class="message-body">
+                                    <p> 
+                                        <strong>Jake</strong><br>
+                                        <img alt="" src="{{ asset('bundles/tlmain/images/dashboard/icons/color/star.png') }}" class="small-star"> 
+                                        <img alt="" src="{{ asset('bundles/tlmain/images/dashboard/icons/color/star.png') }}" class="small-star"> 
+                                        <span class="pull-right">06-11-12</span>
+
+                                    </p>
+                                </div>
+                            </div>
+
+                                <div class="message">
+                                <a href="#" class="message-img"><img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}"></a>
+                                <div class="message-body">
+                                    <p> 
+                                        <strong>Jake</strong><br>
+                                        <img alt="" src="{{ asset('bundles/tlmain/images/dashboard/icons/color/star.png') }}" class="small-star"> 
+                                        <img alt="" src="{{ asset('bundles/tlmain/images/dashboard/icons/color/star.png') }}" class="small-star"> 
+                                        <img alt="" src="{{ asset('bundles/tlmain/images/dashboard/icons/color/star.png') }}" class="small-star"> 
+                                        <img alt="" src="{{ asset('bundles/tlmain/images/dashboard/icons/color/star.png') }}" class="small-star"> 
+                                        <span class="pull-right">06-11-12</span>
+
+                                    </p>
+                                </div>
+                            </div>
+                                <div class="message">
+                                <a href="#" class="message-img"><img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}"></a>
+                                <div class="message-body">
+                                    <p> 
+                                        <strong>Jake</strong><br>
+                                        "staff a friendly, loved it!"
+                                        <span class="pull-right">06-11-12</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <p>&nbsp;</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+    </div>
 
 {% endblock %}

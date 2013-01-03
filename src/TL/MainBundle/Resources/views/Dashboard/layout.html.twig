@@ -104,7 +104,7 @@
         <ul class="navigation"><!-- standard nav -->
             <li class="{% block navDashboard "" %}"><a href="{{ path('TLMainBundle_dashboard') }}" title=""><span class="menu-dashboard"></span>Dashboard</a></li>
             <li class="{% block navCard "" %}"><a href="{{ path('TLMainBundle_card_edit') }}" title=""><span class="menu-forms"></span>Manage Loyalty Card</a></li>
-            <li class="{% block navCampaign "" %}"><a href="#" title=""><span class="menu-components"></span>Create Campaign</a></li>
+            <li class="{% block navCampaign "" %}"><a href="{{ path('TLMainBundle_campaign_new') }}" title=""><span class="menu-components"></span>Create Campaign</a></li>
             <li class="{% block navCustomers "" %}"><a href="buttons.html" title=""><span class="menu-icons"></span>Analyse Customers</a></li>
             <li class="{% block navFeedback "" %}"><a href="charts.html" title=""><span class="menu-messages"></span>View Feedback</a></li>
             <li class="{% block navMaterials "" %}"><a href="messages.html" title=""><span class="menu-tables"></span>Promotional Materials</a></li>

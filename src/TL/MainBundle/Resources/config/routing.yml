@@ -63,4 +63,15 @@ TLMainBundle_card_edit:
 
 
 
+# Campaign
+TLMainBundle_campaign_new:
+    pattern:  /dashboard/campaign/edit
+    defaults: { _controller: TLMainBundle:Campaign:new }
+
+TLMainBundle_campaign_preview:
+    pattern:  /dashboard/campaign/preview/{id}
+    defaults: { _controller: TLMainBundle:Campaign:preview }
+
+
+
 

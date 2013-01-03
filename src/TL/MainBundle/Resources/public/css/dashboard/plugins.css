@@ -180,9 +180,9 @@ li.plupload_droptext { background: url(../images/elements/uploader/drag.png) no-
 
 .cleditorMain iframe {border:none; margin:0; padding:0-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -ms-box-sizing: border-box;max-width: 100%;}
 .cleditorMain textarea {border:none; margin:0; padding:0; overflow-y:scroll; font-size: 12px; padding: 10px; resize:none; outline:none /* webkit grip focus */}
-.cleditorToolbar {background: url('../images/elements/wysiwyg/toolbar.gif') repeat}
+.cleditorToolbar {background: url('/bundles/tlmain/images/dashboard/elements/wysiwyg/toolbar.gif') repeat}
 .cleditorGroup {float:left; height:26px}
-.cleditorButton {float:left; width:24px; height:24px; margin:1px 0 1px 0; background: url('../images/elements/wysiwyg/buttons.gif')}
+.cleditorButton {float:left; width:24px; height:24px; margin:1px 0 1px 0; background: url('/bundles/tlmain/images/dashboard/elements/wysiwyg/buttons.gif')}
 .cleditorDisabled {opacity:0.3; filter:alpha(opacity=30)}
 .cleditorDivider {float:left; width:1px; height:23px; margin:1px 0 1px 0; background:#CCC}
 .cleditorPopup {border:solid 1px #999; background-color:white; position:absolute; z-index:10000}

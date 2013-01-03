@@ -171,12 +171,11 @@ $(document).ready(function() {
 	
 	$("#editor").cleditor({
 		width:"100%", 
-		height:"250px",
+		height:"450px",
 		bodyStyle: "margin: 10px; font: 12px Arial,Verdana; cursor:text",
 		docType: '<!DOCTYPE html>',
 		useCSS:true
 	});
-	
 
 
 	 //===== Tabbed page layout tabs =====//
@@ -205,13 +204,13 @@ $(document).ready(function() {
 	
 	//===== Pie charts =====//
 
-	$('.piechart > li > div').easyPieChart({
-       animate: 2000,
+	$('.piechart').easyPieChart({
+       animate: 1000,
 	   trackColor:	"#ddd",
 	   scaleColor:	"#ddd",
-	   lineWidth: 3,
+	   lineWidth: 5,
 	   barColor: "#d07571",
-	   size: 94
+	   size: 200 
     });
 	
 
@@ -270,9 +269,9 @@ $(document).ready(function() {
 		}
 	});
 	
-	$( "#datepicker-icon" ).datepicker({
+	$( ".datepicker-icon" ).datepicker({
 		showOn: "button",
-		buttonImage: "images/icons/calendar.png",
+		buttonImage: "/bundles/tlmain/images/dashboard/icons/calendar.png",
 		buttonImageOnly: true
 	});
 
@@ -310,6 +309,35 @@ $(document).ready(function() {
 		});
 	});
 		
+    $( "#slider-campaign-age" ).slider({
+        range: true,
+        min: 5,
+        max: 100,
+        values: [ 10, 70 ]
+    });
+				
+    $( "#slider-campaign-visits" ).slider({
+        range: true,
+        min: 5,
+        max: 100,
+        values: [ 10, 70 ]
+    });
+		
+		
+    $( "#slider-campaign-redemptions" ).slider({
+        range: true,
+        min: 5,
+        max: 100,
+        values: [ 10, 70 ]
+    });
+		
+		
+    $( "#slider-campaign-feedback" ).slider({
+        range: true,
+        min: 5,
+        max: 100,
+        values: [ 10, 70 ]
+    });
 		
 		
 	//===== Modals and dialogs =====//

@@ -135,7 +135,7 @@ th.ui-state-default:first-child { border-left: none; }
 .ui-datepicker td .ui-state-active{ background:#67859d; margin-bottom:0px; font-size:normal; text-shadow: 0px; color:white;   -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
 .ui-datepicker td .ui-state-default:hover{ background:#476981; color:white; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
 .ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .35; filter: Alpha(Opacity=35); background: none; }
-.date-trigger { display: inline-block; position: relative; }
+.date-trigger { display: inline-block; position: relative; margin-right: 5em; }
 .date-trigger .ui-datepicker-trigger { position: absolute; top: 6px; margin-left: 6px; cursor: pointer; }
 
 

@@ -1,4 +1,5 @@
-	$(function () {
+$(function () {
+    try {
     var feedback = [ [0.6, 3], [2.6,4], [3.6, 3], [5.6,19], [6.6,33], [7.6,37], [8.6,88], [9.6, 77]];
 
     var plot = $.plot($("#chart"), [ 
@@ -75,4 +76,6 @@
             plot.highlight(item.series, item.datapoint);
         }
     });
+    } catch(e) {
+    }
 });

@@ -73,5 +73,9 @@ TLMainBundle_campaign_preview:
     defaults: { _controller: TLMainBundle:Campaign:preview }
 
 
+# Campaign
+TLMainBundle_customer_list:
+    pattern:  /dashboard/customer
+    defaults: { _controller: TLMainBundle:Customer:index }
 
 

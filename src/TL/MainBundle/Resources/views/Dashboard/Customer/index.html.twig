@@ -1,0 +1,225 @@
+{% extends "TLMainBundle:Dashboard:layout.html.twig" %}
+
+{% block navCustomer "active" %}
+
+{% block content %}
+
+    <div class="page-header">
+        <h3 style="margin-top: 0;">Analyse Customers</h3>
+    </div>
+
+    <div class="body row-fluid">
+        <div class="span8"> 
+
+            {# Default datatable #}
+            <div class="well">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <h5>Customer Overview</h5>
+                    </div>
+                </div>
+                <div class="table-overflow">
+                    <table class="table table-striped" id="data-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Gender</th>
+                                <th>Age</th>
+                                <th>Join Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mr</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>M</td>
+                                <td>34</td>
+                                <td>05-09-12</td>
+                                <td><a href="" class="btn btn-primary">View Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>Mr</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>M</td>
+                                <td>26</td>
+                                <td>21-10-12</td>
+                                <td><a href="" class="btn btn-primary">View Details</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            {# /default datatable #}
+
+        </div>
+        <div class="span4"> 
+
+                <div class="well">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <h5>Customer Profile</h5>
+                            <div class="nav pull-right">
+                                <a href="#" class="dropdown-toggle just-icon" data-toggle="dropdown"><i class="font-cog"></i></a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="#"><i class="font-heart"></i>Favorite it</a></li>
+                                    <li><a href="#"><i class="font-refresh"></i>Reload page</a></li>
+                                    <li><a href="#"><i class="font-link"></i>Attach something</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="pull-right">
+                            <img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}" style="width: 100px;">
+                        </div>
+                        <div class="pull-left">
+                            <h4>Mrs Claire Green</h4>
+                            <p> 
+                                Female<br>
+                                Aged 32<br>
+                                Join Date: 17-11-12<br>
+                                Last Visit: 27-12-12<br>
+                                Total Visits: 177<br>
+                                Total Redemptions: 4<br>
+                                Average Rating: <img alt="" src="{{ asset('bundles/tlmain/images/dashboard/icons/color/star.png') }}" class="small-star"> 
+                                <img alt="" src="{{ asset('bundles/tlmain/images/dashboard/icons/color/star.png') }}" class="small-star"> 
+                                <img alt="" src="{{ asset('bundles/tlmain/images/dashboard/icons/color/star.png') }}" class="small-star"> 
+                                <img alt="" src="{{ asset('bundles/tlmain/images/dashboard/icons/color/star.png') }}" class="small-star"> 
+                                <img alt="" src="{{ asset('bundles/tlmain/images/dashboard/icons/color/star.png') }}" class="small-star"> 
+                            </p>
+                        </div>
+                       <div class="clearfix"></div>
+
+                    </div>
+                </div>
+
+        </div>
+
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="separator-doubled"></div> 
+
+    <div class="clearfix"></div>
+
+    <div class="block body row-fluid">
+        <div class="span4"> 
+
+
+            {# Gender Chart #}
+            <div class="well">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <h5>Gender</h5>
+                        <div class="nav pull-right">
+                            <a href="#" class="dropdown-toggle just-icon" data-toggle="dropdown"><i class="font-cog"></i></a>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="#"><i class="font-heart"></i>Favorite it</a></li>
+                                <li><a href="#"><i class="font-refresh"></i>Reload page</a></li>
+                                <li><a href="#"><i class="font-link"></i>Attach something</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="chart-pie chart-gender"></div>
+                </div>
+            </div>
+            {# /Gender Chart #}
+
+        </div>
+
+        <div class="span4"> 
+
+            {# Age Chart #}
+            <div class="well">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <h5>Age</h5>
+                        <div class="nav pull-right">
+                            <a href="#" class="dropdown-toggle just-icon" data-toggle="dropdown"><i class="font-cog"></i></a>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="#"><i class="font-heart"></i>Favorite it</a></li>
+                                <li><a href="#"><i class="font-refresh"></i>Reload page</a></li>
+                                <li><a href="#"><i class="font-link"></i>Attach something</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="chart chart-age"></div>
+                </div>
+            </div>
+            {# /Age Chart #}
+
+        </div>
+
+        <div class="span4"> 
+
+                <div class="well">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <h5>Loyal Customers</h5>
+                            <div class="nav pull-right">
+                                <a href="#" class="dropdown-toggle just-icon" data-toggle="dropdown"><i class="font-cog"></i></a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="#"><i class="font-heart"></i>Favorite it</a></li>
+                                    <li><a href="#"><i class="font-refresh"></i>Reload page</a></li>
+                                    <li><a href="#"><i class="font-link"></i>Attach something</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body">
+                            <div class="message">
+                            <a href="#" class="message-img"><img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}"></a>
+                            <div class="message-body">
+                                <p> 
+                                    <strong>Jake</strong><br>
+                                    Total Visits: 12 | Last Last: 06-11-12
+                                </p>
+                            </div>
+                        </div>
+                            <div class="message">
+                            <a href="#" class="message-img"><img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}"></a>
+                            <div class="message-body">
+                                <p> 
+                                    <strong>Danny</strong><br>
+                                    Total Visits: 32 | Last Last: 06-11-12
+                                </p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <a href="#" class="message-img"><img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}"></a>
+                            <div class="message-body">
+                                <p> 
+                                    <strong>Anna</strong><br>
+                                    Total Visits: 93 | Last Last: 06-11-12
+                                </p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <a href="#" class="message-img"><img alt="" src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}"></a>
+                            <div class="message-body">
+                                <p> 
+                                    <strong>Sarah</strong><br>
+                                    Total Visits: 56 | Last Last: 06-11-12
+                                </p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                    </div>
+                </div>
+
+
+        </div>
+
+    </div>
+{% endblock %}

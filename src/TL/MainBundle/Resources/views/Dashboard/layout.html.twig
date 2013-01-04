@@ -21,6 +21,7 @@
 
     '@TLMainBundle/Resources/public/js/dashboard/plugins/charts/excanvas.min.js'
     '@TLMainBundle/Resources/public/js/dashboard/plugins/charts/jquery.flot.js'
+    '@TLMainBundle/Resources/public/js/dashboard/plugins/charts/jquery.flot.pie.js'
     '@TLMainBundle/Resources/public/js/dashboard/plugins/charts/jquery.flot.resize.js'
     '@TLMainBundle/Resources/public/js/dashboard/plugins/charts/jquery.sparkline.min.js'
 
@@ -60,6 +61,7 @@
 
     '@TLMainBundle/Resources/public/js/dashboard/functions/custom.js'
     '@TLMainBundle/Resources/public/js/dashboard/charts/chart.js'
+    '@TLMainBundle/Resources/public/js/dashboard/charts/pie.js'
 %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
 {% endjavascripts %}
@@ -105,7 +107,7 @@
             <li class="{% block navDashboard "" %}"><a href="{{ path('TLMainBundle_dashboard') }}" title=""><span class="menu-dashboard"></span>Dashboard</a></li>
             <li class="{% block navCard "" %}"><a href="{{ path('TLMainBundle_card_edit') }}" title=""><span class="menu-forms"></span>Manage Loyalty Card</a></li>
             <li class="{% block navCampaign "" %}"><a href="{{ path('TLMainBundle_campaign_new') }}" title=""><span class="menu-components"></span>Create Campaign</a></li>
-            <li class="{% block navCustomers "" %}"><a href="buttons.html" title=""><span class="menu-icons"></span>Analyse Customers</a></li>
+            <li class="{% block navCustomer "" %}"><a href="{{ path('TLMainBundle_customer_list') }}" title=""><span class="menu-icons"></span>Analyse Customers</a></li>
             <li class="{% block navFeedback "" %}"><a href="charts.html" title=""><span class="menu-messages"></span>View Feedback</a></li>
             <li class="{% block navMaterials "" %}"><a href="messages.html" title=""><span class="menu-tables"></span>Promotional Materials</a></li>
             <li class="{% block navQR "" %}"><a href="tables.html" title=""><span class="menu-files"></span>QR Code</a></li>

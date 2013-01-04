@@ -161,7 +161,7 @@
         <!-- Column --> 
         <div class="span6">
             <h3 class="pull-left">Customer Overview</h3>
-            <h3 class="pull-right"><a href="" class="btn btn-primary btn-large">Analyse Customers</a></h3>
+            <h3 class="pull-right"><a href="{{ path('TLMainBundle_customer_list') }}" class="btn btn-primary btn-large">Analyse Customers</a></h3>
             <div class="clearfix"></div> 
 
             <div class="row-fluid">
@@ -218,7 +218,7 @@
                                 </div>
                             </div>
                             <p>&nbsp;</p>
-                            <p class="pull-right"><a href="" class="btn">View All New Customers</a></p>
+                            <p class="pull-right"><a href="{{ path('TLMainBundle_customer_list') }}" class="btn">View All New Customers</a></p>
                             <div class="clearfix"></div>
 
                         </div>
@@ -277,7 +277,7 @@
                                 </div>
                             </div>
                             <p>&nbsp;</p>
-                            <p class="pull-right"><a href="" class="btn">View All Active Customers</a></p>
+                            <p class="pull-right"><a href="{{ path('TLMainBundle_customer_list') }}" class="btn">View All Active Customers</a></p>
                             <div class="clearfix"></div>
 
                         </div>
@@ -310,7 +310,7 @@
                             </div>
                         </div>
                         <div class="body">
-                            <div class="chart with-legend" id="chart"></div>
+                            <div class="chart chart-feedback with-legend"></div>
                         </div>
                     </div>
                 </div>

@@ -92,6 +92,52 @@ $(function () {
         );
     }
 
+    if($('.chart-feedback-daily').length != 0) {
+        var ratings = (function() {
+
+            var data = [];
+            for(var i=0; i<=60; i++) {
+                data[i] = [i, Math.floor(Math.random() * 3)+7];
+            }
+            return data;
+        })();
+
+        var feedbackChart = $.plot($(".chart-feedback-daily"), [
+            {
+                data: ratings,
+                lines: {
+                    show: true
+                }
+            }
+        ],
+        {
+            colors: ["#aed267"],
+            grid: { hoverable: true, clickable: true },
+            yaxis: { 
+                min: 0, 
+                max: 10,
+                axisLabel: "Rating"
+            },
+
+            xaxis: { 
+                min: 0,
+                max: 60,
+                axisLabel: "Day"
+            },
+            series: {
+                lines: { 
+                    lineWidth: 2, 
+                    fill: true,
+                    fillColor: { colors: [ { opacity: 0.4 }, { opacity: 0 } ] },
+                    //"#dcecf9"
+                    steps: false
+                }
+            }
+        });
+    }
+
+
+
 
     if($('.chart').length != 0) {
 

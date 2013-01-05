@@ -23,6 +23,7 @@
     '@TLMainBundle/Resources/public/js/dashboard/plugins/charts/jquery.flot.js'
     '@TLMainBundle/Resources/public/js/dashboard/plugins/charts/jquery.flot.pie.js'
     '@TLMainBundle/Resources/public/js/dashboard/plugins/charts/jquery.flot.resize.js'
+    '@TLMainBundle/Resources/public/js/dashboard/plugins/charts/jquery.flot.axislabels.js'
     '@TLMainBundle/Resources/public/js/dashboard/plugins/charts/jquery.sparkline.min.js'
 
     '@TLMainBundle/Resources/public/js/dashboard/plugins/forms/jquery.tagsinput.min.js'
@@ -107,8 +108,8 @@
             <li class="{% block navDashboard "" %}"><a href="{{ path('TLMainBundle_dashboard') }}" title=""><span class="menu-dashboard"></span>Dashboard</a></li>
             <li class="{% block navCard "" %}"><a href="{{ path('TLMainBundle_card_edit') }}" title=""><span class="menu-forms"></span>Manage Loyalty Card</a></li>
             <li class="{% block navCampaign "" %}"><a href="{{ path('TLMainBundle_campaign_new') }}" title=""><span class="menu-components"></span>Create Campaign</a></li>
-            <li class="{% block navCustomer "" %}"><a href="{{ path('TLMainBundle_customer_list') }}" title=""><span class="menu-icons"></span>Analyse Customers</a></li>
-            <li class="{% block navFeedback "" %}"><a href="charts.html" title=""><span class="menu-messages"></span>View Feedback</a></li>
+            <li class="{% block navCustomer "" %}"><a href="{{ path('TLMainBundle_customer_index') }}" title=""><span class="menu-icons"></span>Analyse Customers</a></li>
+            <li class="{% block navFeedback "" %}"><a href="{{ path('TLMainBundle_feedback_index') }}" title=""><span class="menu-messages"></span>View Feedback</a></li>
             <li class="{% block navMaterials "" %}"><a href="messages.html" title=""><span class="menu-tables"></span>Promotional Materials</a></li>
             <li class="{% block navQR "" %}"><a href="tables.html" title=""><span class="menu-files"></span>QR Code</a></li>
             <li class="{% block navAccount "" %}"><a href="#" title=""><span class="menu-layouts"></span>My Account</a></li>

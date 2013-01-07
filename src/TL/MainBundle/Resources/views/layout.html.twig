@@ -68,7 +68,7 @@
                     <div style="position:relative;float:right;">
                     {% if is_granted('IS_AUTHENTICATED_FULLY') or is_granted('IS_AUTHENTICATED_REMEMBERED') %}
 
-                        {{ app.user.username }} &nbsp; <a href="#" class="btn btn-small btn-primary"> Dashboard</a>
+                        {{ app.user.username }} &nbsp; <a href="{{ path('TLMainBundle_dashboard') }}" class="btn btn-small btn-primary"> Dashboard</a>
                         <a href="{{ path('fos_user_security_logout') }}" class="btn btn-small">Logout</a>
 
                     {% else %}
@@ -89,7 +89,7 @@
                     <div id="logo">                 
                     <div id="logoimg">
                         <a href="{{ path('TLMainBundle_homepage') }}" title="Rockefeller" >
-                            <h2 class="bigtext" style="font-weight: 600; margin-top: 10px;">TRUE &nbsp;<span style="font-weight: 400;">LOYALTY</span></h2>
+                            <h2 class="bigtext" style="text-align: left; font-weight: 700; margin-top: 10px; color: #1f5384;">TRUE &nbsp;<span style="color: #000000;">LOYALTY</span></h2>
                         </a>
                     </div>
                     </div>

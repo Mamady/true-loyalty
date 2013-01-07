@@ -61,6 +61,9 @@ TLMainBundle_card_edit:
     pattern:  /dashboard/card/edit
     defaults: { _controller: TLMainBundle:LoyaltyCard:edit }
 
+TLMainBundle_card_qr:
+    pattern:  /dashboard/card/qr
+    defaults: { _controller: TLMainBundle:LoyaltyCard:qr }
 
 
 # Campaign
@@ -71,6 +74,11 @@ TLMainBundle_campaign_new:
 TLMainBundle_campaign_preview:
     pattern:  /dashboard/campaign/preview/{id}
     defaults: { _controller: TLMainBundle:Campaign:preview }
+
+TLMainBundle_campaign_materials:
+    pattern:  /dashboard/campaign/{id}/materials
+    defaults: { _controller: TLMainBundle:Campaign:materials }
+
 
 
 # Customer
@@ -83,6 +91,18 @@ TLMainBundle_customer_index:
 TLMainBundle_feedback_index:
     pattern:  /dashboard/feedback
     defaults: { _controller: TLMainBundle:Feedback:index }
+
+
+# User 
+TLMainBundle_user_account:
+    pattern:  /dashboard/user/account
+    defaults: { _controller: TLMainBundle:User:account }
+
+
+# Support 
+TLMainBundle_support_index:
+    pattern:  /dashboard/support
+    defaults: { _controller: TLMainBundle:Support:index }
 
 
 

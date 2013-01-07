@@ -110,10 +110,10 @@
             <li class="{% block navCampaign "" %}"><a href="{{ path('TLMainBundle_campaign_new') }}" title=""><span class="menu-components"></span>Create Campaign</a></li>
             <li class="{% block navCustomer "" %}"><a href="{{ path('TLMainBundle_customer_index') }}" title=""><span class="menu-icons"></span>Analyse Customers</a></li>
             <li class="{% block navFeedback "" %}"><a href="{{ path('TLMainBundle_feedback_index') }}" title=""><span class="menu-messages"></span>View Feedback</a></li>
-            <li class="{% block navMaterials "" %}"><a href="messages.html" title=""><span class="menu-tables"></span>Promotional Materials</a></li>
-            <li class="{% block navQR "" %}"><a href="tables.html" title=""><span class="menu-files"></span>QR Code</a></li>
-            <li class="{% block navAccount "" %}"><a href="#" title=""><span class="menu-layouts"></span>My Account</a></li>
-            <li class="{% block navSupport "" %}"><a href="typography.html" title=""><span class="menu-calendar"></span>Support Centre</a></li>
+            <li class="{% block navMaterials "" %}"><a href="{{ path('TLMainBundle_campaign_materials', {id: 1}) }}" title=""><span class="menu-tables"></span>Promotional Materials</a></li>
+            <li class="{% block navQr "" %}"><a href="{{ path('TLMainBundle_card_qr') }}" title=""><span class="menu-files"></span>QR Code</a></li>
+            <li class="{% block navAccount "" %}"><a href="{{ path('TLMainBundle_user_account') }}" title=""><span class="menu-layouts"></span>My Account</a></li>
+            <li class="{% block navSupport "" %}"><a href="{{ path('TLMainBundle_support_index') }}" title=""><span class="menu-calendar"></span>Support Centre</a></li>
         </ul><!-- /standard nav -->
     </div>
     

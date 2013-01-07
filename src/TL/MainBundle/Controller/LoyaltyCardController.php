@@ -15,5 +15,12 @@ class LoyaltyCardController extends Controller
         return $this->render('TLMainBundle:Dashboard:LoyaltyCard/edit.html.twig');
     }
 
+    public function qrAction()
+    {
+        return $this->render('TLMainBundle:Dashboard:LoyaltyCard/qr.html.twig');
+    }
+
+
+
 
 }

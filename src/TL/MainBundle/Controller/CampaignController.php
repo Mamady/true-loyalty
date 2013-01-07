@@ -22,6 +22,13 @@ class CampaignController extends Controller
     }
 
 
+    public function materialsAction($id)
+    {
+        return $this->render('TLMainBundle:Dashboard:Campaign/materials.html.twig');
+    }
+
+
+
 
 
 }

@@ -1,0 +1,105 @@
+{% extends "TLMainBundle:Dashboard:layout.html.twig" %}
+
+{% block navAccount "active" %}
+
+{% block content %}
+
+   <div class="body row-fluid form-horizontal">
+        <h3>Account Details</h3>
+       
+        <h4>Mr Daniel Anderson</h4>
+
+        <h5>Address</h5>
+        <div class="control-group">
+            <span class="control-label">
+                {{ form_label(form.company) }}
+            </span>
+            <div class="controls">
+                {{ form_errors(form.company) }}
+                {{ form_widget(form.company, { 'attr': {'class': 'span12'} }) }}
+            </div>
+        </div>
+
+        <div class="control-group">
+            <span class="control-label">
+                {{ form_label(form.address1) }}
+            </span>
+            <div class="controls">
+                {{ form_errors(form.address1) }}
+                {{ form_widget(form.address1, { 'attr': {'class': 'span12'} }) }}
+            </div>
+        </div>
+
+        <div class="control-group">
+            <span class="control-label">
+                {{ form_label(form.address2) }}
+            </span>
+            <div class="controls">
+                {{ form_errors(form.address2) }}
+                {{ form_widget(form.address2, { 'attr': {'class': 'span12'} }) }}
+            </div>
+        </div>
+
+        <div class="control-group">
+            <span class="control-label">
+                {{ form_label(form.city) }}
+            </span>
+            <div class="controls">
+                {{ form_errors(form.city) }}
+                {{ form_widget(form.city, { 'attr': {'class': 'span12'} }) }}
+            </div>
+        </div>
+
+        <div class="control-group">
+            <span class="control-label">
+                {{ form_label(form.postcode) }}
+            </span>
+            <div class="controls">
+                {{ form_errors(form.postcode) }}
+                {{ form_widget(form.postcode, { 'attr': {'class': 'span12'} }) }}
+            </div>
+        </div>
+
+        <div class="control-group">
+            <span class="control-label">
+                {{ form_label(form.country) }}
+            </span>
+            <div class="controls">
+                {{ form_errors(form.country) }}
+                {{ form_widget(form.country, { 'attr': {'class': 'span12'} }) }}
+            </div>
+        </div>
+
+        
+        <h5>Other Details</h5>
+        <div class="control-group">
+            <span class="control-label">
+                {{ form_label(form.phone) }}
+            </span>
+            <div class="controls">
+                {{ form_errors(form.phone) }}
+                {{ form_widget(form.phone, { 'attr': {'class': 'span12'} }) }}
+            </div>
+        </div>
+
+
+       <div class="control-group">
+            <span class="control-label">
+                {{ form_label(form.website) }}
+            </span>
+            <div class="controls">
+                {{ form_errors(form.website) }}
+                {{ form_widget(form.website, { 'attr': {'class': 'span12'} }) }}
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <p>&nbsp;</p>
+                                
+        <div class="align-right">
+            <input type="submit" value="Save Changes" class="btn btn-primary">
+        </div>
+
+    </div>
+
+{% endblock %}

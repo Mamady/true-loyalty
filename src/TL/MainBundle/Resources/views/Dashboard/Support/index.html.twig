@@ -1,0 +1,42 @@
+{% extends "TLMainBundle:Dashboard:layout.html.twig" %}
+
+{% block navSupport "active" %}
+
+{% block content %}
+
+   <div class="body row-fluid form-horizontal">
+        <h3>Helpdesk</h3>
+       
+        <p>
+            Use the form below to get in touch with customer services. Please provide as much detail as possible regarding your issue, so we can help you resolve it as quickly as possible. Alternatvely, you can also email us on <a href="mailto:support@trueloyalty.co.uk">support@trueloyalty.co.uk</a>
+        </p>
+
+        <div class="control-group">
+            <span class="control-label">
+                Name
+            </span>
+            <div class="controls">
+                {{ app.user.firstName~' '~app.user.lastName }}
+            </div>
+        </div>
+
+        <div class="control-group">
+            <span class="control-label">
+                {{ form_label(form.message) }}
+            </span>
+            <div class="controls">
+                {{ form_errors(form.message) }}
+                {{ form_widget(form.message, { 'attr': {'class': 'span12'} }) }}
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <p>&nbsp;</p>
+                                
+        <div class="align-right">
+            <input type="submit" value="Send" class="btn btn-primary">
+        </div>
+
+    </div>
+
+{% endblock %}

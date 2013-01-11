@@ -1,3 +1,9 @@
+<style>
+#fos_user_registration_form_tandc {
+    float: left;
+    margin-right: 10px;
+}
+</style>
 <div id="outermain" class="nopagetop">
     <div class="container">
         <section id="maincontent" class="row">
@@ -9,26 +15,31 @@
                         <h2><span>Create a Business Account</span></h2>
                                     
                         {{ form_errors(form) }}
+                        {{ form_errors(form.tandc) }}
                         
                         <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="post" class="styledform">
                         
                             <fieldset>
                                         
-                            <h4><span>Personal Details</span></h4>
+                            <h4><span>Your Personal Details</span></h4>
+                            <p>
+                                Please enter the business owner's details.
+                            </p>
  
                             <div class="twelvecol last">
                                 <div class="twocol">
-                                    {{ form_label(form.title) }}
+                                    {{ form_label(form.title) }} <span class="required">*</span>
                                     {{ form_errors(form.title) }}
                                     {{ form_widget(form.title) }}
                                 </div>
                                 <div class="fivecol">
-                                    {{ form_label(form.firstName) }}
+                                    {{ form_label(form.firstName) }} <span class="required">*</span>
                                     {{ form_errors(form.firstName) }}
                                     {{ form_widget(form.firstName) }}
                                 </div>
                                 <div class="fivecol last">
-                                    {{ form_label(form.lastName) }}
+                                    {{ form_label(form.lastName) }} <span class="required">*</span>
+
                                     {{ form_errors(form.lastName) }}
                                     {{ form_widget(form.lastName) }}
                                 </div>
@@ -37,7 +48,8 @@
                                 <div class="separator"></div>
 
                                 <div class="twelvecol">
-                                    {{ form_label(form.email) }}
+                                    {{ form_label(form.email) }} <span class="required">*</span>
+
                                     {{ form_errors(form.email) }}
                                     {{ form_widget(form.email) }}
                                 </div>
@@ -46,10 +58,12 @@
 
                                 <div class="sixcol">
                                     {{ form_errors( form.plainPassword ) }}
-                                    {{ form_row( form.plainPassword.password ) }}     
+                                    {{ form_label(form.plainPassword.password) }} <span class="required">*</span>
+                                    {{ form_widget( form.plainPassword.password ) }}     
                                 </div>
                                 <div class="sixcol last">
-                                    {{ form_row( form.plainPassword.confirm ) }}    
+                                    {{ form_label(form.plainPassword.confirm) }} <span class="required">*</span>
+                                    {{ form_widget( form.plainPassword.confirm ) }}    
                                 </div>
 
                                 <div class="separator"></div>
@@ -61,10 +75,14 @@
 
                             <fieldset>
 
-                                <h4><span>Mailing Address</span></h4>
+                                <h4><span>Your Business Details</span></h4>
+                                <p>
+                                    Please enter the business's details.
+                                </p>
+    
                                 
                                 <div class="twelvecol">
-                                    {{ form_label(form.company) }}
+                                    {{ form_label(form.company) }} <span class="required">*</span>
                                     {{ form_errors(form.company) }}
                                     {{ form_widget(form.company) }}
                                 </div>
@@ -73,7 +91,7 @@
 
                             
                                 <div class="sixcol">
-                                    {{ form_label(form.address1) }}
+                                    {{ form_label(form.address1) }} <span class="required">*</span>
                                     {{ form_errors(form.address1) }}
                                     {{ form_widget(form.address1) }}
                                 </div>
@@ -87,12 +105,12 @@
                                 <div class="separator"></div>
                             
                                 <div class="sixcol">
-                                    {{ form_label(form.city) }}
+                                    {{ form_label(form.city) }} <span class="required">*</span>
                                     {{ form_errors(form.city) }}
                                     {{ form_widget(form.city) }}
                                 </div>
                                 <div class="sixcol last">
-                                    {{ form_label(form.postcode) }}
+                                    {{ form_label(form.postcode) }} <span class="required">*</span>
                                     {{ form_errors(form.postcode) }}
                                     {{ form_widget(form.postcode) }}
                                     </div>
@@ -100,25 +118,17 @@
                                 <div class="clearfix"></div>
                                 <div class="separator"></div>
                         
-                                <div class="sixcol last">
-                                    {{ form_label(form.country) }}
+                                <div class="twelvecol">
+                                    {{ form_label(form.country) }} <span class="required">*</span>
                                     {{ form_errors(form.country) }}
                                     {{ form_widget(form.country) }}
                                 </div>
 
+                                <div class="clearfix"></div>
                                 <div class="separator"></div>
-                            </fieldset>
-
-                            <div class="clearfix"></div>
-                            <div class="separator"></div>
-                            <div class="separator"></div>
-
-                            <fieldset>
-
-                                <h4><span>Other Details</span></h4>
 
                                 <div class="sixcol">
-                                    {{ form_label(form.phone) }}
+                                    {{ form_label(form.phone) }} <span class="required">*</span>
                                     {{ form_errors(form.phone) }}
                                     {{ form_widget(form.phone) }}
                                 </div>
@@ -129,16 +139,20 @@
                                     {{ form_widget(form.website) }}
                                 </div>
 
-                                {{ form_rest(form) }}
+                                <div class="separator"></div>
+
+                                <div>
+                                    <label class="required" for="fos_user_registration_form_tandc">I agree to True Loyalty's <a href="" style="color: #0033ff;">Terms and Conditions</a> and <a href="" style="color: #0033ff;">Privacy Policy</a> <span class="required">*</span></label>
+                                    <input type="checkbox" value="1" required="required" name="fos_user_registration_form[tandc]" id="fos_user_registration_form_tandc">
+                                </div>
+
                                 <div class="clearfix"></div>
-                                
                                 <div class="separator"></div>
                             </fieldset>
 
-                                <div class="clearfix"></div>
-                                
-                                <div class="separator"></div>
- 
+                            <div class="clearfix"></div>
+                            <div class="separator"></div>
+
                             <div class="center">
                                 <input type="submit" value="Create Account &raquo;" class="btn btn-primary">
                             </div>

@@ -364,65 +364,18 @@ $(document).ready(function() {
 	});
 	
 	$("a.dialog").click(function(e) {
+        alert('a');
 		e.preventDefault();
-		bootbox.dialog("I am a custom dialog", [{
+        var contentElementId = $(this).attr('data-content');
+		bootbox.dialog($('#' + contentElementId).html(), [{
 			"label" : "Success!",
 			"class" : "btn-success",
 			"callback": function() {
 				console.log("great success");
 			}
-		}, {
-			"label" : "Danger!",
-			"class" : "btn-danger",
-			"callback": function() {
-				console.log("uh oh, look out!");
-			}
-		}, {
-			"label" : "Click ME!",
-			"class" : "btn-primary",
-			"callback": function() {
-				console.log("Primary button");
-			}
-		}, {
-			"label" : "Just a button..."
-		}, {
-			"Condensed format": function() {
-				console.log("condensed");
-			}
 		}]);
 	});
-	
-	$("a.multiple-dialogs").click(function(e) {
-		e.preventDefault();
 
-		bootbox.alert("Prepare for multiboxes...", "Argh!");
-
-		setTimeout(function() {
-			bootbox.confirm("Are you having fun?", "No :(", "Yeah!", function(result) {
-				if (result) {
-					bootbox.alert("Glad to hear it!");
-				} else {
-					bootbox.alert("Aww boo. Click the button below to get rid of all these popups", function() {
-						bootbox.hideAll();
-					});
-				}
-			});
-		}, 1000);
-	});
-	
-	$("a.dialog-close").click(function(e) {
-		e.preventDefault();
-		var box = bootbox.alert("This dialog will close in two seconds");
-		setTimeout(function() {
-			box.modal('hide');
-		}, 2000);
-	});
-	
-	$("a.generic-modal").click(function(e) {
-		e.preventDefault();
-		bootbox.modal('<img src="http://dummyimage.com/600x400/000/fff" alt=""/>', 'Modal popup!');
-	});
-	
 	$("a.dynamic").click(function(e) {
 		e.preventDefault();
 		var str = $("<p>This content is actually a jQuery object, which will change in 3 seconds...</p>");

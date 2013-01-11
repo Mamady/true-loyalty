@@ -16,6 +16,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     {% stylesheets filter='cssrewrite' output='css/*.css' combine=true
+        'bundles/tlmain/css/bootstrap.min.css'
         'bundles/tlmain/css/reset.css'
         'bundles/tlmain/css/normalize.css'
         'bundles/tlmain/css/1140.css'
@@ -62,7 +63,7 @@
     
         {# HEADER #}
         <div id="outerheader">
-             <div id="headertext" class="container ">
+             <div id="headertext">
                 <div class="row">
 
                     <div style="position:relative;float:right;">
@@ -106,8 +107,8 @@
                             #}
                            </li>
                             <li><a href="{{ path('TLMainBundle_page_pricing') }}">Pricing</a></li>
-                            <li style="margin-top: -8px;"><a href="{{ path('TLMainBundle_page_features') }}" class="btn btn-warning btn-large" style="padding: 8px; box-shadow: none; color: #5D5D5D !important;">Get Started</a></li>
-                            <li><a href="{{ path('TLMainBundle_page_story') }}">About</a></li>
+                            <li style="margin-top: -8px;"><a href="{{ path('TLMainBundle_page_pricing') }}" class="btn btn-warning btn-large" style="padding: 8px; box-shadow: none; color: #5D5D5D !important;">Get Started</a></li>
+                            <li><a href="{{ path('TLMainBundle_page_faq') }}">FAQ</a></li>
                             <li><a href="{{ path('TLMainBundle_page_contact') }}">Contact</a></li>
                         </ul>                        
                         </nav><!-- nav -->  
@@ -150,7 +151,8 @@
                         <ul>
                             <li class="widget-container">
                                 <h4 class="widget-title">ABOUT US</h4>
-                                <p>True Loyalty provides small businesses with the opportunity to build user friendly, highly functional and effective loyalty programs, drastically improve customer retention rates and build lasting relationships with loyal customers.</p>
+                                <p>True Loyalty provides small businesses with the opportunity to build user friendly, highly functional and effective loyalty programs, drastically improve customer retention rates and build lasting relationships with loyal customers. </p>
+                                <a href="{{ path('TLMainBundle_page_story') }}" class="btn btn-small">Read More &raquo;</a>
                             </li>
                         </ul>
                     </div>
@@ -159,7 +161,6 @@
                             <li class="widget-container">
                             <h4 class="widget-title">LEGAL</h4>
                             <ul class="ts-recent-post-widget">
-                                <li><a href="#">Copyright Disclaimer</a></li>
                                 <li><a href="#">Website Disclaimer</a></li>
                                 <li><a href="#">Terms &amp; Conditions</a></li>
                                 <li><a href="#">Privacy Policy</a></li>
@@ -222,8 +223,18 @@
                     </div>
                     <nav id="footermenu">
                         <ul id="footernav" class="footermenu">
-                            <li><a href="#">Sitemap</a></li>
-                            <li><a href="#">Support/Help</a></li>
+                            <li><a href="#">Sitemap</a> &nbsp; | </li>
+
+                            {% if is_granted('IS_AUTHENTICATED_FULLY') or is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+ 
+                                <li><a href="{{ path('TLMainBundle_dashboard') }}">Dashboard</a> &nbsp; | </li>
+                                <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+
+                           {% else %}
+
+                                <li><a href="{{ path('fos_user_registration_register') }}">Join Today</a> &nbsp; | </li>
+                                <li><a href="{{ path('fos_user_security_login') }}">Login</a></li>
+                            {% endif %}
                         </ul>                   
                     </nav><!-- nav -->  
                     <div class="clearfix"></div>
@@ -249,6 +260,8 @@
     '@TLMainBundle/Resources/public/js/fade.js'
 
     '@TLMainBundle/Resources/public/js/jquery.flexslider-min.js'
+
+    '@TLMainBundle/Resources/public/js/bootstrap.min.js'
 
     '@TLMainBundle/Resources/public/js/custom.js'
 %}

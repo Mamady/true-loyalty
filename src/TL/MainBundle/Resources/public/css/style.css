@@ -619,6 +619,7 @@ div.breadcrumb{
 	-webkit-text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.55);
 	-moz-text-shadow:    0px 1px 4px rgba(0, 0, 0, 0.55);
 	text-shadow:         0px 1px 4px rgba(0, 0, 0, 0.55);
+    padding: inherit;
 }
 div.breadcrumb a{
 	font-weight:700;
@@ -672,6 +673,7 @@ textarea, input[type="password"], select{
 select {
 	font-size:11px;
 	padding:4px 5px;
+    width: auto;
 }
 
 
@@ -952,7 +954,6 @@ h3#comments-title{
 .comment-body p{ margin-bottom:5px; margin-top:10px;}
 .comment-body .more{ padding:0px 0px;}
 #commentform {margin-bottom:20px}
-#commentform label{display:block}
 #commentform .text-input{
 	margin-bottom:8px;
 	padding:8px 5px;
@@ -1623,7 +1624,7 @@ form{margin:0; padding:0;}
 fieldset{border:1px solid #E4E4E4; padding: 0 5px; }
 .styledform fieldset input[type=text], .styledform fieldset input[type=password] {padding: 5px 0; }
 .styledform{margin:0 auto; position:relative; }
-.styledform label{display:block; width:100%; padding-bottom:5px; font-weight:700}
+.styledform label{display: inline; width:100%; padding-bottom:5px; font-weight:700}
 .styledform input[type=password], .styledform input[type=text], .styledform input[type=email]{width:100%; padding-bottom:5px; font-weight:700}
 span.required{ color:#f00;}
 span.error{color:red;text-align:left; font-size:11px; padding-bottom:15px; display:block;}
@@ -1642,7 +1643,7 @@ span.error{color:red;text-align:left; font-size:11px; padding-bottom:15px; displ
 #footersidebar li.widget-container{list-style-type:none; margin:0 0 40px 0; padding:0; border:0px; font-size:11px;}
 #footersidebar .widget-title{padding:0; line-height:22px; margin-bottom:22px !important; letter-spacing:0px; font-weight:700; text-align:left;}
 #footersidebar li li{ background:url(../images/trigger_right.png) no-repeat 0px 7px; padding:0 0 0px 13px; margin:0 0 8px 0;list-style-type:none; }
-#footersidebar li a{ padding:0px; margin:0px;}
+#footersidebar li a{ margin:0px;}
 #footersidebar li a:hover{ text-decoration:none;}
 
 #footersidebar ul.sub-menu, #footersidebar ul.children, #footersidebar ul ul ul{margin:0 0 0 10px; }
@@ -1729,6 +1730,8 @@ ul.customlist.listcheck li, li.check{background:url(../images/list-check.png) no
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    border-style: none;
+    line-height: inherit;
     -webkit-box-shadow:0 1px 1px rgba(255, 255, 255, 0.3) inset, 0 -1px 1px rgba(0, 0, 0, 0.3) inset, 0 2px 4px rgba(0, 0, 0, 0.3);
     -moz-box-shadow:0 1px 1px rgba(255, 255, 255, 0.3) inset, 0 -1px 1px rgba(0, 0, 0, 0.3) inset, 0 2px 4px rgba(0, 0, 0, 0.3);
     box-shadow:0 1px 1px rgba(255, 255, 255, 0.3) inset, 0 -1px 1px rgba(0, 0, 0, 0.3) inset, 0 2px 4px rgba(0, 0, 0, 0.3);

@@ -50,7 +50,7 @@ class RegisterClientForm extends BaseType
                     'second_options'  => array('label' => 'Confirm your Password'),
                 ))
                 ->add('website', 'text', array(
-                    'label' => 'Website URL (optional)',
+                    'label' => 'Website URL',
                     'required' => false
                 ))
                 ->add('company','text', array(
@@ -75,6 +75,11 @@ class RegisterClientForm extends BaseType
                 ))
                 ->add('country', null , array(
                     'label' => 'Country',
+                    'required' => true
+                ))
+                 ->add('tandc', 'checkbox', array(
+                    'label' => 'I agree to True Loyalty\'s Terms and Conditions and Privacy Policy <span class="required">*</span>',
+                    'property_path' => false,
                     'required' => true
                 ))
        ;

@@ -24,6 +24,8 @@ class PageController extends Controller
             'jobs',
             'press',
             'contact',
+            'terms',
+            'privacy',
         );
 
         if(in_array($page, $pages)) {

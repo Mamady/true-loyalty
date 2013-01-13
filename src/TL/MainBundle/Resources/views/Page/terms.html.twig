@@ -1,0 +1,23 @@
+{% extends "TLMainBundle::layout.html.twig" %}
+
+{% block title "Terms and Conditions - True Loyalty - The Best Loyalty Program" %}
+
+{% block breadcrumb "" %}
+{% block pageTop "" %}
+
+{% block content %}
+
+<div id="outermain" class="nopagetop">
+            <div class="container">
+                <section id="maincontent" class="row">
+                    <div class="twelvecol">
+
+                        {% include 'TLMainBundle:Page:_terms.html.twig' %}
+
+                    </div>
+                    <div class="clearfix"></div>
+                </section>
+            </div>
+        </div>
+
+{% endblock %}

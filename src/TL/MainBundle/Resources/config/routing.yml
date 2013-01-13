@@ -19,6 +19,18 @@ TLMainBundle_page_faq:
     pattern:  /faq
     defaults: { _controller: TLMainBundle:Page:show, page: faq }
 
+TLMainBundle_page_terms:
+    pattern:  /terms
+    defaults: { _controller: TLMainBundle:Page:show, page: terms }
+
+TLMainBundle_page_privacy:
+    pattern:  /privacy
+    defaults: { _controller: TLMainBundle:Page:show, page: privacy }
+
+
+
+
+
 
 
 TLMainBundle_page_pricing:

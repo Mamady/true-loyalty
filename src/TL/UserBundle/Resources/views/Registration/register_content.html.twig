@@ -142,7 +142,11 @@
                                 <div class="separator"></div>
 
                                 <div>
-                                    <label class="required" for="fos_user_registration_form_tandc">I agree to True Loyalty's <a href="" style="color: #0033ff;">Terms and Conditions</a> and <a href="" style="color: #0033ff;">Privacy Policy</a> <span class="required">*</span></label>
+                                    
+                                    {% include 'TLMainBundle:Page:_terms_overlay.html.twig' %}
+                                    {% include 'TLMainBundle:Page:_privacy_overlay.html.twig' %}
+
+                                    <label class="required" for="fos_user_registration_form_tandc">I agree to True Loyalty's <a data-toggle="modal" href="#tandc" style="color: #0033ff;">Terms and Conditions</a> and <a data-toggle="modal" href="#privacy" style="color: #0033ff;">Privacy Policy</a> <span class="required">*</span></label>
                                     <input type="checkbox" value="1" required="required" name="fos_user_registration_form[tandc]" id="fos_user_registration_form_tandc">
                                 </div>
 

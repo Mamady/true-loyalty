@@ -138,9 +138,15 @@
             </div>
         </div>
         {% endblock %}
- 
-        {% include 'TLMainBundle::flashes.html.twig' %}
-        {% block content %}{% endblock %}
+
+        <div id="outermain" class="{% block nopagetop "" %}">
+            <div class="container">
+        
+                {% include 'TLMainBundle::flashes.html.twig' %}
+                {% block content %}{% endblock %}
+
+            </div>
+        </div>
 
         <!-- FOOTER SIDEBAR -->
         <div id="outerfootersidebar">
@@ -168,41 +174,8 @@
                             </li>
                         </ul>
                     </div>
-                    <div id="footcol3" class="threecol">
-                        <ul>
-                            <li class="widget-container">
-                                <h4 class="widget-title">RECENT POSTS</h4>
-                                <ul class="if-latest-post-widget">
-                                    <li>
-                                        <img src="/bundles/tlmain/images/content/rp1.jpg" alt="" class="alignleft"/>                                                                                    
-                                        <h6> <a href="#"> Curabitur augue arcu consectetur adipiscing</a></h6>
-                                        <span class="smalldate">July 28, 2012</span>
-                                        <div class="clearfix"></div>
-                                    </li>
-                                    <li>
-                                        <img src="/bundles/tlmain/images/content/rp2.jpg" alt="" class="alignleft"/>                                                                                    
-                                        <h6> <a href="#"> Curabitur augue arcu consectetur adipiscing</a></h6>
-                                        <span class="smalldate">July 28, 2012</span>
-                                        <div class="clearfix"></div>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="footcol4" class="threecol last">
-                        <ul>
-                            <li class="widget-container">
-                                <h4 class="widget-title">Our Address</h4>
-                                <div class="gallery-pic">
-                                    <a href="#"><img src="/bundles/tlmain/images/content/g1.jpg" alt=""></a>
-                                    <a href="#"><img src="/bundles/tlmain/images/content/g2.jpg" alt=""></a>
-                                    <a href="#" class="nomargin"><img src="/bundles/tlmain/images/content/g3.jpg" alt="" ></a>
-                                    <a href="#"><img src="/bundles/tlmain/images/content/g4.jpg" alt=""></a>
-                                    <a href="#"><img src="/bundles/tlmain/images/content/g5.jpg" alt=""></a>
-                                    <a href="#" class="nomargin"><img src="/bundles/tlmain/images/content/g6.jpg" alt="" ></a>
-                                </div>
-                          </li>
-                        </ul>
+                    <div id="footcol3" class="sixcol last" style="text-align: right;">
+                        <img src="{{ asset('bundles/tlmain/images/footer.png') }}">
                     </div>
                     <div class="clearfix"></div>
                     </footer>

@@ -2,76 +2,71 @@
 
 {% block title %}Login to True Loyalty{% endblock %}
 
-{% block pageTop %}
-    <div class="clearfix"></div>
-{% endblock %}
+{% block pageTop "" %}
 
+{% block nopagetop "nopagetop" %}
 
 {% block content %}
 
-<div id="outermain" class="nopagetop">
-    <div class="container">
-        <section id="maincontent" class="row">
-            <div class="twelvecol">
-    
-                <div class="separator"></div>
-                <div class="separator"></div>
-                <div class="fourcol ">
-                    <div class="if-heading">
-                        <h2><span>Login to True Loyalty</span></h2>
-                        {% if error %}
-                            <div>{{ error|trans({}, 'FOSUserBundle') }}</div>
-                        {% endif %}
+<section id="maincontent" class="row">
+    <div class="twelvecol">
 
-                        <form action="{{ path("fos_user_security_check") }}" method="post" class="styledform">
-                            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+        <div class="separator"></div>
+        <div class="separator"></div>
+        <div class="fourcol ">
+            <div class="if-heading">
+                <h2><span>Login to True Loyalty</span></h2>
+                {% if error %}
+                    <div>{{ error|trans({}, 'FOSUserBundle') }}</div>
+                {% endif %}
 
-                            <p>
-                            <label for="username">Email</label>
-                            <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
-                            </p>
+                <form action="{{ path("fos_user_security_check") }}" method="post" class="styledform">
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
 
-                            <p>
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="_password" required="required" />
-                            </p>
+                    <p>
+                    <label for="username">Email</label>
+                    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+                    </p>
 
-                            <input type="hidden" name="_remember_me" value="on" />
-                            <div class="center"> 
-                                <input type="submit" id="_submit" name="_submit" class="btn btn-primary" value="Login &raquo;" />
-                            </div>
-                        </form>
+                    <p>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="_password" required="required" />
+                    </p>
 
+                    <input type="hidden" name="_remember_me" value="on" />
+                    <div class="center"> 
+                        <input type="submit" id="_submit" name="_submit" class="btn btn-primary" value="Login &raquo;" />
                     </div>
-                </div>
-
-                <div class="fivecol center">
-                    <div class="separator"></div>
-                    <div class="separator"></div>
-                    <h3>OR</h3>
-                </div>
-
-                <div class="threecol center last">
-                <div class="separator"></div>
-                    <div class="if-heading">
-                        <h3><span>New to True Loyalty?</span></h3>
-                    
-                        <a href="{{ path('fos_user_registration_register') }}" class="btn btn-success">Create An Account &raquo;</a>
-                    </div>
-                </div>
+                </form>
 
             </div>
-            <div class="clearfix"></div>
-        
+        </div>
+
+        <div class="fivecol center">
             <div class="separator"></div>
             <div class="separator"></div>
-            <div class="separator"></div>
-            <div class="separator"></div>
-            <div class="separator"></div>
-            <div class="separator"></div>
-        </section>
+            <h3>OR</h3>
+        </div>
+
+        <div class="threecol center last">
+        <div class="separator"></div>
+            <div class="if-heading">
+                <h3><span>New to True Loyalty?</span></h3>
+            
+                <a href="{{ path('fos_user_registration_register') }}" class="btn btn-success">Create An Account &raquo;</a>
+            </div>
+        </div>
+
     </div>
-</div>
+    <div class="clearfix"></div>
+
+    <div class="separator"></div>
+    <div class="separator"></div>
+    <div class="separator"></div>
+    <div class="separator"></div>
+    <div class="separator"></div>
+    <div class="separator"></div>
+</section>
 
 
 {% endblock %}

@@ -5,19 +5,17 @@
 {% block breadcrumb "" %}
 {% block pageTop "" %}
 
+{% block nopagetop "nopagetop" %}
+
 {% block content %}
 
-<div id="outermain" class="nopagetop">
-            <div class="container">
-                <section id="maincontent" class="row">
-                    <div class="twelvecol">
+<section id="maincontent" class="row">
+    <div class="twelvecol">
 
-                        {% include 'TLMainBundle:Page:_privacy.html.twig' %}
+        {% include 'TLMainBundle:Page:_privacy.html.twig' %}
 
-                    </div>
-                    <div class="clearfix"></div>
-                </section>
-            </div>
-        </div>
+    </div>
+    <div class="clearfix"></div>
+</section>
 
 {% endblock %}

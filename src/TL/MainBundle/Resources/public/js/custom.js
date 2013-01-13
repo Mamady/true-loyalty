@@ -3,54 +3,13 @@ jQuery(document).ready(function(){
 	/*Add Class Js to html*/
 	jQuery('html').addClass('js');	
 								
-    /*=================================== TOPSEARCH ==============================*/
-	var headertext = jQuery('#headertext');
-	var outerafterheader = jQuery('#outerafterheader');
-	var outerslider = jQuery('#outerslider');
-	var outersliderplax = jQuery('#outerslider.parallax');
-	var submitbutton = jQuery("#topsearchform input#searchsubmit");
-	var topsearchtext = jQuery("#topsearchform input#s");
-	var textfocusout = function(){
-		if(!topsearchtext.is(":focus") && topsearchtext.val()==""){
-			submitbutton.fadeTo(300,0.5);
-			topsearchtext.animate({"width":"100px"},1000,"easeOutQuart");
-		}
-	};
-	
-	topsearchtext.focusin(function(){
-		submitbutton.fadeTo(300,1);
-		topsearchtext.animate({"width":"125px"},1000,"easeOutQuart");
-	});
-	topsearchtext.focusout(textfocusout);
-	
-	var headertextheight = headertext.css("height");
-	jQuery(window).scroll(function(evt){
-		if(headertext.offset().top>0){
-			headertext.addClass("sticky");
-			outerafterheader.addClass("sticky");
-			outersliderplax.addClass("sticky");
-			outerslider.addClass("sticky");
-		}else{
-			headertext.removeClass("sticky");
-			outerafterheader.removeClass("sticky");
-			outersliderplax.removeClass("sticky");
-			outerslider.removeClass("sticky");
-		}
-	});
-	headertext.mouseenter(function(){
-		if(headertext.offset().top>0){
-			headertext.removeClass("sticky");
-			outerafterheader.removeClass("sticky");
-			outersliderplax.removeClass("sticky");
-		}
-	});
-	headertext.mouseleave(function(){
-		if(headertext.offset().top>0){
-			headertext.addClass("sticky");
-			outerafterheader.addClass("sticky");
-			outersliderplax.addClass("sticky");
-		}
-	});
+    jQuery('#cookieAccepted').click(function() {
+        
+        document.cookie = "cookieAccepted=1;expires=Sat, 16 May 2999 18:40:22 GMT;" 
+        jQuery(this).parent().hide();
+
+    });
+
 	/*=================================== MENU ===================================*/
     jQuery("ul.sf-menu").supersubs({ 
     minWidth		: 12,		/* requires em unit. */

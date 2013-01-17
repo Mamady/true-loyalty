@@ -1555,6 +1555,7 @@ h2.active {background:transparent;}
 /*SHORTCODE - Custom
 -------------------------------------------------*/
 .bigtext{font-size:32px; font-weight:300; letter-spacing:-2px; text-align:center; line-height:110%;margin-bottom:10px;}
+.big{font-size:120%; line-height:150%;}
 .secondarytext{font-size:24px; font-weight:300; text-align:center; letter-spacing:0px; line-height:100%; font-style:italic;display:block;}
 .if-heading{border-top:1px solid;}
 .if-heading h1, .if-heading h2, .if-heading h3, .if-heading h4, .if-heading h5, .if-heading h6{letter-spacing:-1px; font-weight:300;}

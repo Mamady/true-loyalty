@@ -45,14 +45,9 @@
 #main-table .pricing-features {
     margin-top: 112px;
 }
-#main-table .main-special-row .tooltip {
-    cursor: pointer;
-    height: 12px;
-    margin-top: -2px;
-    padding-right: 5px;
-    width: 12px;
+#main-table .main-special-row .icon-question-sign {
+    margin-top: 8px;
 }
-
 #main-table .table-premium .table-title {
     background-color: #0C72A4 !important;
 }

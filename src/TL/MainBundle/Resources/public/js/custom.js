@@ -1,5 +1,9 @@
 jQuery(document).ready(function(){
 	
+    if (jQuery("[rel=tooltip]").length) {
+        jQuery("[rel=tooltip]").tooltip();
+     }
+
 	/*Add Class Js to html*/
 	jQuery('html').addClass('js');	
 								

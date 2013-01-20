@@ -144,7 +144,7 @@
 
                             {% if is_granted('IS_AUTHENTICATED_FULLY') or is_granted('IS_AUTHENTICATED_REMEMBERED') %}
  
-                                <li><a href="{{ path('TLMainBundle_dashboard') }}">Dashboard</a> &nbsp; | </li>
+                                {# <li><a href="{{ path('TLMainBundle_dashboard') }}">Dashboard</a> &nbsp; | </li> #}
                                 <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
 
                            {% else %}

@@ -62,29 +62,10 @@
     <div id="outercontainer">
     
         {# HEADER #}
-            {% include 'TLMainBundle::_header.html.twig' %}
+            {% include 'TLMainBundle::_header_simple.html.twig' %}
         {# END HEADER #}
 
-        {% block pageTop %}
-        <div id="outerafterheader" style="background:url(/bundles/tlmain/images/content/header.jpg) no-repeat bottom center;">
-            <div class="container">
-                <div id="afterheader" class="row">
-                    <section id="aftertheheader">
-                        <div class="breadcrumb twelvecol">
-                            {% block breadcrumb %}
-                                You are here: <a href="{{ path('TLMainBundle_homepage') }}">Home</a> &raquo; <a href="about.html">About Us</a> &raquo; <strong>Services</strong>
-                            {% endblock %}
-                        </div>
-                        <div class="clearfix"></div>                        
-                        <h1 class="pagetitle">{% block pageTopText "Services" %}</h1>                    
-                    </section>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
-        {% endblock %}
-
-        <div id="outermain" class="{% block nopagetop "" %}">
+        <div id="outermain" class="nopagetop">
             <div class="container">
         
                 {% include 'TLMainBundle::flashes.html.twig' %}
@@ -93,44 +74,7 @@
             </div>
         </div>
 
-        <!-- FOOTER SIDEBAR -->
-        <div id="outerfootersidebar">
-            <div class="container">
-                <div id="footersidebarcontainer" class="row"> 
-                    <footer id="footersidebar">
-                    <div id="footcol1" class="threecol">
-                        <ul>
-                            <li class="widget-container">
-                                <h4 class="widget-title">ABOUT US</h4>
-                                <p>True Loyalty provides small businesses with the opportunity to build user friendly, highly functional and effective loyalty programs, drastically improve customer retention rates and build lasting relationships with loyal customers. </p>
-                                <a href="{{ path('TLMainBundle_page_story') }}" class="btn btn-small">Read More &raquo;</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="footcol2" class="threecol">
-                        <ul>
-                            <li class="widget-container">
-                            <h4 class="widget-title">LEGAL</h4>
-                            <ul class="ts-recent-post-widget">
-                                <li><a href="{{ path('TLMainBundle_page_terms') }}">Terms &amp; Conditions</a></li>
-                                <li><a href="{{ path('TLMainBundle_page_privacy') }}">Privacy Policy</a></li>
-                            </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="footcol3" class="sixcol last" style="text-align: right;">
-                        <img src="{{ asset('bundles/tlmain/images/footer.png') }}">
-                    </div>
-                    <div class="clearfix"></div>
-                    </footer>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- END FOOTER SIDEBAR -->
-        
-        <!-- FOOTER -->
+       <!-- FOOTER -->
         <div id="outerfooter">
             <div class="container">
                 <div id="footercontainer" class="row">
@@ -144,12 +88,12 @@
 
                             {% if is_granted('IS_AUTHENTICATED_FULLY') or is_granted('IS_AUTHENTICATED_REMEMBERED') %}
  
-                                <li><a href="{{ path('TLMainBundle_dashboard') }}">Dashboard</a> &nbsp; | </li>
+                                {# <li><a href="{{ path('TLMainBundle_dashboard') }}">Dashboard</a> &nbsp; | </li> #}
                                 <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
 
                            {% else %}
 
-                                <li><a href="{{ path('fos_user_registration_register') }}">Join Today</a> &nbsp; | </li>
+                                <li><a href="{{ path('TLMainBundle_page_pricing') }}">Join Today</a> &nbsp; | </li>
                                 <li><a href="{{ path('fos_user_security_login') }}">Login</a></li>
                             {% endif %}
                         </ul>                   

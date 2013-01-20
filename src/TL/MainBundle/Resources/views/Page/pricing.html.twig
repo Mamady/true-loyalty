@@ -65,8 +65,8 @@
 
                         <div class="table-price">
                             <h2><i>&pound;</i>9.95</h2>
-                            <h3>billed monthly<br /><br />
-                            &pound;20 Joining Fee</h3>
+                            <h3>billed monthly
+                            </h3>
                         </div>
 
                         <ul>
@@ -89,7 +89,7 @@
                             <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
                             <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
                         </ul>
-                        <a href="/signup/starter" class="btn btn-success">Start Free Trial</a>
+                        <a href="{{ path('fos_user_registration_register', {'plan': 'starter'}) }}" class="btn btn-success">Start Free Trial</a>
                     </div>
 
                     <div class="main-table-row table-premium">
@@ -101,8 +101,8 @@
 
                         <div class="table-price">
                             <h2><i>&pound;</i>19.95</h2>
-                            <h3>billed monthly<br /><br />
-                            &pound;20 Joining Fee</h3>
+                            <h3>billed monthly<br />
+                            </h3>
                         </div>
 
                         <ul>
@@ -125,7 +125,7 @@
                             <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
                             <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
                         </ul>
-                        <a href="/signup/premium" class="btn btn-success">Start Free Trial</a>
+                        <a href="{{ path('fos_user_registration_register', {'plan': 'premium'}) }}" class="btn btn-success">Start Free Trial</a>
                     </div>
                     </div>
 
@@ -137,8 +137,8 @@
 
                         <div class="table-price">
                             <h2><i>&pound;</i>29.95</h2>
-                            <h3>billed monthly<br /><br />
-                            &pound;20 Joining Fee</h3>
+                            <h3>billed monthly
+                            </h3>
                         </div>
 
                         <ul>
@@ -162,7 +162,7 @@
                             <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
                             <li><img src="{{ asset('bundles/tlmain/images/green-tick.png') }}" alt="Included" /></li>
                         </ul>
-                        <a href="/signup/pro" class="btn btn-success">Start Free Trial</a>
+                        <a href="{{ path('fos_user_registration_register', {'plan': 'delux'}) }}" class="btn btn-success">Start Free Trial</a>
                     </div>
                 <div class="clr"></div>           
             </div>

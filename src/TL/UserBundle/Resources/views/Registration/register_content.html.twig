@@ -15,8 +15,9 @@
                         {{ form_errors(form) }}
                         {{ form_errors(form.tandc) }}
                         
-                        <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="post" class="styledform">
+                        <form action="{{ path('fos_user_registration_register') }}?plan={{ plan }}" {{ form_enctype(form) }} method="post" class="styledform">
                         
+                            {{ form_widget(form.plan) }}
                             <fieldset>
                                         
                             <h4><span>Your Personal Details</span></h4>

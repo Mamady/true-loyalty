@@ -1,0 +1,39 @@
+{% extends "TLMainBundle::layout.html.twig" %}
+
+{% block title "Sitemap - True Loyalty" %}
+
+{% block breadcrumb "" %}
+{% block pageTopText "Sitemap" %}
+
+{% block content %}
+
+<section id="maincontent" class="row">
+    <div class="twelvecol">
+
+        <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">General</li>
+              <li><a href="{{ path('TLMainBundle_homepage') }}#">True Loyalty Homepage</a></li>
+              <li><a href="{{ path('TLMainBundle_page_how_it_works') }}">How It Works</a></li>
+              <li><a href="{{ path('TLMainBundle_page_features') }}">Features</a></li>
+              <li><a href="{{ path('TLMainBundle_page_pricing') }}">Pricing</a></li>
+              <li><a href="{{ path('TLMainBundle_page_faq') }}">FAQ</a></li>
+              <li><a href="{{ path('TLMainBundle_page_contact') }}">Contact Us</a></li>
+              <li><a href="{{ path('TLMainBundle_page_story') }}">About Us</a></li>
+              <li class="nav-header">Legal</li>
+              <li><a href="{{ path('TLMainBundle_page_terms') }}">Terms &amp; Conditions</a></li>
+              <li><a href="{{ path('TLMainBundle_page_privacy') }}">Privacy Policy</a></li>
+                <li class="nav-header">Merchants</li>
+              <li><a href="{{ path('TLMainBundle_page_pricing') }}">Join</a></li>
+              <li><a href="{{ path('fos_user_security_login') }}">Login</a></li>
+              <li><a href="{{ path('TLMainBundle_dashboard') }}">Dashboard</a></li>
+            </ul>
+          </div>
+
+   <div class="separator"></div>
+
+    </div>
+    <div class="clearfix"></div>
+</section>
+
+{% endblock %}

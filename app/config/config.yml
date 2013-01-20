@@ -4,7 +4,7 @@ imports:
 
 framework:
     #esi:           ~
-    translator:     ~
+    translator:     { fallback: en }
     secret:         "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -64,7 +64,8 @@ fos_user:
     user_class: TL\UserBundle\Entity\User
     registration:
         form:
-            type: tl_userbundle_registerclientform
+            type:    tl_userbundle_registerclientform
+            handler: tl_user.registerclient.form.handler
 
 stof_doctrine_extensions:
     default_locale: en_GB

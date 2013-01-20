@@ -37,7 +37,7 @@ class User extends BaseUser
      * @var $firstName
      *
      * @ORM\Column(name="first_name", type="string", length=100, nullable=false)
-     * @Assert\Length(min="2",minMessage="First Name is too short.")
+     * @Assert\Length(min="2",minMessage="tl_user.first_name.short")
      */
     protected $firstName;
 
@@ -45,13 +45,14 @@ class User extends BaseUser
      * @var $lastName
      *
      * @ORM\Column(name="last_name", type="string", length=100)
+     * @Assert\Length(min="2",minMessage="tl_user.last_name.short")
      */
     protected $lastName;
 
     /**
      * @var $website
      *
-     * @ORM\Column(name="website", type="string", length=200)
+     * @ORM\Column(name="website", type="string", length=200, nullable=true)
      */
     protected $website;
 
@@ -126,6 +127,13 @@ class User extends BaseUser
      * @ORM\Column(name="verified", type="boolean", nullable=true)
      */
     protected $verified;
+
+    /**
+     * @var $plan
+     *
+     * @ORM\Column(name="plan", type="string", length=100, nullable=true)
+     */
+    protected $plan;
 
     /**
      * @var $code
@@ -492,6 +500,30 @@ class User extends BaseUser
     public function getCode()
     {
         return $this->code;
+    }
+
+    /**
+     * Get plan
+     *
+     * @return string
+     */
+    public function getPlan()
+    {
+        return $this->plan;
+    }
+
+
+    /**
+     * Set plan
+     *
+     * @param string $plan
+     * @return User
+     */
+    public function setPlan($plan)
+    {
+        $this->plan = $plan;
+
+        return $this;
     }
 
     public function setEmail($email)

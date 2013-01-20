@@ -3,6 +3,7 @@
 namespace TL\UserBundle\Form;
 
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use FOS\UserBundle\Form\Type\RegistrationFormType as BaseType;
 
 class RegisterClientForm extends BaseType
@@ -73,6 +74,9 @@ class RegisterClientForm extends BaseType
                     'label' => 'Postcode',
                     'required' => true
                 ))
+                ->add('plan', 'hidden', array(
+                    'required' => true
+                ))
                 ->add('country', null , array(
                     'label' => 'Country',
                     'required' => true
@@ -93,6 +97,14 @@ class RegisterClientForm extends BaseType
     public function getName()
     {
         return 'tl_userbundle_registerclientform';
+    }
+
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    {
+        $resolver->setDefaults(array(
+            'data_class'      => 'TL\UserBundle\Entity\User',
+            'csrf_protection' => false,
+        ));
     }
 }
 

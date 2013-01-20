@@ -27,6 +27,11 @@ TLMainBundle_page_privacy:
     pattern:  /privacy
     defaults: { _controller: TLMainBundle:Page:show, page: privacy }
 
+TLMainBundle_page_sitemap:
+    pattern:  /sitemap
+    defaults: { _controller: TLMainBundle:Page:show, page: sitemap }
+
+
 
 
 

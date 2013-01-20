@@ -24,6 +24,7 @@ class PageController extends Controller
             'jobs',
             'press',
             'contact',
+            'sitemap',
             'terms',
             'privacy',
         );

@@ -22,6 +22,11 @@ class RegistrationController extends BaseController
     {
         $request = $this->container->get('request');
 
+        if (!$request->query->get('plan')) {
+            $url = $this->container->get('router')->generate('TLMainBundle_page_pricing');
+             return new RedirectResponse($url);
+        }
+
         $user = new User();
         $user->setPlan($request->query->get('plan'));
         $form = $this->container->get('fos_user.registration.form');

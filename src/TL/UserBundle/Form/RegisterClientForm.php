@@ -86,6 +86,11 @@ class RegisterClientForm extends BaseType
                     'property_path' => false,
                     'required' => true
                 ))
+                  ->add('optin', 'checkbox', array(
+                    'label' => 'I want to be informed of any promotions or special offers.',
+                    'property_path' => false,
+                    'required' => false
+                ))
        ;
     }
 

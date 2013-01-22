@@ -1,85 +1,224 @@
 {% extends "TLMainBundle::layout.html.twig" %}
 
+{% block title "Frequently Asked Questions - True Loyalty Programs" %}
+
+{% block breadcrumb "" %}
+{% block pageTopText "Frequently Asked Questions" %}
+
 {% block content %}
 
 <section id="maincontent" class="row">
     <div class="twelvecol">
+       
+        <div class="twelvecol last">
+            <h3>True Loyalty</h3>
+            <div class="toggle">
+                <h2 class="trigger"><span>What is True Loyalty?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            We provide small businesses with the opportunity to build user friendly, highly functional and effective loyalty programs. We provide all of our clients with the materials, the technology and the guidance necessary to start a simple but effective digital loyalty program, from scratch.
+                        </p>
+                    </div>
+                </div>
+                
+                <h2 class="trigger"><span>Who runs True Loyalty?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                        True Loyalty is a trading name of Kilroy Global Limited, a registered company based in London, UK. With a combined experience of over 20 years in business and technological development, our team work around the clock to ensure the best possible service for our clients. More information about the team can be <a href="{{ path('TLMainBundle_page_story') }}">found here</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+                
+            <p>&nbsp;</p>
 
-        <div class="sixcol ">
-            <h4>Tabs</h4>
-            <div class="tabcontainer">
-                <ul class="tabs">
-                    <li><a href="#tab0">First Tab</a></li>
-                    <li><a href="#tab1">Second Tab</a></li>
-                    <li><a href="#tab2">Third Tab</a></li>
-                </ul>
-                <div id="tab-body">
-                    <div id="tab0" class="tab-content">
-                    <p>Proin sollicitudin malesuada risus, congue pellentesque elit dictum non. Proin eget ultrices ligula. estibulum tempus nisl et ipsum elementum eu aliquet ipsum eleifend.</p>
-                    <p>Fusce eros nisl, sollicitudin in consectetur vehicula, tincidunt vitae magna. Vestibulum porttitor lacinia tempus. Nunc cursus pellentesque justo a aliquam. Suspendisse tempor suscipit lorem et fermentum.</p>
+            <h3>How It Works</h3>
+            <div class="toggle">
+                <h2 class="trigger"><span>I don't have a Smartphone, a tablet or any other fancy equipment. Can I still work with True Loyalty?</span></h2>
+                <div class="toggle_container">
+                     <div class="block">
+                        <p>
+                            Yes, all you need is access to a laptop, desktop computer or any other device that can access the internet. Furthermore, this device doesn't even have to be in your store. You can manage your loyalty program from the comfort of your living room at home.
+                        </p>
                     </div>
-                    <div id="tab1" class="tab-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis feugiat rutrum luctus. Proin nisl augue, tempus quis lacinia at, ultrices eget sapien. Vestibulum at orci a eros molestie rutrum. Fusce interdum erat vel eros elementum vitae interdum massa varius. Fusce sit amet neque ut neque vestibulum rhoncus in eu nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer interdum sapien facilisis odio fermentum tincidunt. Nullam a ante augue.</p>
+                </div>
+                
+                <h2 class="trigger"><span>Do I need to install equipment in my store for my loyalty program to work?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            None at all. All data is stored in your customer's Smartphones when they 'stamp' their mobile loyalty card or redeem a coupon code. All you have to do is place promotional materials around your store and you’re ready to go. Did we mention that we provide all of these materials for free? Well, we do!
+                        </p>
                     </div>
-                    <div id="tab2" class="tab-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis feugiat rutrum luctus. Proin nisl augue, tempus quis lacinia at, ultrices eget sapien. Vestibulum at orci a eros molestie rutrum.</p>
+                </div>
+                
+                {% include 'TLMainBundle:Page:_startup_kit.html.twig' %}
+                <h2 class="trigger"><span>How do I promote my loyalty program?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            True Loyalty will provide you with a <a data-toggle="modal" href="#startupKit">free start up kit</a> to help you launch and manage your loyalty program. This kit will include a welcome pack, a poster, tent cards and your unique “QR code” that customers scan to earn 'stamps' and rewards.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="trigger"><span>How do customers join my loyalty program?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            The customer downloads the "True Loyalty" mobile application on their Smartphone and then joins your loyalty program from within the application. Your customers can download the app by searching for it in their App Store (Apple) or Google Play Store (Android) or by scanning the app's QR code on your promotional materials. Once they've downloaded the app, they're ready to be rewarded.
+                        </p>
+                    </div>
+                </div>
+
+                 <h2 class="trigger"><span>How do customers use my loyalty program?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            After your customer has joined your loyalty program, they can scan your unique QR code (included in your free start up kit) to earn digital 'stamps' and redeem rewards. Your customer can also show you any promotional codes that you sent them from within your business dashboard. After your customer has stamped their digital loyalty card, redeemed a reward or used a promotional code, they can submit feedback about their experience in your store.
+                        </p>
+                    </div>
+                </div>
+
+                 <h2 class="trigger"><span>Do customers have to have a Smartphone to use join and use my loyalty program?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            Yes. At the moment True Loyalty only caters for customers who use Smartphones, but we are working on ways to help you reward and engage with those customers who do not use a Smartphone. However, considering that 91% of adults own and use a mobile phone, and Smartphone use is expected to increase from 19.2 million to 41.9 million between 2012 and 2016, now is the best time to embrace this technology, and use it to your advantage. 
+                        </p>
+                    </div>
+                </div>
+
+                 <h2 class="trigger"><span>How do I manage my loyalty program?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            Our unique "business dashboard" allows you to login and change your loyalty programs settings, send promotional codes to your customers, analyse program members and view their feedback. For more information about what features the dashboard has to offer, <a href="{{ path('TLMainBundle_page_features') }}">click here</a>.
+                        </p>
+                    </div>
+                </div>
+
+                 <h2 class="trigger"><span>How much control do I have over my loyalty program?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            You have full control over your loyalty program. As well as selecting exactly which customers you would like to send your promotional campaigns to, you can set your loyalty card's minimum spend requirements per 'stamp', number of stamps to earn reward and reward terms and conditions, to name a few.
+                        </p>
+                    </div>
+                </div>
+
+
+ 
+                 <h2 class="trigger"><span>How much time will it take to manage my loyalty program?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            This is completely up to you. You can set your loyalty card's settings, send a couple of promotional campaigns out, sit back and then analyse your customer's demographics and feedback now and then, or you can use True Loyalty's platform as a key tool to effectively market your products and services. It is your decision as to how much time you put into your loyalty platform.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+            <p>&nbsp;</p>
+
+            <h3>Pricing</h3>
+            <div class="toggle">
+  
+                <h2 class="trigger"><span>How does True Loyalty's pricing work?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            We think pricing should be as simple and clear as possible. That's why we have introduced a tiered flat rate pricing structure so you'll always know what you'll be paying. For the starter, premium and deluxe plans, you'll be billed on monthly basis.
+                        </p>
+                    </div>
+                </div>
+          
+                <h2 class="trigger"><span>Do I have to pay to have a free trial?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            No. We do not ask for any payment details before you are happy to proceed with a subscription plan. All new sign ups are given a free 30 day trial, with no strings attached. True Loyalty will send you an email 7 days before the end of your trial period asking you whether or not you’d like to continue using our services. If you’re not interested, let us know and we won't bother you again.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="trigger"><span>Are there any other fees?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            No. We do not charge any admin fees, joining fees, management fees or hosting fees. All you pay is the monthly subscription fee that you see on the <a href="{{ path('TLMainBundle_page_pricing') }}">pricing page</a>.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="trigger"><span>Who processes and handles payments?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            All payments are processed and handled by GoCardless Ltd, a payment processing company based in London, UK. They're safe, reliable and are backed by the Royal Bank of Scotland. GoCardless's entire server transmissions are secured with SSL, all data is protected using military grade encryption, funds are held in ring-fenced accounts and they are registered with the FSA. Check them out at <a href="http://www.gocardless.com" rel="nofollow">GoCardless.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="trigger"><span>Can I cancel my account?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            You can cancel your account at any time. As long as you give us 7 days notice before your next bill date, we will cancel your agreement and you will not be charged from then on. Details of how to cancel your agreement with us will be included in the welcome pack that we send you.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="trigger"><span>How does upgrading and downgrading work?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            True Loyalty allows you to voluntarily upgrade and downgrade your plan as necessary. All of this can be done from within the business dashboard. Upgrading or downgrading your plan will take effect immediately and you'll receive an email from us as written confirmation.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="trigger"><span>Will I ever be forced to upgrade or downgrade my plan?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            No.  We will never automatically upgrade or downgrade your subscription plan. If however, you reach the total customer threshold or monthly email limit for your plan, we may send you an email informing you of your options. You will then have the option to upgrade if you wish.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="trigger"><span>How will I be billed if I upgrade or downgrade my plan?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            When upgrading or downgrading your account, your previous plan will be cancelled and a pro-rata refund will be provided for the remaining period of the month. You will then be asked to create a new subscription for the new plan.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="trigger"><span>What will happen if I don't keep up with my payments?</span></h2>
+                <div class="toggle_container">
+                    <div class="block">
+                        <p>
+                            If you fail to pay your monthly bill within 14 days of the payment due date, we reserve the right to place temporary and/or permanent restrictions on your account. Details of how we deal with late payments will be included on the welcome pack that we send you.
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="sixcol last">
-            <h4>Toggle</h4>
-            <div id="toggle">
-                <h2 class="trigger"><span>Excepteur sint occaecat</span></h2>
-                <div class="toggle_container">
-                    <div class="block">
-                        <h5>Need a Website?</h5>
-                        <p>Consequat te olim letalis premo ad hos olim odio olim indoles ut venio iusto. Euismod, sagaciter diam neque antehabeo blandit, jumentum transverbero luptatum. Lenis vel diam praemitto molior facilisi facilisi suscipere abico, ludus, at. Wisi suscipere nisl ad capto comis esse, autem genitus. Feugiat immitto ullamcorper hos luptatum gilvus eum. Delenit patria nunc os pneum acsi nulla magna singularis proprius autem exerci accumsan.</p>
-                        <p>Praesent duis vel similis usitas camur, nostrud eros opes verto epulae feugiat ad. Suscipit modo magna letalis amet et tego accumsan facilisi, meus. Vindico luptatum blandit ulciscor mos caecus praesent sed meus velit si quis lobortis praemitto, uxor.</p>
-                    </div>
-                </div>
-                
-                <h2 class="trigger"><span>Maecenas et lacus est, et congue velit</span></h2>
-                <div class="toggle_container">
-                    <div class="block">
-                        <h5>Need a Logo?</h5>
-                        <p>Consequat te olim letalis premo ad hos olim odio olim indoles ut venio iusto. Euismod, sagaciter diam neque antehabeo blandit, jumentum transverbero luptatum. Lenis vel diam praemitto molior facilisi facilisi suscipere abico, ludus, at. Wisi suscipere nisl ad capto comis esse, autem genitus. Feugiat immitto ullamcorper hos luptatum gilvus eum. Delenit patria nunc os pneum acsi nulla magna singularis proprius autem exerci accumsan.</p>
-                        <p>Praesent duis vel similis usitas camur, nostrud eros opes verto epulae feugiat ad. Suscipit modo magna letalis amet et tego accumsan facilisi, meus. Vindico luptatum blandit ulciscor mos caecus praesent sed meus velit si quis lobortis praemitto, uxor.</p>
-                    </div>
-                </div>
-                
-                <h2 class="trigger"><span>Sed lobortis massa id magna</span></h2>
-                <div class="toggle_container">
-                    <div class="block">
-                        <h5>Need to be Heard?</h5>
-                        <p>Consequat te olim letalis premo ad hos olim odio olim indoles ut venio iusto. Euismod, sagaciter diam neque antehabeo blandit, jumentum transverbero luptatum. Lenis vel diam praemitto molior facilisi facilisi suscipere abico, ludus, at. Wisi suscipere nisl ad capto comis esse, autem genitus. Feugiat immitto ullamcorper hos luptatum gilvus eum. Delenit patria nunc os pneum acsi nulla magna singularis proprius autem exerci accumsan.</p>
-                        <p>Praesent duis vel similis usitas camur, nostrud eros opes verto epulae feugiat ad. Suscipit modo magna letalis amet et tego accumsan facilisi, meus. Vindico luptatum blandit ulciscor mos caecus praesent sed meus velit si quis lobortis praemitto, uxor.</p>
-                    </div>
-                </div>
-                
-                <h2 class="trigger"><span>Maecenas ultrices odio a orci dapibus</span></h2>
-                <div class="toggle_container">
-                    <div class="block">
-                        <h5>Have Product to Sell?</h5>
-                        <p>Consequat te olim letalis premo ad hos olim odio olim indoles ut venio iusto. Euismod, sagaciter diam neque antehabeo blandit, jumentum transverbero luptatum. Lenis vel diam praemitto molior facilisi facilisi suscipere abico, ludus, at. Wisi suscipere nisl ad capto comis esse, autem genitus. Feugiat immitto ullamcorper hos luptatum gilvus eum. Delenit patria nunc os pneum acsi nulla magna singularis proprius autem exerci accumsan.</p>
-                        <p>Praesent duis vel similis usitas camur, nostrud eros opes verto epulae feugiat ad. Suscipit modo magna letalis amet et tego accumsan facilisi, meus. Vindico luptatum blandit ulciscor mos caecus praesent sed meus velit si quis lobortis praemitto, uxor.</p>
-                    </div>
-                </div>
-                
-                <h2 class="trigger"><span>Excepteur sint occaecat</span></h2>
-                <div class="toggle_container">
-                    <div class="block">
-                        <h5>Need a Website?</h5>
-                        <p>Consequat te olim letalis premo ad hos olim odio olim indoles ut venio iusto. Euismod, sagaciter diam neque antehabeo blandit, jumentum transverbero luptatum. Lenis vel diam praemitto molior facilisi facilisi suscipere abico, ludus, at. Wisi suscipere nisl ad capto comis esse, autem genitus. Feugiat immitto ullamcorper hos luptatum gilvus eum. Delenit patria nunc os pneum acsi nulla magna singularis proprius autem exerci accumsan.</p>
-                        <p>Praesent duis vel similis usitas camur, nostrud eros opes verto epulae feugiat ad. Suscipit modo magna letalis amet et tego accumsan facilisi, meus. Vindico luptatum blandit ulciscor mos caecus praesent sed meus velit si quis lobortis praemitto, uxor.</p>
-                    </div>
-                </div>
-            </div>
+
+            <p>&nbsp;</p>
+
+
         </div>
         
     </div>
-    <div class="clearfix"></div><!-- clear float --> 
-</section><!-- maincontent -->
+    <div class="clearfix"></div>
+</section>
 
 {% endblock %}

@@ -1,0 +1,6 @@
+services:
+    tlmain.listener.request:
+        class: TL\MainBundle\Listener\RequestListener
+        arguments: [@service_container]
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }

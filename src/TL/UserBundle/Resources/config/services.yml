@@ -1,0 +1,17 @@
+services:
+    tl_user.registerclient.form:
+        class: TL\UserBundle\Form\RegisterClientForm
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: tl_userbundle_registerclientform }
+
+    tl_user.registerclient.form.handler:
+        class: TL\UserBundle\Form\Handler\RegisterClientFormHandler
+        scope: request
+        arguments: [@fos_user.registration.form, @request, @fos_user.user_manager, @fos_user.mailer, @fos_user.util.token_generator ]
+        tags:
+            - { name: form.handler, alias: tl_userbundle_registerclientform_handler }
+
+
+
+

@@ -1,0 +1,126 @@
+TLMainBundle_homepage:
+    pattern:  /
+    defaults: { _controller: TLMainBundle:Page:show, page: index }
+
+
+TLMainBundle_page_how_it_works:
+    pattern:  /how-it-works
+    defaults: { _controller: TLMainBundle:Page:show, page: how_it_works }
+
+TLMainBundle_page_features:
+    pattern:  /features
+    defaults: { _controller: TLMainBundle:Page:show, page: features }
+
+TLMainBundle_page_testimonials:
+    pattern:  /testimonials
+    defaults: { _controller: TLMainBundle:Page:show, page: testimonials }
+
+TLMainBundle_page_faq:
+    pattern:  /faq
+    defaults: { _controller: TLMainBundle:Page:show, page: faq }
+
+TLMainBundle_page_terms:
+    pattern:  /terms
+    defaults: { _controller: TLMainBundle:Page:show, page: terms }
+
+TLMainBundle_page_privacy:
+    pattern:  /privacy
+    defaults: { _controller: TLMainBundle:Page:show, page: privacy }
+
+TLMainBundle_page_sitemap:
+    pattern:  /sitemap
+    defaults: { _controller: TLMainBundle:Page:show, page: sitemap }
+
+
+
+
+
+
+
+
+TLMainBundle_page_pricing:
+    pattern:  /pricing
+    defaults: { _controller: TLMainBundle:Page:show, page: pricing }
+
+
+
+TLMainBundle_page_story:
+    pattern:  /about
+    defaults: { _controller: TLMainBundle:Page:show, page: story }
+
+TLMainBundle_page_team:
+    pattern:  /team
+    defaults: { _controller: TLMainBundle:Page:show, page: team }
+
+TLMainBundle_page_press:
+    pattern:  /press
+    defaults: { _controller: TLMainBundle:Page:show, page: press }
+
+TLMainBundle_page_jobs:
+    pattern:  /jobs
+    defaults: { _controller: TLMainBundle:Page:show, page: jobs }
+
+
+TLMainBundle_page_contact:
+    pattern:  /contact
+    defaults: { _controller: TLMainBundle:Page:contact, page: contact }
+
+
+# Dashboard
+
+TLMainBundle_dashboard:
+    pattern:  /dashboard
+    defaults: { _controller: TLMainBundle:Dashboard:index }
+
+
+# Loyalty Card
+TLMainBundle_card_edit:
+    pattern:  /dashboard/card/edit
+    defaults: { _controller: TLMainBundle:LoyaltyCard:edit }
+
+TLMainBundle_card_qr:
+    pattern:  /dashboard/card/qr
+    defaults: { _controller: TLMainBundle:LoyaltyCard:qr }
+
+
+# Campaign
+TLMainBundle_campaign_new:
+    pattern:  /dashboard/campaign/edit
+    defaults: { _controller: TLMainBundle:Campaign:new }
+
+TLMainBundle_campaign_preview:
+    pattern:  /dashboard/campaign/preview/{id}
+    defaults: { _controller: TLMainBundle:Campaign:preview }
+
+TLMainBundle_campaign_materials:
+    pattern:  /dashboard/campaign/{id}/materials
+    defaults: { _controller: TLMainBundle:Campaign:materials }
+
+
+
+# Customer
+TLMainBundle_customer_index:
+    pattern:  /dashboard/customer
+    defaults: { _controller: TLMainBundle:Customer:index }
+
+
+# Feedback
+TLMainBundle_feedback_index:
+    pattern:  /dashboard/feedback
+    defaults: { _controller: TLMainBundle:Feedback:index }
+
+
+# User 
+TLMainBundle_user_account:
+    pattern:  /dashboard/user/account
+    defaults: { _controller: TLMainBundle:User:account }
+
+
+# Support 
+TLMainBundle_support_index:
+    pattern:  /dashboard/support
+    defaults: { _controller: TLMainBundle:Support:index }
+
+
+
+

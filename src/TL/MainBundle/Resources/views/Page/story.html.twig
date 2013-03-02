@@ -1,0 +1,60 @@
+{% extends "TLMainBundle::layout.html.twig" %}
+
+{% block title "About Us - True Loyalty" %}
+
+{% block breadcrumb "" %}
+{% block pageTopText "About Us" %}
+
+{% block content %}
+
+<section id="maincontent" class="row">
+    <div class="twelvecol">
+
+        <p>True Loyalty provides small businesses across the United Kingdom with the opportunity to build user friendly, highly functional and effective loyalty programs, drastically improve customer retention rates and build lasting relationships with loyal customers.</p>
+    </div>
+
+    <div class="separator"></div>
+    <div class="separator"></div>
+
+
+    <div class="if-heading">
+        <h1><span>The Team</span></h1>
+    </div>
+    <div class="separator"></div>
+    
+    <div class="if-testimonial testi1">
+        <ul>
+            <li class="sixcol">
+                <div class="testiimg">
+                    <img src="{{ asset('bundles/tlmain/images/mohammad.png') }}" width="70" height="70" alt="Mohammad Forouzani" title="Mohammad Forouzani" />
+                <span class="insetshadow"></span></div>
+                <p style="padding-left: 100px;">Mohammad builds, develops, maintains and constantly improves the True Loyalty technical infrastructure. He wears many hats to make sure the servers are always online, the website is working, and the mobile apps are as user friendly as possible.
+                With 15 years experience, Mohammad can build pretty much any function or service that our business clients need, and he's always up for a challenge.<br>
+                When not writing code, Mohammad loves extreme sports including snow boarding, motorcycle racing and go carting.
+                <span class="testiinfo">Mohammad Forouzani &#8211; Founder</span>
+                <span class="testiinfo"><a href="mailto:mohammad@trueloyalty.co.uk">mohammad@trueloyalty.co.uk</a></span>
+                </p>
+                <div class="clearfix"></div>
+            </li>
+            <li class="sixcol last">
+                <div class="testiimg">
+                    <img src="{{ asset('bundles/tlmain/images/chris.png') }}" width="70" height="70" alt="Chris Kilroy" title="Chris Kilroy" />
+                <span class="insetshadow"></span></div>
+                <p style="padding-left: 100px;">Chris runs the day-to-day operations of the business, works closely with our clients, helps develop our products, and works alongside the tech team to provide customers with state-of-the-art solutions. 
+                Having previously founded and managed a successful technological driven business in the educational market, Chris is always looking for ways to solve problems with innovative and future-proof solutions.<br>
+                Outside of business he loves to travel, meet new people and is currently trying to improve his cooking skills.
+                <span class="testiinfo">Chris Kilroy &#8211; Founder</span>
+                <span class="testiinfo"><a href="mailto:chris@trueloyalty.co.uk">chris@trueloyalty.co.uk</a></span>
+                </p>
+            <div class="clearfix"></div>
+            </li>
+            <li class="clearfix"></li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+
+    </div>
+    <div class="clearfix"></div>
+</section>
+
+{% endblock %}

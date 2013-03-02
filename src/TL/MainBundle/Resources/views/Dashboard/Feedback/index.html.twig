@@ -1,0 +1,157 @@
+{% extends "TLMainBundle:Dashboard:layout.html.twig" %}
+
+{% block navFeedback "active" %}
+
+{% block content %}
+
+    <div class="page-header">
+        <h3 style="margin-top: 0;">View Feedback</h3>
+    </div>
+
+    <div class="body row-fluid">
+        <div class="span6"> 
+
+            {# Feedback Chart #}
+                    <div class="well">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <h5>Feedback Overview</h5>
+                                <div class="nav pull-right">
+                                    <a href="#" class="dropdown-toggle just-icon" data-toggle="dropdown"><i class="font-cog"></i></a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#"><i class="font-heart"></i>Favorite it</a></li>
+                                        <li><a href="#"><i class="font-refresh"></i>Reload page</a></li>
+                                        <li><a href="#"><i class="font-link"></i>Attach something</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="chart chart-feedback with-legend"></div>
+                        </div>
+                    </div>
+            {# /Feedback Chart #}
+
+        </div>
+        <div class="span6"> 
+
+            {# Feedback Daily Chart #}
+            <div class="well">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <h5>Daily Analysis</h5>
+                        <div class="nav pull-right">
+                            <a href="#" class="dropdown-toggle just-icon" data-toggle="dropdown"><i class="font-cog"></i></a>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="#"><i class="font-heart"></i>Favorite it</a></li>
+                                <li><a href="#"><i class="font-refresh"></i>Reload page</a></li>
+                                <li><a href="#"><i class="font-link"></i>Attach something</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="chart chart-feedback-daily"></div>
+                </div>
+            </div>
+            {# /Feedback Daily Chart #}
+
+        </div>
+
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="separator-doubled"></div> 
+
+    <div class="block body row-fluid">
+
+            {# Standard messages #}
+            <div class="block well">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <h5>Messages</h5>
+                        <div class="nav pull-right">
+                            <a href="#" class="dropdown-toggle just-icon" data-toggle="dropdown"><i class="font-cog"></i></a>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="#"><i class="font-heart"></i>Favorite it</a></li>
+                                <li><a href="#"><i class="font-refresh"></i>Reload page</a></li>
+                                <li><a href="#"><i class="font-link"></i>Attach something</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="body">
+                    
+                    <!-- Messages -->
+                    <ul class="messages">
+                    
+                        <!-- Message -->
+                        <li class="by-user">
+                            <a href="#" title=""><img src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}" alt="" /></a>
+                            <div class="area">
+                                <span class="arrow"></span>
+                                <div class="info-row">
+                                    <span class="pull-left"><strong>John</strong> says:</span>
+                                    <span class="pull-right">3 hours ago</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel est enim, vel eleifend felis. Ut volutpat, leo eget euismod scelerisque, eros purus lacinia velit, nec rhoncus mi dui eleifend orci. 
+                                Phasellus ut sem urna, id congue libero. Nulla eget arcu vel massa suscipit ultricies ac id velit</p>
+                            </div>
+                        </li>
+                        <!-- /message -->
+
+                        <!-- Message -->
+                        <li class="by-me">
+                            <a href="#" title=""><img src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}" alt="" /></a>
+                            <div class="area">
+                                <span class="arrow"></span>
+                                <div class="info-row">
+                                    <span class="pull-left"><strong>Eugene</strong> says:</span>
+                                    <span class="pull-right">3 hours ago</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel est enim, vel eleifend felis. Ut volutpat, leo eget euismod scelerisque, eros purus lacinia velit, nec rhoncus mi dui eleifend orci. 
+                                Phasellus ut sem urna, id congue libero. Nulla eget arcu vel massa suscipit ultricies ac id velit</p>
+                            </div>
+                        </li>
+                        <!-- /message -->
+                        
+                        <!-- Message -->
+                        <li class="by-user">
+                            <a href="#" title=""><img src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}" alt="" /></a>
+                            <div class="area">
+                                <span class="arrow"></span>
+                                <div class="info-row">
+                                    <span class="pull-left"><strong>John</strong> says:</span>
+                                    <span class="pull-right">3 hours ago</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel est enim, vel eleifend felis. Ut volutpat, leo eget euismod scelerisque, eros purus lacinia velit, nec rhoncus mi dui eleifend orci. 
+                                Phasellus ut sem urna, id congue libero. Nulla eget arcu vel massa suscipit ultricies ac id velit</p>
+                            </div>
+                        </li>
+                        <!-- /message -->
+                         
+                        <!-- Message -->
+                        <li class="by-me">
+                            <a href="#" title=""><img src="{{ asset('bundles/tlmain/images/dashboard/user.png') }}" alt="" /></a>
+                            <div class="area">
+                                <span class="arrow"></span>
+                                <div class="info-row">
+                                    <span class="pull-left"><strong>Eugene</strong> says:</span>
+                                    <span class="pull-right">3 hours ago</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel est enim, vel eleifend felis. Ut volutpat, leo eget euismod scelerisque, eros purus lacinia velit, nec rhoncus mi dui eleifend orci. 
+                                Phasellus ut sem urna, id congue libero. Nulla eget arcu vel massa suscipit ultricies ac id velit</p>
+                            </div>
+                        </li>
+                        <!-- /message -->
+                        
+                       
+                    </ul>
+                    <!-- /messages -->
+                </div>
+            </div>
+            {# /standard messages #}
+
+    </div>
+{% endblock %}

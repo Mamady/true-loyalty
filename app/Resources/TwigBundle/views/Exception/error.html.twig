@@ -1,0 +1,31 @@
+{% extends "TLMainBundle::layout.html.twig" %}
+
+{% block title "500 Error" %}
+
+{% block breadcrumb "" %}
+
+{% block pageTopText "500 Error" %}
+
+{% block content %}
+
+<section id="maincontent" class="row">
+    <div class="twelvecol">
+
+        <div class="sixcol ">
+            <img src="{{ asset('bundles/tlmain/images/500.png') }}">
+        </div>
+        
+        <div class="sixcol last">
+            <h2>500. That's an error.</h2>
+            <p>It seems something went wrong - very wrong. Our engineers have been notified and will investigate this as soon as possible.</p>
+
+            <p>In the meantime, use the navigation at the top to go to the page you want, or click the button below to go to the homepage.</p>
+
+            <div class="fivecol center"><a href="{{ path('TLMainBundle_homepage') }}" class="button">Go to Homepage</a></div>
+        </div>
+        
+    </div>
+    <div class="clearfix"></div>
+</section>
+
+{% endblock %}

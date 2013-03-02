@@ -1,0 +1,133 @@
+{% extends "TLMainBundle:Dashboard:layout.html.twig" %}
+
+{% block navCampaign "active" %}
+
+{% block content %}
+
+    <div class="body row-fluid form-horizontal">
+        <h3>Create a Campaign</h3>
+        
+        <div class="well body">
+            As you are on the <strong>Standard Package</strong>, you can send <strong>300</strong> more emails until the end of the month, make them count!
+        </div>
+        <div class="control-group">
+            <span class="control-label">Copy Previous Campaign</span>
+            <div class="controls">
+                <select name="copy">
+                    <option value="opt1">Promo 1</option>
+                    <option value="opt2">Promo 2</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <span class="control-label">Campaign Name</span>
+            <div class="controls">
+                <input type="text" name="name" class="span12">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <span class="control-label">Email Subject</span>
+            <div class="controls">
+                <input type="text" name="subject" class="span12">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <span class="control-label">Target Customers</span>
+            <div class="controls">
+                <button name="all" class="btn btn-primary">All Customers</button>
+                <button name="some" class="btn btn">Specific Segment</button>
+                <button name="some2" class="btn btn">Individual Customer</button>
+            </div>
+        </div>
+
+        <div class="offset2 span10">
+            <div class="span8">
+                <div class="control-group">
+                    <span class="control-label align-right">Age</span>
+                    <div class="controls">
+                        <div class="sliderSpecs"></div>
+                        <div id="slider-campaign-age"></div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <span class="control-label align-right">Total Vists</span>
+                    <div class="controls">
+                        <div class="sliderSpecs"></div>
+                        <div id="slider-campaign-visits"></div>
+                    </div>
+                </div>
+ 
+                <div class="control-group">
+                    <span class="control-label align-right">Total Redemptions</span>
+                    <div class="controls">
+                        <div class="sliderSpecs"></div>
+                        <div id="slider-campaign-redemptions"></div>
+                    </div>
+                </div>
+ 
+                <div class="control-group">
+                    <label class="control-label align-right">Join Date</label>
+                    <div class="controls">
+                        <div class="date-trigger"><input type="text" name="trigger" placeholder="Select date" class="datepicker-icon" /></div>
+                        <div class="date-trigger"><input type="text" name="trigger" placeholder="Select date" class="datepicker-icon" /></div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <span class="control-label align-right">Average Feedback</span>
+                    <div class="controls">
+                        <div class="sliderSpecs"></div>
+                        <div id="slider-campaign-feedback"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="span4 align-center" style="width: 200px;">
+                <div class="piechart" data-percent="73">73%</div>
+                <div><strong>of customers targeted<br> (43 total)</strong></div>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <span class="control-label">Promotion Details</span>
+            <div class="controls">
+                <textarea name="reward" class="spacer-bottom span12 high auto" placeholder="Get 20% off any sandwich when you buy a coffee" rows="4" cols="4"></textarea>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <span class="control-label">Promotion Expiry Date</span>
+            <div class="controls">
+                <div class="inlinepicker datepicker-fixed"></div>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <span class="control-label">Terms and Conditions</span>
+            <div class="controls">
+                <textarea name="tandc" class="spacer-bottom span12 high auto" rows="4" cols="4">{#
+                #}Your promotion code can only be redeemed by yourself, and is only valid once.&#13;&#10;{# 
+                #}Your promotion code cannot be used in conjunction with any other offer.&#13;&#10;{#
+                #}This promotion has a zero cash value and cannot be exchanged.&#13;&#10;{#
+                #}</textarea>
+            </div>
+        </div>
+
+        <div class="form-actions align-right">
+            <div class="span3 offset9 last">
+                <a href="{{ path('TLMainBundle_campaign_preview', {'id': 1} ) }}" class="btn btn-primary">Preview Campaign</a>
+            </div>
+        </div> 
+
+
+       </div>
+        <div class="clearfix"></div>
+
+    </div>
+
+{% endblock %}

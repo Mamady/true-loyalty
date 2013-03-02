@@ -1,0 +1,50 @@
+{% extends "TLUserBundle::layout.html.twig" %}
+
+{% block title %}Create a Business Account - True Loyalty{% endblock %}
+
+{% block content %}
+
+<div class="alert alert-info">
+ 
+    {% if plan == 'starter' %}
+    <span class="pull-right" style="text-align: center;">
+        <strong>FREE Trial</strong>
+    </span>
+
+    <strong>Starter Plan</strong><br>
+    100 members<br>
+    100 emails 
+
+    {% elseif plan == 'premium' %}
+
+
+    <span class="pull-right" style="text-align: center;">
+        <strong>FREE Trial</strong>
+{#        &pound;20 joining fee<br>
+        <button class="promo-code btn btn-small">Promo Code</button>
+#}
+    </span>
+
+    <strong>Premium Plan</strong><br>
+    500 members<br>
+    500 emails 
+
+
+    {% elseif plan == 'deluxe' %}
+
+
+     <span class="pull-right" style="text-align: center;">
+        <strong>FREE Trial</strong>
+    </span>
+
+    <strong>Deluxe Plan</strong><br>
+    Unlimited members<br>
+    Unlimited emails 
+
+   {% endif %}
+</div>
+
+
+{% include "TLUserBundle:Registration:register_content.html.twig" %}
+{% endblock content %}
+

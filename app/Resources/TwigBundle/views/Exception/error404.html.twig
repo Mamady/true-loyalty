@@ -1,0 +1,31 @@
+{% extends "TLMainBundle::layout.html.twig" %}
+
+{% block title "404 Error" %}
+
+{% block breadcrumb "" %}
+
+{% block pageTopText "404 Error" %}
+
+{% block content %}
+
+<section id="maincontent" class="row">
+    <div class="twelvecol">
+
+        <div class="sixcol ">
+            <img src="{{ asset('bundles/tlmain/images/404.png') }}">
+        </div>
+        
+        <div class="sixcol last">
+            <h2>404. That's an error.</h2>
+            <p>It seems the page you were looking for has moved or is no longer there. Or maybe you just mistyped something? It happens.</p>
+
+            <p>Use the navigation at the top to go to the page you want, or click the button below to go to the homepage.</p>
+
+            <div class="fivecol center"><a href="{{ path('TLMainBundle_homepage') }}" class="button">Go to Homepage</a></div>
+        </div>
+        
+    </div>
+    <div class="clearfix"></div>
+</section>
+
+{% endblock %}

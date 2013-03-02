@@ -1,0 +1,31 @@
+{% extends "TLMainBundle:Dashboard:layout.html.twig" %}
+
+{% block navQr "active" %}
+
+{% block content %}
+
+   <div class="body row-fluid">
+        <h3>QR Code</h3>
+       
+        <div class="body row-fluid">
+            <div class="span7 align-center">
+                <img src="{{ asset('bundles/tlmain/images/dashboard/qr.png') }}" alt="QR Code" />
+            </div> 
+
+            <div class="span5">
+                <div class="align-center">
+                    <img src="{{ asset('bundles/tlmain/images/dashboard/qr-til.png') }}" alt="QR Code" />
+                </div>
+                <br><br><br>
+
+                <div class="align-center">
+                    <a href="" class="btn btn-success btn-large" style="width: 370px; height:60px;"><h1>Print QR Code</h1></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+
+        <div id="outerheader">
+             <div id="headertext">
+                <div class="row">
+
+                    <div style="position:relative;float:right;">
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') or is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+
+                        {{ app.user.username }} &nbsp; {# <a href="{{ path('TLMainBundle_dashboard') }}" class="btn btn-small btn-primary"> Dashboard</a> #}
+                        <a href="{{ path('fos_user_security_logout') }}" class="btn btn-small">Logout</a>
+
+                    {% else %}
+
+                        <a class="btn btn-small btn-success" href="{{ path('TLMainBundle_page_pricing') }}">Join Today</a>
+                        &nbsp;
+                        <a href="{{ path('fos_user_security_login') }}" class="btn btn-small">Login</a>
+
+                    {% endif %}
+                    </div>
+
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+            <div id="top" class="container">
+                <header class="row">
+                    <div id="logo">                 
+                    <div id="logoimg">
+                        <a href="{{ path('TLMainBundle_homepage') }}" title="True Loyalty" >
+                            <h2 class="bigtext" style="text-align: left; font-weight: 700; margin-top: 10px; color: #1f5384;">TRUE &nbsp;<span style="color: #000000;">LOYALTY</span></h2>
+                        </a>
+                    </div>
+                    </div>
+                    <section id="navigation">
+                        <nav>
+                        <ul id="topnav" class="sf-menu">
+                            <li ><a href="{{ path('TLMainBundle_page_how_it_works') }}">How It Works</a></li>
+                            <li ><a href="{{ path('TLMainBundle_page_features') }}">Features</a></li>
+                            {#
+                                <ul class="sub-menu">
+                                   <li ><a href="{{ path('TLMainBundle_page_testimonials') }}">Testimonials</a></li>
+                                    <li ><a href="{{ path('TLMainBundle_page_faq') }}">FAQ</a></li>
+                                </ul>
+                            #}
+                           </li>
+                            <li><a href="{{ path('TLMainBundle_page_pricing') }}">Pricing</a></li>
+                            <li style="margin-top: -8px;"><a href="{{ path('TLMainBundle_page_pricing') }}" class="btn btn-warning btn-large" style="padding: 8px; box-shadow: none; color: #5D5D5D !important;">Get Started</a></li>
+                            <li><a href="{{ path('TLMainBundle_page_faq') }}">FAQ</a></li>
+                            <li><a href="{{ path('TLMainBundle_page_contact') }}">Contact</a></li>
+                        </ul>                        
+                        </nav><!-- nav -->  
+                        <div class="clearfix"></div>
+                    </section>
+                    <div class="clearfix"></div>
+                </header>
+            </div>
+        </div>

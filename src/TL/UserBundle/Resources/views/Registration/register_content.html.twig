@@ -1,0 +1,193 @@
+<style>
+#fos_user_registration_form_tandc,
+#fos_user_registration_form_optin {
+    float: left;
+    margin-right: 10px;
+}
+</style>
+        <section id="maincontent" class="row">
+            <div class="twelvecol">
+    
+                <div class="separator"></div>
+                <div class="sevencol ">
+                    <div class="if-heading">
+                        <h2><span>Create a Business Account</span></h2>
+                                    
+                        {{ form_errors(form) }}
+                        {{ form_errors(form.tandc) }}
+                        
+                        <form action="{{ path('fos_user_registration_register') }}?plan={{ plan }}" {{ form_enctype(form) }} method="post" class="styledform">
+                        
+                            {{ form_widget(form.plan) }}
+                            <fieldset>
+                                        
+                            <h4><span>Your Personal Details</span></h4>
+                            <p>
+                                Please enter the business owner's details.
+                            </p>
+ 
+                            <div class="twelvecol last">
+                                <div class="twocol">
+                                    {{ form_label(form.title) }} <span class="required">*</span>
+                                    {{ form_errors(form.title) }}
+                                    {{ form_widget(form.title) }}
+                                </div>
+                                <div class="fivecol">
+                                    {{ form_label(form.firstName) }} <span class="required">*</span>
+                                    {{ form_errors(form.firstName) }}
+                                    {{ form_widget(form.firstName) }}
+                                </div>
+                                <div class="fivecol last">
+                                    {{ form_label(form.lastName) }} <span class="required">*</span>
+
+                                    {{ form_errors(form.lastName) }}
+                                    {{ form_widget(form.lastName) }}
+                                </div>
+
+                                <div class="clearfix"></div>
+                                <div class="separator"></div>
+
+                                <div class="twelvecol">
+                                    {{ form_label(form.email) }} <span class="required">*</span>
+
+                                    {{ form_errors(form.email) }}
+                                    {{ form_widget(form.email) }}
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="separator"></div>
+
+                                <div class="sixcol">
+                                    {{ form_errors( form.plainPassword ) }}
+                                    {{ form_label(form.plainPassword.password) }} <span class="required">*</span>
+                                    {{ form_widget( form.plainPassword.password ) }}     
+                                </div>
+                                <div class="sixcol last">
+                                    {{ form_label(form.plainPassword.confirm) }} <span class="required">*</span>
+                                    {{ form_widget( form.plainPassword.confirm ) }}    
+                                </div>
+
+                                <div class="separator"></div>
+                            </fieldset>
+
+                            <div class="clearfix"></div>
+                            <div class="separator"></div>
+                            <div class="separator"></div>
+
+                            <fieldset>
+
+                                <h4><span>Your Business Details</span></h4>
+                                <p>
+                                    Please enter the business's details.
+                                </p>
+    
+                                
+                                <div class="twelvecol">
+                                    {{ form_label(form.company) }} <span class="required">*</span>
+                                    {{ form_errors(form.company) }}
+                                    {{ form_widget(form.company) }}
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="separator"></div>
+
+                            
+                                <div class="sixcol">
+                                    {{ form_label(form.address1) }} <span class="required">*</span>
+                                    {{ form_errors(form.address1) }}
+                                    {{ form_widget(form.address1) }}
+                                </div>
+                                <div class="sixcol last">
+                                    {{ form_label(form.address2) }}
+                                    {{ form_errors(form.address2) }}
+                                    {{ form_widget(form.address2) }}
+                                    </div>
+
+                                <div class="clearfix"></div>
+                                <div class="separator"></div>
+                            
+                                <div class="sixcol">
+                                    {{ form_label(form.city) }} <span class="required">*</span>
+                                    {{ form_errors(form.city) }}
+                                    {{ form_widget(form.city) }}
+                                </div>
+                                <div class="sixcol last">
+                                    {{ form_label(form.postcode) }} <span class="required">*</span>
+                                    {{ form_errors(form.postcode) }}
+                                    {{ form_widget(form.postcode) }}
+                                    </div>
+
+                                <div class="clearfix"></div>
+                                <div class="separator"></div>
+                        
+                                <div class="twelvecol">
+                                    {{ form_label(form.country) }} <span class="required">*</span>
+                                    {{ form_errors(form.country) }}
+                                    {{ form_widget(form.country) }}
+                                </div>
+
+                                <div class="clearfix"></div>
+                                <div class="separator"></div>
+
+                                <div class="sixcol">
+                                    {{ form_label(form.phone) }} <span class="required">*</span>
+                                    {{ form_errors(form.phone) }}
+                                    {{ form_widget(form.phone) }}
+                                </div>
+
+                                <div class="sixcol last">
+                                    {{ form_label(form.website) }}
+                                    {{ form_errors(form.website) }}
+                                    {{ form_widget(form.website) }}
+                                </div>
+
+                                <div class="separator"></div>
+
+                                <div>
+                                    
+                                    {% include 'TLMainBundle:Page:_terms_overlay.html.twig' %}
+                                    {% include 'TLMainBundle:Page:_privacy_overlay.html.twig' %}
+
+                                    <label class="required" for="fos_user_registration_form_tandc">I agree to True Loyalty's <a data-toggle="modal" href="#tandc" style="color: #0033ff;">Terms and Conditions</a> and <a data-toggle="modal" href="#privacy" style="color: #0033ff;">Privacy Policy</a> <span class="required">*</span></label>
+                                    <input type="checkbox" value="1" required="required" name="fos_user_registration_form[tandc]" id="fos_user_registration_form_tandc">
+                                    <br>
+                                    <br>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" value="1" name="fos_user_registration_form[optin]" id="fos_user_registration_form_optin">
+                                    <label for="fos_user_registration_form_optin">I would like to sign up to True Loyalty's monthly newsletter</label>
+                                </div>
+
+
+                                <div class="clearfix"></div>
+                                <div class="separator"></div>
+                            </fieldset>
+
+                            <div class="clearfix"></div>
+                            <div class="separator"></div>
+
+                            <div class="center">
+                                <input type="submit" value="Create Account &raquo;" class="btn btn-primary">
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+                <div class="twocol center">
+                    <div class="separator"></div>
+                    <div class="separator"></div>
+                    <h3>OR</h3>
+                </div>
+
+                <div class="threecol center last">
+                <div class="separator"></div>
+                    <div class="if-heading">
+                        <h3><span>Already a Member?</span></h3>
+                    
+                        <a href="{{ path('fos_user_security_login') }}" class="btn btn-success">Sign In &raquo;</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </section>

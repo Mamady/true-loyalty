@@ -1,0 +1,149 @@
+{% extends "TLMainBundle::layout.html.twig" %}
+
+{% block pageTop %}
+
+<!-- SLIDER -->
+<div id="outerslider">
+    <div id="slidercontainer">
+        <section id="slider">
+            <div id="slideritems" class="flexslider preloader">
+                <ul class="slides">
+
+                    {#
+                    <li style="background-image:url(/bundles/tlmain/images/slider/bg-slider1.jpg);">
+                        <img src="/bundles/tlmain/images/slider/slider1.png" alt="" />
+                        <div class="flex-caption">
+                            <div class="text-caption row right">
+                                <div class="caption-content">
+                                    <h2>Getting Worldwide</h2>
+                                    <div>Consectetur adipiscing elit aeneane lorem lipsum, condimentum ultrices consequat eu, vehicula mauris lipsum adipiscing lipsum aenean orci lorem. Asequat lorem ipsum dolor lorem sit amet, consectetur adipiscing dolor elit. Aenean nisl orci, condimentum.</div>
+                                    <a class="sliderbutton" href="http://www.interfeis.com/"><span>For Details</span></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </li>
+                    #}
+                    <li style="background-image:url(/bundles/tlmain/images/slider/bg-slider2.jpg);">
+                        <img src="/bundles/tlmain/images/slider/slider2.png" alt="" />
+                        <div class="flex-caption">
+                            <div class="text-caption row left">
+                                <div class="caption-content">
+                                    <h2><a href="{{ path('TLMainBundle_page_how_it_works') }}">The Best<br>Loyalty Program</a></h2>
+                                    <div><a href="{{ path('TLMainBundle_page_how_it_works') }}">True Loyalty provides small businesses with a platform to build simple and effective digital loyalty programs.<br></div>
+
+                                    <br><br>
+                                    <a class="btn btn-primary" href="{{ path('TLMainBundle_page_how_it_works') }}">How It Works &raquo;</a>  &nbsp; &nbsp;
+                                    <a class="btn btn-success" href="{{ path('TLMainBundle_page_pricing') }}">View Pricing &raquo;</a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    {#
+                    <li style="background-image:url(/bundles/tlmain/images/slider/bg-slider3.jpg);">
+                        <img src="/bundles/tlmain/images/slider/slider3.png" alt="" />
+                        <div class="flex-caption">
+                            <div class="text-caption row top">
+                                <div class="caption-content">
+                                    <h2>Using The Latest Technology</h2>
+                                    <div>Consectetur adipiscing elit aeneane lorem lipsum, condimentum ultrices consequat eu, vehicula mauris lipsum adipiscing lipsum aenean orci lorem. Asequat lorem ipsum dolor lorem sit amet, consectetur adipiscing dolor elit. Aenean nisl orci, condimentum.</div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </li>
+                    #}                
+                    </ul>
+            </div>
+            <div class="clearfix"></div>
+        </section>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!-- END SLIDER -->
+
+{% endblock %}
+        
+
+{% block content %}
+
+<section id="maincontent" class="row">
+    <div class="twelvecol">
+
+    <h2 class="bigtext">Work with True Loyalty to build your business's loyalty program today.</h2>
+    <p class="secondarytext">We help you recruit, manage and reward loyal customers.</p>
+    <div class="separator"><div></div> </div>
+    
+    <div  class="minisliders flexslider">
+        <ul class="slides">
+        <li class="slide " >
+            <div class="fourcol ">
+                <img src="/bundles/tlmain/images/content/iconhome-2.png" alt="Analyse Customers" class="alignleft" /><br />
+                <h3>No Hardware Needed</h3>
+                <div class="clearfix"></div>
+                <p>You don't need any fancy scanners, printers, till machines or smartphones. Your entire program can be managed through your laptop or desktop PC, in store or at home.</p>
+            </div>
+            <div class="fourcol ">
+                <img src="/bundles/tlmain/images/content/iconhome-5.png" alt="Track Campaign Statistics" class="alignleft" /><br />
+                <h3>Easy To Use</h3>
+                <div class="clearfix"></div>
+                <p>Our unique "business dashboard" allows you to easily manage your loyalty card and promotional campaigns, analyse customers and view customer feedback. It's simple but highly effective.</p>
+            </div>
+            <div class="fourcol last">
+                <img src="/bundles/tlmain/images/content/iconhome-3.png" class="alignleft" alt="Send Targetted Promotions" /><br />
+                <h3>Simple Pricing</h3>
+                <div class="clearfix"></div>
+                <p>We believe in being as honest and transparent as possible when it comes to pricing. That's why we have a tiered flat-rate fee structure. This way, you'll always know what you'll be paying.</p>
+            </div>
+        </li>
+        <li class="slide " >
+            <div class="fourcol ">
+                <img src="/bundles/tlmain/images/content/iconhome-4.png" alt="Analyse Customers" class="alignleft" /><br />
+                <h3>Maximum Security</h3>
+                <div class="clearfix"></div>
+                <p>All of your loyalty program's settings, data and information is stored on True Loyalty's reliable, safe and secure servers. We understand the importance of keeping your data safe.</p>
+            </div>
+            <div class="fourcol ">
+                <img src="/bundles/tlmain/images/content/iconhome-1.png" class="alignleft" alt="Send Targetted Promotions" /><br />
+                <h3>Better Customer Service</h3>
+                <div class="clearfix"></div>
+                <p>Our platform allows you to reward your loyal customers, react to their feedback and most importantly develop an understanding of who they are and what they want.</p>
+            </div>
+            <div class="fourcol last">
+                <img src="/bundles/tlmain/images/content/iconhome-6.png" alt="Reward Customers" class="alignleft" /><br />
+                <h3>Reward Customers</h3>
+                <div class="clearfix"></div>
+                <p>We help you build custom-made loyalty cards and send targeted promotions to different segments of your loyalty program's membership. Work with us to reward your customers today.</p>
+            </div>
+
+        </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+        
+    <div class="separator"></div>
+    <div class="separator"></div>
+
+    <div class="center"> 
+        <a class="btn btn-success btn-large" href="{{ path('TLMainBundle_page_how_it_works') }}">How Would My Loyalty Program Work?</a>
+    </div>
+
+    <div class="separator"></div>
+
+    <hr>
+
+    <div class="separator"></div>
+
+        <blockquote>True Loyalty provides everything a small business needs. They help you build profitable loyalty programs, track your customers, send promotions to them and even view detailed customer feedback!</blockquote>
+            <span class="testiinfo">Tom, Bishops Stortford</span>
+    </div>
+
+
+
+    </div>
+    <div class="clearfix"></div><!-- clear float --> 
+</section><!-- maincontent -->
+
+{% endblock %}

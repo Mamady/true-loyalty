@@ -1,0 +1,97 @@
+{% extends "TLMainBundle::layout.html.twig" %}
+
+{% block title "Contact Us - True Loyalty" %}
+
+{% block breadcrumb "" %}
+{% block pageTopText "Contact Us" %}
+
+{% block content %}
+
+<section id="maincontent" class="row">
+    <div class="twelvecol">
+
+        <p>We would love to answer your questions or help you develop your tailored loyalty program today! Feel free to contact us by using the form below.</p>
+    <div class="separator"></div>
+    <div class="sixcol ">
+        <div class="if-heading">
+            <h3><span>Get in touch</span></h3>
+            <form action="{{ path('TLMainBundle_page_contact') }}" method="post" {{ form_enctype(form) }} class="styledform">
+                {{ form_errors(form) }}
+
+                <p>{{ form_row(form.name) }}</p>
+                <p>{{ form_row(form.email) }}</p>
+                <p>{{ form_row(form.message) }}</p>
+                
+                {{ form_rest(form) }}
+                <input type="submit" name="submit" class="btn btn-primary" id="submit_btn" value="Send"/>
+            </form>
+            
+        </div>
+    </div>
+    <div class="sixcol last">
+        <div class="if-heading">
+            <h3><span>Our Office</span></h3>
+        </div>
+        <div class="frameimg">
+        <iframe style="width:100%; height:250px; border:0; margin:0px; padding:0px; " src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=207+Regent+Street,+London&amp;aq=0&output=embed&iwloc=near"></iframe></div>
+    <div class="separator"></div>
+    
+        <div class="sixcol">
+            <div class="if-heading">
+                <h4><span>Our Headquarters</span></h4>
+            </div>
+            <ul>
+                <li class="clearfix contact_address">
+                    <div class="left"><span class="lambda-address"></span></div>
+                    <div class="description">Kilroy Global Limited<br />
+                    Third Floor, 207 Regent Street<br/> London <br>W1B 3HH</div>
+                </li>
+{#                <li class="clearfix contact_phone" >
+                    <div class="left"><span class="lambda-phone"></span></div>
+                    <div class="description">020 3286 8478</div>
+                </li>
+#}
+                <li class="clearfix contact_email">
+                    <div class="left"><span class="lambda-email"></span></div>
+                    <div class="description">info@trueloyalty.co.uk</div>
+                </li>
+            </ul>
+
+        </div>
+
+        <hr> 
+        <div class="twelvecol">
+            True Loyalty is a trading name of Kilroy Global Limited, a company registered in England and Wales, with a company number of 08245637, and a registered office address of Third Floor, 207 Regent Street, London, W1B 3HH.</div>
+{#
+        <div class="sixcol last">
+            <div class="if-heading">
+                <h4><span>Our Branch Office</span></h4>
+            </div>
+            <ul>
+            <li class="clearfix contact_address">
+                <div class="left"><span class="lambda-address"></span></div>
+                <div class="description">Jl. Ranca Bentang No. 122<br />
+                Lembang, <br/>Bandung 12322</div>
+            </li>
+            <li class="clearfix contact_phone" >
+                <div class="left"><span class="lambda-phone"></span></div>
+                <div class="description">+62 (22) 555-2346</div>
+            </li>
+            <li class="clearfix contact_mobile">
+                <div class="left"><span class="lambda-fax"></span></div>
+                <div class="description">+62 (22) 555-1247</div>
+            </li>
+            <li class="clearfix contact_email">
+                <div class="left"><span class="lambda-email"></span></div>
+                <div class="description">ramayana@interfeis.com</div>
+            </li>
+            </ul>
+        </div>
+#}
+    </div>
+
+    </div>
+    <div class="clearfix"></div><!-- clear float --> 
+</section><!-- maincontent -->
+
+{% endblock %}

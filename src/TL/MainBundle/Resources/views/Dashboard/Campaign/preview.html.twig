@@ -1,0 +1,41 @@
+{% extends "TLMainBundle:Dashboard:layout.html.twig" %}
+
+{% block navCampaign "active" %}
+
+{% block content %}
+
+    <div class="body row-fluid form-horizontal">
+        <h3> Campaign Preview</h3>
+        
+        <div class="block well">
+               <div class="navbar"><div class="navbar-inner"><h5>Promotion Campaign - Email Preview</h5></div></div>
+                <textarea id="editor" name="editor" rows="10" cols="16" style="float: left;">
+                <p>Dear **FIRST_NAME**,</p>
+                <p>We have a great promotion on until **EXPIRY_DATE**</p>
+                <p>**PROMOTION_DETAILS**</p>
+                <p>Remember you only have until **PROMOTION_EXPIRY_DATE** to redeem your unique promotion code.</p>
+                <p>Your unique promotion code is **PROMOTION_CODE**</p>
+                <p>&nbsp;</p>
+                <p>Kind Regards,</p>
+                <p>Company A</p>
+                <p>&nbsp;</p>
+                <p>**TERMS_AND_CONDITIONS**</p>
+
+                </textarea>
+        </div>
+
+        <div class="form-actions align-right">
+            <div class="span3 offset9 last">
+                You can send 56 more emails until the end of the month. Are you sure you want to send this promotion to 43 customers?<br><br>
+                <a href="{{ path('TLMainBundle_campaign_new') }}" class="btn btn-danger">&laquo; &nbsp; EDIT DETAILS</a> &nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="submit" class="btn btn-primary" value="SEND CAMPAIGN &nbsp; &raquo;">
+            </div>
+       </div> 
+
+
+       </div>
+        <div class="clearfix"></div>
+
+    </div>
+
+{% endblock %}

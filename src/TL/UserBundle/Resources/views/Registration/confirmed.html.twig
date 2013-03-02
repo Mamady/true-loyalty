@@ -1,0 +1,40 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block fos_user_content %}
+
+<div class="alert alert-success"><strong>Your account has been successfully created!</strong> </div>
+
+<p>You're now one step closer to building that perfect loyalty program for your business.</p>
+
+<p>True Loyalty will be launching over the next couple of months and will contact you beforehand to arrange the delivery of your free start up kit.</p>
+
+<p>In the meantime, if you have any questions, or wish to contact us for any reason, feel free to email us at <a href="mailto:support@trueloyalty.co.uk">support@trueloyalty.co.uk</a>. We will respond to all enquiries within 48 hours.</p>
+
+<p>We will be in touch shortly, have a great day!</p>
+
+<br>
+<br>
+
+<div style="text-align: center;">
+    <a href="{{ path('TLMainBundle_homepage') }}" class="btn btn-success btn-large">Back to Homepage</a>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{#
+    {% if app.session is not empty %}
+        {% set targetUrl = app.session.get('_security.target_path') %}
+        {% if targetUrl is not empty %}<p><a href="{{ targetUrl }}">Contine &raquo;</a></p>{% endif %}
+    {% endif %}
+#}
+{% endblock fos_user_content %}

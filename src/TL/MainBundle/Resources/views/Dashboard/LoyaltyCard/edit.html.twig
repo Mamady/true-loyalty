@@ -1,0 +1,75 @@
+{% extends "TLMainBundle:Dashboard:layout.html.twig" %}
+
+{% block navCard "active" %}
+
+{% block content %}
+
+    <div class="body row-fluid form-horizontal">
+        <h3>Manage Loyalty Card</h3>
+        <hr>
+
+        <div class="row-fluid">
+            <div class="span9">
+                <div class="control-group">
+                    <span class="control-label">Stamps Required To Earn Reward</span>
+                    <div class="controls">
+                        <div class="sliderSpecs"><label for="amount">Stamps:</label><input type="text" id="cardStamps" /></div>
+                        <div id="slider-range-stamps"></div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <span class="control-label">Minimum Spend</span>
+                    <div class="controls">
+                        <div class="sliderSpecs"><label for="amount">Minimum:</label><input type="text" id="cardMinimumSpend" /></div>
+                        <div id="slider-range-minimum-spend"></div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <span class="control-label">Reward Details</span>
+                    <div class="controls">
+                        <textarea name="reward" class="spacer-bottom span12 high auto" placeholder="Free coffee" rows="4" cols="4"></textarea>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <span class="control-label">Terms and Conditions</span>
+                    <div class="controls">
+                        <textarea name="tandc" class="spacer-bottom span12 high auto" rows="4" cols="4">{#
+                        #}One stamp/reward per customer per day&#13;&#10;{# 
+                        #}Reward cannot be used in conjunction with any other offer.&#13;&#10;{#
+                        #}Stamps and rewards have zero cash value and cannot be exchanged.&#13;&#10;{#
+                        #}</textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions align-right">
+                    <div class="span3 offset9 last">
+                        Are you sure you want to change your loyalty card settings? Doing so may confuse your customers.<br><br>
+                        <input type="submit" class="btn btn-primary" value="Save Changes">
+                    </div>
+                </div> 
+
+
+
+            </div>
+             <div class="span3 last align-center">
+
+                <div class="popover top align-left" style="position: relative; display: block; margin: 0 auto; width: 100%;">
+                    <div class="arrow"></div>
+                    <h3 class="popover-title">Hold On</h3>
+                    <div class="popover-content">
+                        <strong>Don't change your loyalty card settings too much.</strong> <br>
+                        Your customers might start getting annoyed, which kinda defeats the purpose of the loyalty card.
+                    </div>
+                </div>
+                <br>
+                <img src="{{ asset('bundles/tlmain/images/dashboard/mascot.png') }}">
+            </div>
+            
+       </div>
+        <div class="clearfix"></div>
+
+    </div>
+
+{% endblock %}

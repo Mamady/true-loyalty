@@ -1,0 +1,22 @@
+ 
+{% if app.session.has('showCookieNotice') %}
+        <div class="nopagetop alert alert-info" style="position: fixed; bottom: 0; padding-right: 15px; margin-bottom: 0; width: 910px;">
+
+We use "cookies" to enhance the usability of this website and improve your online experience.
+            <button class="btn pull-right" id="cookieAccepted">I Understand</button>
+        </div>
+
+{% endif %}
+
+
+{% for name, messages in app.session.flashbag.all() %}
+
+    {% for message in messages %}
+        <div class="row twelvecol">
+            <div class="alert alert-block alert-{{ name }}">{{ message|raw }}</div>
+        </div>
+    {% endfor %}
+
+{% endfor %}
+
+

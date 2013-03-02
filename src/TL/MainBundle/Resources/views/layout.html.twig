@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}True Loyalty - The Best Loyalty Program{% endblock %}</title>
+
+    <meta name="keywords" content="{% block meta_keywords "" %}">
+    <meta name="description" content="{% block meta_description "" %}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    {% stylesheets filter='cssrewrite' output='css/*.css' combine=true
+        'bundles/tlmain/css/bootstrap.min.css'
+        'bundles/tlmain/css/reset.css'
+        'bundles/tlmain/css/normalize.css'
+        'bundles/tlmain/css/1140.css'
+        'bundles/tlmain/css/style.css'
+        'bundles/tlmain/css/flexslider.css'
+        'bundles/tlmain/css/color.css'
+        'bundles/tlmain/css/layout.css'
+        'bundles/tlmain/css/prettyPhoto.css'
+    %}
+        <link rel="stylesheet" type="text/css" href="{{ asset_url }}" media="screen" />
+    {% endstylesheets %}
+
+    {% javascripts combine=true
+        '@TLMainBundle/Resources/public/js/jquery-1.8.3.min.js'
+    %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    <script type="text/javascript">
+        {# Javascript that gets parsed by Twig #}
+        {# include 'TLMainBundle::base.js.twig' #}
+    </script>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    {% block css %}
+        {% stylesheets filter='cssrewrite' output='css/*.css' combine=true
+            'bundles/tlmain/css/custom.css'
+        %}
+            <link rel="stylesheet" type="text/css" href="{{ asset_url }}" media="screen" />
+        {% endstylesheets %}
+    {% endblock %}
+
+
+    <link rel="shortcut icon" href="bundles/tlmain/images/favicon.ico" />
+</head>
+
+
+<body>
+<div id="subbody">
+    <div id="outercontainer">
+    
+        {# HEADER #}
+            {% include 'TLMainBundle::_header.html.twig' %}
+        {# END HEADER #}
+
+        {% block pageTop %}
+        <div id="outerafterheader" style="background:url(/bundles/tlmain/images/content/header.jpg) no-repeat bottom center;">
+            <div class="container">
+                <div id="afterheader" class="row">
+                    <section id="aftertheheader">
+                        <div class="breadcrumb twelvecol">
+                            {% block breadcrumb %}
+                                You are here: <a href="{{ path('TLMainBundle_homepage') }}">Home</a> &raquo; <a href="about.html">About Us</a> &raquo; <strong>Services</strong>
+                            {% endblock %}
+                        </div>
+                        <div class="clearfix"></div>                        
+                        <h1 class="pagetitle">{% block pageTopText "Services" %}</h1>                    
+                    </section>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+
+        <div id="outermain" class="{% block nopagetop "" %}">
+            <div class="container">
+        
+                {% include 'TLMainBundle::flashes.html.twig' %}
+                {% block content %}{% endblock %}
+
+            </div>
+        </div>
+
+        <!-- FOOTER SIDEBAR -->
+        <div id="outerfootersidebar">
+            <div class="container">
+                <div id="footersidebarcontainer" class="row"> 
+                    <footer id="footersidebar">
+                    <div id="footcol1" class="threecol">
+                        <ul>
+                            <li class="widget-container">
+                                <h4 class="widget-title">ABOUT US</h4>
+                                <p>True Loyalty provides small businesses with the opportunity to build user friendly, highly functional and effective loyalty programs, drastically improve customer retention rates and build lasting relationships with loyal customers. </p>
+                                <a href="{{ path('TLMainBundle_page_story') }}" class="btn btn-small">Read More &raquo;</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="footcol2" class="threecol">
+                        <ul>
+                            <li class="widget-container">
+                            <h4 class="widget-title">LEGAL</h4>
+                            <ul class="ts-recent-post-widget">
+                                <li><a href="{{ path('TLMainBundle_page_terms') }}">Terms &amp; Conditions</a></li>
+                                <li><a href="{{ path('TLMainBundle_page_privacy') }}">Privacy Policy</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="footcol3" class="sixcol last" style="text-align: right;">
+                        <img src="{{ asset('bundles/tlmain/images/footer.png') }}">
+                    </div>
+                    <div class="clearfix"></div>
+                    </footer>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END FOOTER SIDEBAR -->
+        
+        <!-- FOOTER -->
+        <div id="outerfooter">
+            <div class="container">
+                <div id="footercontainer" class="row">
+                <footer id="footer">
+                    <div class="copyright">
+                        True Loyalty is a trading name of Kilroy Global Limited.
+                    </div>
+                    <nav id="footermenu">
+                        <ul id="footernav" class="footermenu">
+                            <li><a href="{{ path('TLMainBundle_page_sitemap') }}">Sitemap</a> &nbsp; | </li>
+
+                            {% if is_granted('IS_AUTHENTICATED_FULLY') or is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+ 
+                                {# <li><a href="{{ path('TLMainBundle_dashboard') }}">Dashboard</a> &nbsp; | </li> #}
+                                <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+
+                           {% else %}
+
+                                <li><a href="{{ path('TLMainBundle_page_pricing') }}">Join Today</a> &nbsp; | </li>
+                                <li><a href="{{ path('fos_user_security_login') }}">Login</a></li>
+                            {% endif %}
+                        </ul>                   
+                    </nav><!-- nav -->  
+                    <div class="clearfix"></div>
+                </footer>
+                </div>
+            </div>
+        </div>
+        <!-- END FOOTER -->
+        
+    </div><!-- end outercontainer -->
+</div><!-- end bodychild -->
+
+{% javascripts combine=true
+    '@TLMainBundle/Resources/public/js/modernizr.js'
+    '@TLMainBundle/Resources/public/js/jquery.easing.js'
+
+    '@TLMainBundle/Resources/public/js/hoverIntent.js'
+    '@TLMainBundle/Resources/public/js/superfish.js'
+    '@TLMainBundle/Resources/public/js/supersubs.js'
+
+    '@TLMainBundle/Resources/public/js/jquery.prettyPhoto.js'
+
+    '@TLMainBundle/Resources/public/js/fade.js'
+
+    '@TLMainBundle/Resources/public/js/jquery.flexslider-min.js'
+
+    '@TLMainBundle/Resources/public/js/bootstrap.min.js'
+
+    '@TLMainBundle/Resources/public/js/custom.js'
+%}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+{# jQuery Flexslider #}
+<script type="text/javascript">
+jQuery(window).load(function() {
+    jQuery('.flexslider').flexslider({
+        animation: "slade", //String: Select your animation type, "fade" or "slide"
+        directionNav: true, //Boolean: Create navigation for previous/next navigation? (true/false)
+        controlNav: true,   //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+        smoothHeight: true,
+        start: function(slider){
+            if(slider.length > 1) {
+                var currentSlide = jQuery(slider.slides[slider.currentSlide]);
+            }
+        },
+        before: function(slider){
+            if(slider.length > 1) {
+                var currentSlide = jQuery(slider.slides[slider.animatingTo]);
+            }
+        }
+      });
+});
+</script>   
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36779344-1']);
+  _gaq.push(['_setDomainName', 'trueloyalty.co.uk']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

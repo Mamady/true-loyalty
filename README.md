@@ -1,4 +1,4 @@
 true-loyalty
 ============
 
-True Loyalty
+Source for the True Loyalty website.
